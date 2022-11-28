@@ -6,6 +6,6 @@ push-to-branch:
 	$(GIT) push --tags
 
 deploy:
-	$(GIT) push main
+	$(GIT) push WilfridSKendall main
 	
 # Test by visiting https://wilfridskendall.github.io/index.html
