@@ -1,30 +1,6 @@
-
 ARCHIVE/
-ARCHIVED
 
-.dropbox
-.directory
-
-products.txt
-rubber.cache
 VERSION.txt
 
-*.aux
-*.backup
-*.bbl
-*.blg
-*.desktop
-*.gz
-*.kate-swp
-*.kilepr
-*.log
-*.loi
-*.nav
-*.out
-*.pyc
-*.reading
-*.snm
-*.talk
-*.toc
-*.vrb
+
 
