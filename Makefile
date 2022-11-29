@@ -4,14 +4,13 @@ START=/usr/bin/xdg-open
 main: see
 
 push-to-branch:
-	$(GIT) commit -a
-	$(GIT) push
-	$(GIT) push --tags
+	-$(GIT) commit -a
 
 deploy: push-to-branch
-	$(GIT) push WilfridSKendall main
+	$(GIT) push
+	$(GIT) push --tags
 	
 see: deploy
-	$(START) index.html
+	@$(START) index.html
 
 # Test by visiting https://wilfridskendall.github.io/index.html
