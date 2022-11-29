@@ -7,11 +7,16 @@ main: deploy
 # Commit using git
 push-to-branch:
 	-$(GIT) commit -a
+	$(GIT) push --tags
 
 # Push to github with tags
 deploy: push-to-branch
-	$(GIT) push main
-	$(GIT) push --tags main
+	$(GIT) checkout main
+	$(GIT) pull
+	$(GIT) merge working
+	$(GIT) push
+	$(GIT) push --tags
+	$(GIT) checkout working
 	
 # Test by visiting https://wilfridskendall.github.io/index.html
 see: 
