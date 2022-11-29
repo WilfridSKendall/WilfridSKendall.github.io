@@ -1,16 +1,19 @@
 GIT=/usr/bin/git
 START=/usr/bin/firefox -newtab
 
-main: see
+main: deploy
+	@$(START) index.html
 
+# Commit using git
 push-to-branch:
 	-$(GIT) commit -a
 
+# Push to github with tags
 deploy: push-to-branch
 	$(GIT) push
 	$(GIT) push --tags
 	
-see: deploy
-	@$(START) index.html
-
 # Test by visiting https://wilfridskendall.github.io/index.html
+see: 
+	@$(START) https://wilfridskendall.github.io/index.html
+
