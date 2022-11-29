@@ -1,5 +1,5 @@
 GIT=/usr/bin/git
-START=/usr/bin/firefox -newtab
+START=/usr/bin/firefox -new-tab
 
 main: deploy
 	@$(START) index.html
@@ -15,5 +15,5 @@ deploy: push-to-branch
 	
 # Test by visiting https://wilfridskendall.github.io/index.html
 see: 
-	@$(START) https://wilfridskendall.github.io/index.html
+	$(START) https://wilfridskendall.github.io/index.html
 
