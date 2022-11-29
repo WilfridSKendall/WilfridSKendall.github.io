@@ -1,5 +1,5 @@
 GIT=/usr/bin/git
-START=/usr/bin/xdg-open
+START=/usr/bin/firefox -newtab
 
 main: see
 
