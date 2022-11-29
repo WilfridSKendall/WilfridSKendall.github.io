@@ -10,8 +10,8 @@ push-to-branch:
 
 # Push to github with tags
 deploy: push-to-branch
-	$(GIT) push
-	$(GIT) push --tags
+	$(GIT) push main
+	$(GIT) push --tags main
 	
 # Test by visiting https://wilfridskendall.github.io/index.html
 see: 
