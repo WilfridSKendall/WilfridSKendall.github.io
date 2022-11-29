@@ -8,6 +8,7 @@ main: deploy
 push-to-branch:
 	-$(GIT) commit -a
 	$(GIT) push --tags
+	$(GIT) push
 
 # Push to github with tags
 deploy: push-to-branch
@@ -15,7 +16,6 @@ deploy: push-to-branch
 	$(GIT) pull
 	$(GIT) merge working
 	$(GIT) push
-	$(GIT) push --tags
 	$(GIT) checkout working
 	
 # Test by visiting https://wilfridskendall.github.io/index.html
