@@ -23,7 +23,11 @@ deploy: push-to-branch
 datestamp:
 	-$(SED) -i -e"/^This web-page/s/updated.*$$/updated $(shell date -Idate)/" index.html
 
-# Test by visiting https://wilfridskendall.github.io/index.html
+# Test by visiting `index.html`
 see: 
+	$(START) index.html
+
+# Test by visiting `https://wilfridskendall.github.io/index.html`
+see-www: 
 	$(START) https://wilfridskendall.github.io/index.html
 
