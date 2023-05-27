@@ -11,7 +11,9 @@ Here are various translations of "the wonders of the Lord God are extraordinary"
 | Malay               |                                                              | Hal-hal luar biasa yang dilakukan oleh Allah                 |
 | Malayam<br /><br /> | കർത്താവായ ദൈവത്തിന്റെ അത്ഭുതങ്ങൾ അസാധാരണമാണ് <br />Karthaavaya Daivathinte Albuthangal Asaadhaaranamaan | Karth-thaavaaya - Dheiva - thintey - Albu - dhunghul - Asadhaaranam - Aan-uh. [Audio link](Malayam.m4a)<br /> |
 
+# Translating into pig latin
 
+Try  the website <https://lingojam.com/PigLatinTranslator>!
 
 # Going further
 
