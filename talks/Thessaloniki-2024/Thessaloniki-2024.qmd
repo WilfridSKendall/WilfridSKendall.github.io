@@ -4,7 +4,7 @@ subtitle:    Lecture at Aristotle University of Thessaloniki
 date:        15 May 2024
 author:     
     - name:           Wilfrid S Kendall
-      url:            https://wilfridskendall.github.io/index.html
+      url:            https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf
       affiliation:    University of Warwick Department of Statistics
       affilation-url: https://www.warwick.ac.uk/statsdept
 license:    "CC BY"
@@ -32,9 +32,9 @@ format:
             @Rmanual-2010
 ---
 
-Handout available on the web:
+Handout <https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf> available on the web: either link directly or use this `QR-code`:
 
-![](/home/wilfrid/HTML/WilfridSKendall/talks/Thessaloniki-2024/image/talk_URL.jpg){width=1in}
+![image/talk_URL.jpg](https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf){width=1in}
 
 Introduction   {#sec-introduction}
 ============
