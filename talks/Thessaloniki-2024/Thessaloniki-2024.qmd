@@ -1,5 +1,5 @@
 ---
-title:       Markov chain Monte Carlo and Perfect simulation
+title:       Markov chain Monte Carlo and Perfect Simulation
 subtitle:    Lecture at Aristotle University of Thessaloniki
 date:        15 May 2024
 author:     
@@ -32,9 +32,7 @@ format:
             @Rmanual-2010
 ---
 
-Handout <https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf> available on the web: either link directly or use this `QR-code`:
 
-![image/talk_URL.jpg](https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf){width=1in}
 
 Introduction   {#sec-introduction}
 ============
@@ -43,17 +41,32 @@ Introduction   {#sec-introduction}
 
 ::: {.column}
 
-![`Αριστοτέλης` 384–322 BCE](image/Aristotle_Altemps_Inv8575.jpg){width=2in}
+![`Αριστοτέλης` 384–322 BCE](image/Aristotle_Altemps_Inv8575.jpg){width=1.5in}
 
 :::
 
 ::: {.column}
 
-Aristotle: "The more you know, the more you know you don't know."
+Aristotle: 
+
+- "Pleasure in the job puts perfection in the work."
+- "The more you know, the more you know you don't know."
+
+\pause
+
+\bigskip
+
+Handout available on the web: either use the `QR-code` and follow links,    
+![](image/talk_URL.jpg){width=1in}  
+or link directly using this URL:
 
 :::
 
 ::::
+
+\small
+
+<https://wilfridskendall.github.io/talks/Thessaloniki-2024/index.html>
 
 Sketch of MCMC (I)   {#sec-MCMC-I}
 ==================

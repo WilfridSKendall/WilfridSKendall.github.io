@@ -1,4 +1,4 @@
-# Markov chain Monte Carlo and Perfect simulation
+# Markov chain Monte Carlo and Perfect Simulation
 ## Lecture at Aristotle University of Thessaloniki
 ## Wilfrid S Kendall
 ## 15 May 2024
