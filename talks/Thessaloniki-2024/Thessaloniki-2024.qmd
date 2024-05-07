@@ -213,14 +213,18 @@ Image attributions
 
 ::: {style="font-size: 25%;"}
 
-| Image         | Attribution                                                                                  |
-| ------------- | -------------------------------------------------------------------------------------------- |
-| [Aristotle](https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg) | After Lysippos, _Public domain_, via Wikimedia Commons.                                                                                         |
-| [Edward Teller](https://commons.wikimedia.org/wiki/File:Edward_Teller_in_1958.jpg) | Lawrence Livermore National Laboratory,  restored by w:User:Greg L, Papa Lima Whiskey, _[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)_, via Wikimedia Commons                                                                                   |
-| Perfect Ising                                              | Result of code written by WSK                   | 
-| Dead leaves                                                | Result of code written by WSK                   | 
-| [Queues](https://covidposters.github.io/images/queues.png) | <https://covidposters.github.io/> _Open source_ | 
-| Epidemic                                                   | Result of code written by WSK                   | 
+| Image         | Attribution                                                                    | License      |
+| ------------- | ------------------------------------------------------------------------------ | ------------ |
+| [Aristotle](https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg) | After Lysippos | _Public domain_ |
+|               |                                                                    | via Wikimedia Commons    |
+| [Edward Teller](https://commons.wikimedia.org/wiki/File:Edward_Teller_in_1958.jpg) | Lawrence Livermore National Laboratory                       | _[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)_    |
+|               | restored by w:User:Greg L, Papa Lima Whiskey                       | via Wikimedia Commons    |  
+| Perfect Ising                                              | Result of code written by WSK     | _[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0)_ | 
+| Dead leaves                                                | Result of code written by WSK     | _[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0)_ | 
+| [Queues](https://covidposters.github.io/images/queues.png) | <https://covidposters.github.io/> |_Open source_ | 
+| Epidemic                                                   | Result of code written by WSK     | _[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0)_ | 
+
+: {tbl-colwidths="[20,50,30]"}
 
 :::
 
