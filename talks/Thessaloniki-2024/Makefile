@@ -14,19 +14,10 @@ handout-2x2       := $(title)-handout-2x2.pdf
 notes             := $(title)-notes.pdf
 notes-2x2         := $(title)-notes-2x2.pdf
 
-figures-svg := $(wildcard image/*.svg)
-figures-pdf := $(subst .svg,.pdf,$(figures-svg))
 
 ##################################################
 
 QUARTO	      := /usr/local/bin/quarto
-# Instead of following math_single_backslash, use 
-#---
-#from: markdown+tex_math_single_backslash
-#---
-# in source!
-#quarto_opt    := --from=markdown+tex_math_single_backslash \
-#		      --highlight-style tango 
 quarto_opt    := --highlight-style tango
 
 ##################################################
@@ -43,7 +34,7 @@ see_notes:      $(notes-2x2); xdg-open $(notes-2x2)
 
 #################################################
 
-$(beamer): $(source) $(biblio) $(figures-pdf) $(macros)
+%.pdf: %.qmd $(biblio) $(macros)
 	sed -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \
 	$(QUARTO) render $< - --to=beamer $(quarto_opt)              \
 	--citeproc --bibliography=$(biblio) --csl=$(csl)
@@ -61,13 +52,13 @@ image/%.pdf: image/%.svg
 		
 #################################################
 
-%-handout.pdf: %.qmd $(biblio) $(figures-pdf)
+%-handout.pdf: %.qmd $(biblio)
 	sed -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \
 	$(QUARTO) render $< - --to=beamer $(quarto_opt) --output $@    \
 	--citeproc --bibliography=$(biblio) --csl=$(csl)  \
 	-M classoption=handout
 
-%-notes.pdf: %.qmd $(biblio) $(figures-pdf)
+%-notes.pdf: %.qmd $(biblio)
 	sed -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \
 	$(QUARTO) render $< - --to=beamer $(quarto_opt) --output $@    \
 	--citeproc --bibliography=$(biblio) --csl=$(csl)  \
