@@ -64,9 +64,7 @@ or link directly using this URL:
 
 ::::
 
-\small
-
-<https://wilfridskendall.github.io/talks/Thessaloniki-2024/index.html>
+<https://wilfridskendall.github.io/talks/Thessaloniki-2024/>
 
 Sketch of MCMC (I)   {#sec-MCMC-I}
 ==================
