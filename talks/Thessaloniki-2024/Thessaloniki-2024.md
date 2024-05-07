@@ -1,6 +1,8 @@
 # Markov chain Monte Carlo and Perfect simulation
 45 minutes
 
+![](/home/wilfrid/HTML/WilfridSKendall/talks/Thessaloniki-2024/image/talk_URL.png)
+
 ## Introduction {#sec-1}
 
 ![](http://brewminate.com/wp-content/uploads/2018/05/050218-23-Aristotle-Science-History-Philosophy.jpg)
