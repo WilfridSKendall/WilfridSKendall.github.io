@@ -71,6 +71,13 @@ or visit <https://wilfridskendall.github.io/talks/Thessaloniki-2024/>.
 
 Sketch of MCMC (I)   {#sec-MCMC-I}
 ==================
+\note{This is a paper from physics, so the senior author is mentioned last!
+
+\bigskip
+
+The Brown\& May (2004) paper provides an incisive and thoughtful evaluation of Teller's r\^ole 
+in American science policy over half a century.
+\par}
 :::: {.columns}
 
 ::: {.column}
@@ -90,7 +97,7 @@ The senior author was Edward Teller ("father of the H-bomb").
 
 \bigskip \text{ } \bigskip \text{ } \bigskip  \bigskip \text{ } \medskip
 
-[Fermi once said,] Teller was the only monomaniac he knew who had several manias: see @BrownMay-2004.
+[Fermi once said that] Teller was the only monomaniac he knew who had several manias: see @BrownMay-2004.
 :::
 
 ::::
@@ -99,6 +106,9 @@ The senior author was Edward Teller ("father of the H-bomb").
 
 Sketch of MCMC (II)   {#sec-MCMC-II}
 ===================
+\note{We begin with a visual introduction to some simple ideas from Markov chain thery
+which are fundamental to MCMC and perfect simulation.
+\par}
 * \structure{Markov chain basics}:
 	- \structure{Transition probabilities} \(p(a,b)\) 
 	(or \structure{transition rates} in continuous time: 
@@ -158,7 +168,10 @@ Sketch of MCMC (IV)   {#sec-MCMC-IV}
 
 Perfect Simulation  {#sec-perfection}
 ==================
-
+\note{
+Jim Propp described the discovery of CFTP as like walking down the street and suddenly noticing
+a 50\$ bill lying on the ground.
+\par}
 * The idea of exact simulation / Coupling from the Past (CFTP) / perfect simulation @ProppWilson-1996a  (Persi Diaconis: “Like seeing the landscape of Mars for the first time”);
 * Ideas (of “_classic CFTP_”): 
 	- extending simulation _backwards_ through time, 
@@ -171,6 +184,10 @@ Perfect Simulation  {#sec-perfection}
 
 An example and some theory  {#sec-example}
 ==========================
+\note{To be very clear, the special "dead leaves" example of CFTP
+was probably well-known to the French workers in 
+statistics of geology who invented the "dead leaves" model, well before CFTP had been formally invented.
+\par}
 * An intensely visual example, which helps many people see intuitively what is going on here, is _DeadLeaves-CFTP_ [@KendallThoennes-1999] (technically, _Occluded CFTP_);
 * What about cases where monotonicity fails? or there isn’t a sensible “maximal” process? @Kendall-1998d: 
 	* cross-couple upper and lower envelope processes, 
@@ -185,21 +202,122 @@ how to implement CFTP in R.
 
 Applications to Queues and Epidemics  {#sec-applications}
 ====================================
+\note{The figure refers to a recent crisis 
+in which \textbf{both} queues \textbf{and} epidemics played a major part!
+\par}
 ![An illustration introducing _both_ queues _and_ epidemics!](https://covidposters.github.io/images/queues.png){width=3.5in}
 
 Perfect Queues  {#sec-queues}
 ==============
- The simplest queuing model (Poisson arrivals, exponential service times, single server) can be analyzed very throughly;
+ The simplest queuing model (Poisson arrivals, exponential service times, single server) can be analyzed very thoroughly;
 
-* Poisson arrivals are not unreasonable, but exponential service times are ludicrous. Fortunately the case of general service time can use the “embedded chain” (sample at instants of departure), if just 1 server;
+* Poisson arrivals are not unreasonable, but exponential service times are ludicrous. The \(M/G/1\) case of general service time _for just one server_ can use the “embedded chain” (sample at instants of departure);
+\note[item]{Why are Exponential service times ludicrous? They imply that the fact that
+you have been waiting one hour for the previous customer to complete service 
+\textbf{has no bearing} on how much longer you still have to wait.
+On second thoughts this can be an accurate model in some dire cases! Fortunately,
+analysis of the \(M/G/1\) case can use the celebrated Pollaczek-Khintchine formula.}
 * Multi-server case: computation of eg waiting-time distribution is out of reach so use simulation [and insights from @KieferWolfowitz-1955];
+\note[item]{Kiefer \& Wolfowitz (1955) is a remarkable paper, establishing a fundamental stochastic recursion
+for the \emph{KieferWolfowitz workload vector}.}
 *  @Sigman-2011 shows how to do CFTP in the "super-stable" case (traffic so low that it could have been handled by just one server), using Dominated CFTP and comparing to a "Processor-sharing" discipline.
-* @ConnorKendall-2014 show how to extend @Sigman-2011, showing how Dominated CFTP can be applied to simulate (sub-critical!) queues perfectly (and this has now been generalized by others to the case of non-Poissonian inter-arrival times). (Technical point: pathwise domination requires service times to be assigned in order of commencement of service!)
+\note[item]{Sigman's result is ingenious and pioneering, but is limited mainly to the case when there is not much
+need for an \(M/G/1\) queue with \(c>1\).}
+
+---
+
+* @ConnorKendall-2014 show how to extend @Sigman-2011, showing how Dominated CFTP can be applied to simulate (sub-critical!) queues perfectly (and this has now been generalized by others to the case of non-Poissonian inter-arrival times). (Technical point: pathwise domination requires service times to be assigned in order of commencement of service!)  
+    - dominate \(M/G/c FCFS\) (FCFS means first come first served)  
+    by \(M/G/c RA = [M/G/1 RA]^c\)  
+    (RA means assign to individual servers on arrival);
+\note[item]{FCFS becomes FIFO ("first in first out") for a single server.}
+\note[item]{\(M/G/c RA = [M/G/1 RA]^c\) is clearly less efficient than \(M/G/c FCFS\); this works pathwise 
+so long as we assign service times in order of commencement of service.}
+    - use fact that _workload_ of \(M/G/1 FCFS\) is same as \(M/G/1 PS\)
+    which can be run backwards in time in equilibrium;  
+     (PS means arrivals Share Processor.)
+\note[item]{Calculations for time reversal apply the ideas underlying the Pollaczek-Khintchine formula.}
+    - so \([M/G/1 PS]^c\) can be used to provide Dominated CFTP.
+* @ConnorKendall-2014 also compare  
+    (a) CFTP coupling when dominating process empties, 
+    (b) a faster CFTP coupling using upper and lower processes 
+    starting respectively at dominating process and at empty state. 
+\note[item]{Using upper and lower "sandwiching" is introduced as part of Dominated CFTP in WSK (1998).}
+
+---
+
+Results (I)
+-----------
+\note{
+CFTP algorithms can be tested against special cases where answers \emph{can} be calculated.
+
+\bigskip
+
+Simulations here use \emph{Mathematica} code.
+Solid bars indicate theoretical mean number of customers in system; shaded bars show the result of 5000
+draws using CFTP.
+\par}
+
+Histogram of customer numbers for \(M/M/c\) queue in equilibrium:
+arrival rate \(10\), service rate \(2\), and \(10\) servers,
+comparing theory 
+(available for \(M/M/c\) queue)
+with results of @ConnorKendall-2014 algorithm.
+
+![](image/output_10_2_10-juxtaposed_labeled.pdf){width=3in}
+
+---
+
+Results (II)
+------------
+\note{
+Algorithm choice really does make a difference.
+In this case, using upper and lower processes results in run-times shorter by a factor of 32,
+more than compensating for some increased complexity.
+
+\bigskip
+
+Simulations here use \emph{Mathematica} code.
+\par}
+
+Comparison of log-run times for  
+(a) CFTP coupling when dominating process empties (solid bars), 
+(b) a faster CFTP coupling using upper and lower processes (grey bars).
+
+![](image/output_10_2_10-times-binary_labeled.pdf){width=3in}
+
+---
+
+Results (III)
+-------------
+\note{
+Here, for fun, a detailed look at the six least heavily loaded servers in equilibrium
+for an \(M/G/c\) queue. 
+
+Notice how server 25 is carrying a heavier load.
+Perfect simulation allows us to have an easy confidence in these simulation results!
+
+\bigskip
+
+Simulations here use \emph{Mathematica} code.
+\par}
+
+Workload distributions of six least heavily loaded servers in an \(M/G/c=25\) queue
+with Uniform(\(0,1\)) service time distribution and arrival rate \(25\).
+
+::: {layout-nrow=2}
+
+![](image/output_uniform_1_labeled.pdf){width=3in}
+
+![](image/output_uniform_2_labeled.pdf){width=3in}
+
+:::
+
 
 Perfect Epidemics  {#sec-epidemics}
 =================
 * Even the simple case of deterministic S-I-R permits only *partial* closed-form solution;
-* Suppose one can observe **only** the “removal times”? Can one do perfect simulation of the infection times? (Given basic parameters.)
+* Suppose **only** the “removal times” are observed? Can the infection times be simulated perfectly? (Given basic parameters.)
 * **YES**: work in progress by Connor and Kendall. Here is a GIF illustrating this for a real-life small-pox epidemic;
 * (be clear about assumptions!)
 * (indicate how the perfect simulation algorithm can be used as a high-dimensional integration device to enable simulation-based Bayesian inference!). 
@@ -227,16 +345,18 @@ Image attributions
 
 ::: {style="font-size: 25%;"}
 
-| Image         | Attribution                                                                    | License      |
+| Image         | Attribution                                                                    |              |
 | ------------- | ------------------------------------------------------------------------------ | ------------ |
 | [Aristotle](https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg) | After Lysippos | _Public domain_ |
 |               |                                                                    | via Wikimedia Commons    |
 | [Edward Teller](https://commons.wikimedia.org/wiki/File:Edward_Teller_in_1958.jpg) | Lawrence Livermore National Laboratory                       | _[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)_    |
 |               | restored by w:User:Greg L, Papa Lima Whiskey                       | via Wikimedia Commons    |  
-| Perfect Ising                                              | Result of code written by WSK     | _[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0)_ | 
-| Dead leaves                                                | Result of code written by WSK     | _[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0)_ | 
+| Perfect Ising                                              | Result of code written by WSK     |              | 
+| Dead leaves                                                | Result of code written by WSK     |              | 
 | [Queues](https://covidposters.github.io/images/queues.png) | <https://covidposters.github.io/> |_Open source_ | 
-| Epidemic                                                   | Result of code written by WSK     | _[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0)_ | 
+| Number of customers in \(M/M/c\) queue              | Result of code written by Stephen Connor |              | 
+| Run-times for \(M/M/c\) queues                      | Result of code written by Stephen Connor |              | 
+| Epidemic                                                   | Result of code written by WSK     |              | 
 
 : {tbl-colwidths="[20,50,30]"}
 

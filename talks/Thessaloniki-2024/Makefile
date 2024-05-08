@@ -18,7 +18,11 @@ notes-2x2         := $(title)-notes-2x2.pdf
 ##################################################
 
 QUARTO	      := /usr/local/bin/quarto
-quarto_opt    := --highlight-style tango
+QUARTO_OPT    := --highlight-style tango
+
+INKSCAPE      := /usr/bin/inkscape
+
+.PHONY: main handout notes full see see_handout see_notes qrcode
 
 ##################################################
 
@@ -36,38 +40,41 @@ see_notes:      $(notes-2x2); xdg-open $(notes-2x2)
 
 %.pdf: %.qmd $(biblio) $(macros)
 	sed -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \
-	$(QUARTO) render $< - --to=beamer $(quarto_opt)              \
+	$(QUARTO) render $< - --to=beamer $(QUARTO_OPT)              \
 	--citeproc --bibliography=$(biblio) --csl=$(csl)
 
 %.tex: %.qmd $(biblio)
-	$(QUARTO) render $< --to=latex $(quarto_opt)
+	$(QUARTO) render $< --to=latex $(QUARTO_OPT)
 
 $(biblio): $(biblio-source)
 	sed --regexp-extended -f $(HOME)/lib/bibfix.sed \
 		-e "s/Kendall, Wilfrid Stephen/WSK/" \
 		"$<" > $(biblio)
 
-image/%.pdf: image/%.svg
-	$(INKSCAPE) --export-area-drawing --export-type="pdf" $< 
+qrcode: image/talk_URL.jpg
 
-qrcode: 
-	qrencode -s 1 -l H -o "image/talk_URL.png" \
-	"https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf"
-	convert image/talk_URL.png image/talk_URL.jpg
-	rm image/talk_URL.png
 #################################################
 
 %-handout.pdf: %.qmd $(biblio)
 	sed -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \
-	$(QUARTO) render $< - --to=beamer $(quarto_opt) --output $@    \
+	$(QUARTO) render $< - --to=beamer $(QUARTO_OPT) --output $@    \
 	--citeproc --bibliography=$(biblio) --csl=$(csl)  \
 	-M classoption=handout
 
 %-notes.pdf: %.qmd $(biblio)
 	sed -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \
-	$(QUARTO) render $< - --to=beamer $(quarto_opt) --output $@    \
+	$(QUARTO) render $< - --to=beamer $(QUARTO_OPT) --output $@    \
 	--citeproc --bibliography=$(biblio) --csl=$(csl)  \
 	-M classoption=notes -M classoption=handout
 
 %-2x2.pdf: %.pdf
 	$(PDFNUP) --tidy --landscape --frame 'true' --scale '0.95' --nup '2x2' $^ -o $@
+
+image/%.pdf: image/%.svg
+	$(INKSCAPE) --export-area-drawing --export-type="pdf" $< 
+
+%.jpg: %.png ; convert $^ $@ ; rm $^
+
+image/talk_URL.png:
+	qrencode -s 1 -l H -o "$@" \
+		"https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf"
