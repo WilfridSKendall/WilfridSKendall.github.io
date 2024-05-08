@@ -494,9 +494,8 @@ and remarkably fast execution using very good ``just in time" compilation techni
     - first observed removal is also the first removal: under a plausible improper prior we can then deduce what is the distribution of infectives $I_0$ at time $0$;
     - all removals are recorded;
     - there are no further removals after the last observed removal.
-* Coding in [_julia_](https://julialang.org/) [@BezansonEdelmanKarpinskiShah-2017],  we can derive
-[a perfect simulation GIF drawing from conditional distribution of pattern of infections](https://wilfridskendall.github.io/talks/Thessaloniki-2024//animation/animation-IS-256.gif)
-(or [MP4](https://wilfridskendall.github.io/talks/Thessaloniki-2024/animation/animation-IS-128.mp4)).
+* Coding in [_julia_](https://julialang.org/) [@BezansonEdelmanKarpinskiShah-2017],  we can construct
+[a perfect simulation GIF resulting in a draw from the conditional distribution of pattern of infections](https://wilfridskendall.github.io/talks/Thessaloniki-2024//animation/animation-IS-256.gif).
 
 \only<1-5>{
 \uncover<5>{\includegraphics[height=1.5in]{image/demo-a.pdf}}
