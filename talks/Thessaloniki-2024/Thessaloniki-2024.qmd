@@ -281,6 +281,7 @@ Simulations here use \emph{Mathematica} code.
 \par}
 
 Comparison of log-run times for  
+
 (a) CFTP coupling when dominating process empties (solid bars), 
 (b) a faster CFTP coupling using upper and lower processes (grey bars).
 
@@ -291,18 +292,18 @@ Comparison of log-run times for
 Results (III)
 -------------
 \note{
-Here, for fun, a detailed look at the six least heavily loaded servers in equilibrium
-for an \(M/G/c\) queue. 
+Here, for fun, a detailed look at the six most heavily loaded servers in equilibrium
+for an \(M/G/c=25\) queue. 
 
-Notice how server 25 is carrying a heavier load.
-Perfect simulation allows us to have an easy confidence in these simulation results!
+Notice how server 25 is definitely carrying a heavier load!
+Perfect simulation allows us to have an easy confidence in these simulation results.
 
 \bigskip
 
 Simulations here use \emph{Mathematica} code.
 \par}
 
-Workload distributions of six least heavily loaded servers in an \(M/G/c=25\) queue
+Workload distributions of six most heavily loaded servers in an \(M/G/c=25\) queue
 with Uniform(\(0,1\)) service time distribution and arrival rate \(25\).
 
 ::: {layout-nrow=2}
