@@ -567,11 +567,7 @@ Technical information
 | \(M/M/c\) loads                   | Result of code written by Stephen Connor |              | 
 | [_Diamond Princess_](https://commons.wikimedia.org/wiki/File:Diamond_Princess_(ship,_2004)_-_cropped.jpg) | Alpsdake | _[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)_ |
 | Epidemic                                                   | Result of code written by WSK     |              | 
-
 : {tbl-colwidths="[22,50,28]"}
-
 :::
 
-
 \scriptsize
-
