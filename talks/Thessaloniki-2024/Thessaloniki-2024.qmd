@@ -495,21 +495,21 @@ and remarkably fast execution using very good ``just in time" compilation techni
     - all removals are recorded;
     - there are no further removals after the last observed removal.
 * Coding in [_julia_](https://julialang.org/) [@BezansonEdelmanKarpinskiShah-2017],  we can derive
-[a perfect simulation drawing from conditional distribution of pattern of infections](https://www.warwick.ac.uk/WSK/animation-demo.gif).
+[a perfect simulation drawing from conditional distribution of pattern of infections](https://wilfridskendall.github.io/talks/Thessaloniki-2024//animation/animation-IS-256.gif).
 
 \only<1-5>{
 \uncover<5>{\includegraphics[height=1.5in]{image/demo-a.pdf}}
 }
-\only<6>{
+\only<6| handout:0>{
 \includegraphics[height=1.5in]{image/demo-b.pdf}
 }
-\only<7>{
+\only<7| handout:0>{
 \includegraphics[height=1.5in]{image/demo-c.pdf}
 }
-\only<8>{
+\only<8| handout:0>{
 \includegraphics[height=1.5in]{image/demo-d.pdf}
 }
-\only<9>{
+\only<9| handout:0>{
 \includegraphics[height=1.5in]{image/demo-e.pdf}
 }
 
