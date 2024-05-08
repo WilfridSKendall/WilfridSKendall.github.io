@@ -339,12 +339,12 @@ References {.allowframebreaks}
 ::: {#refs}
 :::
 
-Image attributions
-==================
+Technical information
+=====================
 
 \scriptsize
 
-::: {style="font-size: 25%;"}
+::: {style="font-size: 15%;"}
 
 | Image         | Attribution                                                                    |              |
 | ------------- | ------------------------------------------------------------------------------ | ------------ |
@@ -355,11 +355,12 @@ Image attributions
 | Perfect Ising                                              | Result of code written by WSK     |              | 
 | Dead leaves                                                | Result of code written by WSK     |              | 
 | [Queues](https://covidposters.github.io/images/queues.png) | <https://covidposters.github.io/> |_Open source_ | 
-| Number of customers in \(M/M/c\) queue              | Result of code written by Stephen Connor |              | 
-| Run-times for \(M/M/c\) queues                      | Result of code written by Stephen Connor |              | 
+| \(M/M/c\) customers              | Result of code written by Stephen Connor |              | 
+| \(M/M/c\) runtimes                      | Result of code written by Stephen Connor |              | 
+| \(M/M/c\) loads                   | Result of code written by Stephen Connor |              | 
 | Epidemic                                                   | Result of code written by WSK     |              | 
 
-: {tbl-colwidths="[20,50,30]"}
+: {tbl-colwidths="[22,50,28]"}
 
 :::
 
