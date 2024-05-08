@@ -14,7 +14,13 @@
 # s/^.*$/|&|/
 
 # Insert header
-1s/^Version.*$/|`git` repository information.\n|------------------------------------------------------|\n| & |/
+1i| | |\n|----|--------------------------------------------------|
+
+5s/^.$/|Comment:|&/
+2,3s/^.*$/|&|/
+
+# Add pipes for date and author
+2,3s/:/:|/
 
 # Delete line describing commit
 /^commit.*$/d
@@ -22,8 +28,9 @@
 # Delete major underlining
 /^=*$/d
 
-# Add tabulation for other lines
-2,$s/^.*$/| & |/
 
-# Add end of table followed by blank line at end
-$s/$/|------------------------------------------------------|\n\n/
+# Introduce summary
+5s/^.*$/|Summary:| & |/
+6,$s/^.*$/|| & |/
+# Add blank lines at end
+$s/$/\n\n/
