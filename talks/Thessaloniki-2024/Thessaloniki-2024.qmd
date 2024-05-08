@@ -7,6 +7,7 @@ author:
       url:            https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf
       affiliation:    University of Warwick Department of Statistics
       affilation-url: https://www.warwick.ac.uk/statsdept
+institute: Department of Statistics, University of Warwick
 license:    "CC BY"
 ---
 
@@ -18,6 +19,8 @@ format:
     beamer:
         date-format:     "D MMMM YYYY"
         logo:            image/WarwickStatistics-small.png
+        titlegraphic:    image/talk_URL.jpg
+
         theme:           Boadilla
         mainfont:        "Times New Roman"
         monofont:        "JuliaMono"
@@ -26,6 +29,7 @@ format:
         citecolor:       blue
         hyperrefoptions:
             - pdfstartview=Fit
+
         include-in-header:
             - "Thessaloniki-2024.sty"
         nocite: |
@@ -56,15 +60,14 @@ Aristotle:
 
 \bigskip
 
-Handout available on the web: either use the `QR-code` and follow links,    
-![](image/talk_URL.jpg){width=1in}  
-or link directly using this URL:
+Handout available on the web: either use the `QR-code`  
+![](image/talk_URL.jpg)
 
 :::
 
 ::::
 
-<https://wilfridskendall.github.io/talks/Thessaloniki-2024/>
+or visit <https://wilfridskendall.github.io/talks/Thessaloniki-2024/>.
 
 Sketch of MCMC (I)   {#sec-MCMC-I}
 ==================

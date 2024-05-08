@@ -10,4 +10,24 @@ Dating back as far as the classic Metropolis et al.  (1953) paper, approximate s
 
 **Acknowledgments:** The author acknowledges support of UK EPSRC grant EP/R022100.
 
-Talk handout is at <https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf>.
+------
+
+To construct the talk, handout, and notes: use (respectively)
+
+```
+make
+make handout
+make notes
+```
+
+
+
+The talk handout is located at <https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf>. The QR code for the handout is generated (as a `PNG` file) by
+
+```bash
+qrencode -s 3 -l H -o "image/talk_URL.png" \
+"https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf"
+
+```
+
+or simply `make qrcode`.

@@ -49,7 +49,12 @@ $(biblio): $(biblio-source)
 
 image/%.pdf: image/%.svg
 	$(INKSCAPE) --export-area-drawing --export-type="pdf" $< 
-		
+
+qrcode: 
+	qrencode -s 1 -l H -o "image/talk_URL.png" \
+	"https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf"
+	convert image/talk_URL.png image/talk_URL.jpg
+	rm image/talk_URL.png
 #################################################
 
 %-handout.pdf: %.qmd $(biblio)
