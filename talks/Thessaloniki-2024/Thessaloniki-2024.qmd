@@ -496,7 +496,7 @@ and remarkably fast execution using very good ``just in time" compilation techni
     - there are no further removals after the last observed removal.
 * Coding in [_julia_](https://julialang.org/) [@BezansonEdelmanKarpinskiShah-2017],  we can derive
 [a perfect simulation GIF drawing from conditional distribution of pattern of infections](https://wilfridskendall.github.io/talks/Thessaloniki-2024//animation/animation-IS-256.gif)
-(or [MP4](https://wilfridskendall.github.io/talks/Thessaloniki-2024//animation/animation-IS-128.mp4)).
+(or [MP4](https://wilfridskendall.github.io/talks/Thessaloniki-2024/animation/animation-IS-128.mp4)).
 
 \only<1-5>{
 \uncover<5>{\includegraphics[height=1.5in]{image/demo-a.pdf}}
