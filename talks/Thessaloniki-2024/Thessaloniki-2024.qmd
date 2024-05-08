@@ -181,7 +181,7 @@ Perfect Simulation  {#sec-perfection}
 Jim Propp described the discovery of CFTP as like walking down the street and suddenly noticing
 a 50\$ bill lying on the ground.
 \par}
-* The idea of exact simulation / Coupling from the Past (CFTP) / perfect simulation @ProppWilson-1996a  (Persi Diaconis: “Like seeing the landscape of Mars for the first time”);
+* The @ProppWilson-1996a  idea of exact simulation / Coupling from the Past (CFTP) / perfect simulation (Persi Diaconis: “Like seeing the landscape of Mars for the first time”);
 * Ideas (of “_classic CFTP_”): 
 	- extending simulation _backwards_ through time, 
 	- exploit monotonicity by coupling maximal and minimal processes, 
@@ -497,19 +497,19 @@ and remarkably fast execution using very good ``just in time" compilation techni
 * Coding in [_julia_](https://julialang.org/) [@BezansonEdelmanKarpinskiShah-2017],  we can construct
 [a perfect simulation GIF resulting in a draw from the conditional distribution of pattern of infections](https://wilfridskendall.github.io/talks/Thessaloniki-2024//animation/animation-IS-256.gif).
 
-\only<1-5>{
-\uncover<5>{\includegraphics[height=1.5in]{image/demo-a.pdf}}
-}
-\only<6| handout:0>{
-\includegraphics[height=1.5in]{image/demo-b.pdf}
+\only<1-6>{
+\uncover<6>{\includegraphics[height=1.5in]{image/demo-a.pdf}}
 }
 \only<7| handout:0>{
-\includegraphics[height=1.5in]{image/demo-c.pdf}
+\includegraphics[height=1.5in]{image/demo-b.pdf}
 }
 \only<8| handout:0>{
-\includegraphics[height=1.5in]{image/demo-d.pdf}
+\includegraphics[height=1.5in]{image/demo-c.pdf}
 }
 \only<9| handout:0>{
+\includegraphics[height=1.5in]{image/demo-d.pdf}
+}
+\only<10| handout:0>{
 \includegraphics[height=1.5in]{image/demo-e.pdf}
 }
 
@@ -530,13 +530,13 @@ integrate out the pattern of unobserved infections.
 
 Conclusion  {#sec-conclusion}
 ==========
-* You may not need to put up with burn-in issues when doing MCMC. 
-Consider the possibility of using perfect simulation!
+* Are you worried about burn-in issues when doing MCMC. 
+Consider whether perfect simulation can be applied!
 * CFTP works even for significantly complex and relevant models of real-life phenomena;
-* _Of course_ really detailed models are still going to resist perfect simulation: but it will always be helpful to compare with a simpler model (using fewer parameters!). 
+* _Of course_ really detailed models will resist perfect simulation: but it can be helpful to compare with a simpler model (especially, using fewer parameters). 
 * CFTP is clearly an important tool to be considered by the investigator seeking to 
 implement accurate and informative MCMC.
-
+* Thank you for your attention! \alert{QUESTIONS?}
 
 References {.allowframebreaks .t} 
 ==========
