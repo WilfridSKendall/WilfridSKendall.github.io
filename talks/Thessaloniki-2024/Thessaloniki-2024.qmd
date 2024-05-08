@@ -33,7 +33,7 @@ format:
         include-in-header:
             - "Thessaloniki-2024.sty"
         nocite: |
-            @Rmanual-2010
+            @Rmanual-2010, @MizumotoKagayaZarebskiChowell-2020, @FraserEtAl-2023
 ---
 
 
@@ -45,7 +45,7 @@ Introduction   {#sec-introduction}
 
 ::: {.column}
 
-![`Αριστοτέλης` 384–322 BCE](image/Aristotle_Altemps_Inv8575.jpg){width=1.5in}
+![`Αριστοτέλης` 384–322 BCE](image/Aristotle_Altemps_Inv8575.jpg){width=2in}
 
 :::
 
@@ -60,8 +60,12 @@ Aristotle:
 
 \bigskip
 
+\text{ }
+
+\bigskip
+
 Handout available on the web: either use the `QR-code`  
-![](image/talk_URL.jpg)
+\qquad\qquad ![](image/talk_URL.jpg)
 
 :::
 
@@ -71,12 +75,17 @@ or visit <https://wilfridskendall.github.io/talks/Thessaloniki-2024/>.
 
 Sketch of MCMC (I)   {#sec-MCMC-I}
 ==================
-\note{This is a paper from physics, so the senior author is mentioned last!
+\note{This is a paper from physics, so the senior author comes last in the citation!
 
 \bigskip
 
 The Brown\& May (2004) paper provides an incisive and thoughtful evaluation of Teller's r\^ole 
-in American science policy over half a century.
+in American science policy over half a century. 
+
+\bigskip
+
+Teller is said to have appreciated and
+repeated the ``monomania" quip -- ascribed by some to Fermi.
 \par}
 :::: {.columns}
 
@@ -97,7 +106,7 @@ The senior author was Edward Teller ("father of the H-bomb").
 
 \bigskip \text{ } \bigskip \text{ } \bigskip  \bigskip \text{ } \medskip
 
-[Fermi once said that] Teller was the only monomaniac he knew who had several manias: see @BrownMay-2004.
+[Fermi once remarked that] Teller was the only monomaniac he knew who had _several_ manias [@BrownMay-2004].
 :::
 
 ::::
@@ -184,9 +193,9 @@ a 50\$ bill lying on the ground.
 
 An example and some theory  {#sec-example}
 ==========================
-\note{To be very clear, the special "dead leaves" example of CFTP
+\note{To be very clear, the special ``dead leaves" example of CFTP
 was probably well-known to the French workers in 
-statistics of geology who invented the "dead leaves" model, well before CFTP had been formally invented.
+statistics of geology who invented the ``dead leaves" model, well before CFTP had been formally invented.
 \par}
 * An intensely visual example, which helps many people see intuitively what is going on here, is _DeadLeaves-CFTP_ [@KendallThoennes-1999] (technically, _Occluded CFTP_);
 * What about cases where monotonicity fails? or there isn’t a sensible “maximal” process? @Kendall-1998d: 
@@ -204,52 +213,67 @@ Applications to Queues and Epidemics  {#sec-applications}
 ====================================
 \note{The figure refers to a recent crisis 
 in which \textbf{both} queues \textbf{and} epidemics played a major part!
+
+\bigskip
+
+We now consider perfect simulation applied to significant probabilistic systems
+in queuing theory and in epidemics.
+We'll pick up pace here. The primary purpose
+is to demonstrate that perfect simulation is more than just a toy technique
+for wildly simple cases.
+
 \par}
 ![An illustration introducing _both_ queues _and_ epidemics!](https://covidposters.github.io/images/queues.png){width=3.5in}
 
 Perfect Queues  {#sec-queues}
 ==============
- The simplest queuing model (Poisson arrivals, exponential service times, single server) can be analyzed very thoroughly;
+ The simplest queuing model (\(M/M/1\): Poisson arrivals, exponential service times, single server) can be analyzed very thoroughly indeed! However:
 
-* Poisson arrivals are not unreasonable, but exponential service times are ludicrous. The \(M/G/1\) case of general service time _for just one server_ can use the “embedded chain” (sample at instants of departure);
+* Poisson arrivals are not unreasonable, but exponential service times are ludicrous. The \(M/G/1\) case (general service time _for just one server_)
+can be analyzed using the “embedded chain” (sample at each departure);
 \note[item]{Why are Exponential service times ludicrous? They imply that the fact that
 you have been waiting one hour for the previous customer to complete service 
 \textbf{has no bearing} on how much longer you still have to wait.
 On second thoughts this can be an accurate model in some dire cases! Fortunately,
 analysis of the \(M/G/1\) case can use the celebrated Pollaczek-Khintchine formula.}
-* Multi-server case: computation of eg waiting-time distribution is out of reach so use simulation [and insights from @KieferWolfowitz-1955];
+* Multi-server case: computation of _eg_ waiting-time distribution is out of reach so use simulation [and insights from @KieferWolfowitz-1955];
 \note[item]{Kiefer \& Wolfowitz (1955) is a remarkable paper, establishing a fundamental stochastic recursion
 for the \emph{KieferWolfowitz workload vector}.}
-*  @Sigman-2011 shows how to do CFTP in the "super-stable" case (traffic so low that it could have been handled by just one server), using Dominated CFTP and comparing to a "Processor-sharing" discipline.
+*  @Sigman-2011 shows how to do CFTP in the "super-stable" case (traffic so low that it could have been handled by just one server), using Dominated CFTP and comparing to a "Processor-Sharing" discipline.
 \note[item]{Sigman's result is ingenious and pioneering, but is limited mainly to the case when there is not much
-need for an \(M/G/1\) queue with \(c>1\).}
+need for an \(M/G/c\) queue with \(c>1\).}
 
 ---
 
-* @ConnorKendall-2014 show how to extend @Sigman-2011, showing how Dominated CFTP can be applied to simulate (sub-critical!) queues perfectly (and this has now been generalized by others to the case of non-Poissonian inter-arrival times). (Technical point: pathwise domination requires service times to be assigned in order of commencement of service!)  
-    - dominate \(M/G/c FCFS\) (FCFS means first come first served)  
-    by \(M/G/c RA = [M/G/1 RA]^c\)  
-    (RA means assign to individual servers on arrival);
-\note[item]{FCFS becomes FIFO ("first in first out") for a single server.}
-\note[item]{\(M/G/c RA = [M/G/1 RA]^c\) is clearly less efficient than \(M/G/c FCFS\); this works pathwise 
+* @ConnorKendall-2014 extend @Sigman-2011,
+showing how to apply Dominated CFTP to simulate (sub-critical!) queues perfectly; 
+now generalized by others to the case of non-Poissonian inter-arrival times. 
+(Technical point: pathwise domination needs service times to be assigned in order of commencement of service!) 
+The idea is  
+    - dominate \(M/G/c\ \operatorname{FCFS}\) (\(\operatorname{FCFS}\) means first come first served)  
+    by \(M/G/c\ \operatorname{RA} = [M/G/1\ \operatorname{RA}]^c\)  
+    (\(\operatorname{RA}\) means assign to individual servers on arrival);
+\note[item]{\(\operatorname{FCFS}\) becomes \(\operatorname{FIFO}\) ("first in first out") for a single server.}
+\note[item]{\(M/G/c\ \operatorname{RA} = [M/G/1\ \operatorname{RA}]^c\) is clearly less efficient than \(M/G/c\ \operatorname{FCFS}\); this works pathwise 
 so long as we assign service times in order of commencement of service.}
-    - use fact that _workload_ of \(M/G/1 FCFS\) is same as \(M/G/1 PS\)
-    which can be run backwards in time in equilibrium;  
-     (PS means arrivals Share Processor.)
+    - use fact that \(M/G/1\ \operatorname{FCFS}\) and \(M/G/1\ \operatorname{PS}\) _workloads_ agree 
+     (\(\operatorname{PS}\) means Processor Sharing: pool servers to serve everyone simultaneously)
+    and  \(M/G/1\ \operatorname{PS}\) can be simulated backwards in time;  
 \note[item]{Calculations for time reversal apply the ideas underlying the Pollaczek-Khintchine formula.}
-    - so \([M/G/1 PS]^c\) can be used to provide Dominated CFTP.
-* @ConnorKendall-2014 also compare  
+    - so \([M/G/1\ \operatorname{PS}]^c\) can be used to provide Dominated CFTP.
+* @ConnorKendall-2014 describe 
     (a) CFTP coupling when dominating process empties, 
-    (b) a faster CFTP coupling using upper and lower processes 
+    (b) and a faster CFTP coupling using upper and lower processes 
     starting respectively at dominating process and at empty state. 
-\note[item]{Using upper and lower "sandwiching" is introduced as part of Dominated CFTP in WSK (1998).}
+\note[item]{Using upper and lower ``sandwiching" is introduced as part of Dominated CFTP in WSK (1998).}
 
 ---
 
 Results (I)
 -----------
 \note{
-CFTP algorithms can be tested against special cases where answers \emph{can} be calculated.
+CFTP algorithms can be tested against special cases where answers \emph{can} be calculated
+not just simulated.
 
 \bigskip
 
@@ -292,19 +316,30 @@ Comparison of log-run times for
 Results (III)
 -------------
 \note{
-Here, for fun, a detailed look at the six most heavily loaded servers in equilibrium
-for an \(M/G/c=25\) queue. 
+Here, for fun, a detailed look at the last six coordinates of the equilibrium Kiefer-Wolfowitz 
+workload vector for a particular \(M/\operatorname{Uniform}(0,1)/c=25\) queue.
+("the ordered amounts of residual work in the system for
+the \(c\) servers, bearing in mind the \(\operatorname{FCFS}\) queueing discipline").
 
-Notice how server 25 is definitely carrying a heavier load!
-Perfect simulation allows us to have an easy confidence in these simulation results.
+\bigskip
+
+The coordinates are correlated, and increase monotonically with ``server" (actually, 
+Kiefer-Wolfowitz dimension).
+Note that the last coordinate
+is more skewed, so anticipated to do noticeably more work!
+
+\bigskip
+
+Perfect simulation allows us to place our confidence in these simulation results.
 
 \bigskip
 
 Simulations here use \emph{Mathematica} code.
 \par}
 
-Workload distributions of six most heavily loaded servers in an \(M/G/c=25\) queue
-with Uniform(\(0,1\)) service time distribution and arrival rate \(25\).
+Marginal distributions of last six coordinates of the equilibrium Kiefer-Wolfowitz 
+workload vector (anticipated work in system) for an \(M/G/c=25\) queue
+with Uniform(\(0,1\)) service times and arrival rate \(25\).
 
 ::: {layout-nrow=2}
 
@@ -317,21 +352,193 @@ with Uniform(\(0,1\)) service time distribution and arrival rate \(25\).
 
 Perfect Epidemics  {#sec-epidemics}
 =================
-* Even the simple case of deterministic S-I-R permits only *partial* closed-form solution;
-* Suppose **only** the “removal times” are observed? Can the infection times be simulated perfectly? (Given basic parameters.)
-* **YES**: work in progress by Connor and Kendall. Here is a GIF illustrating this for a real-life small-pox epidemic;
-* (be clear about assumptions!)
-* (indicate how the perfect simulation algorithm can be used as a high-dimensional integration device to enable simulation-based Bayesian inference!). 
+\note{
+Two classical models from mathematical epidemiology.
+Even the simple case of deterministic S-I-R permits only \emph{partial} closed-form solution;
+
+\bigskip
+
+The assumption of homogeneous mixing of population greatly simplifies the mathematics \emph{and}
+statistics.
+Without this assumption one ends up with huge numbers of parameters, which is very bad news statistically speaking.
+A lot of research has been done on how to deal with more realistic models!
+(For example, [a UK model using 1000000 agents!](https://github.com/BDI-pathogens/OpenABM-Covid19),
+Fraser et al, 2023)
+
+\bigskip
+
+However in this work we deal only with homogeneous mixing.
+Before running, one must learn to walk!
+\par}
+**S-I-R deterministic epidemic:** susceptibles $s$, infectives $i$, removals $r$:
+$$
+\begin{aligned}
+s' \quad&=\quad - \alpha \; i \, s \,,
+\\
+i' \quad&=\quad \left(\alpha \; s - \beta\;\right)\;i \,,
+\\
+r' \quad&=\quad \beta\; i \,.
+\end{aligned}
+$$
+(Total population $s+i+r=n$​  is constant.)
+\pause
+
+**S-I-R stochastic epidemic:** a Markov chain $(S, I, R)$​ with transitions
+$$
+\begin{aligned}
+\textbf{Infection:}& \quad S \to S-1\,, &\; I \to I+1 \qquad&\text{at rate}\qquad \alpha\; I \, S \,,
+\\
+\textbf{Removal:}& \quad I \to I-1\,, &\; R \to R+1 \qquad&\text{at rate}\qquad \beta\; I  \,.
+\end{aligned}
+$$
+
+\pause
+Both models assume homogeneous mixing.
+
+The first question asked about a new epidemic
+=============================================
+\note{
+I am skipping over very influential early work on this incident,
+which particularly focussed on the incubation period
+(a time when the subject is infectious, perhaps at time-varying rate, before symptoms appear).
+This is pretty much related to $\beta$.
+
+
+\bigskip
+
+See Mizumoto \emph{et al} (2020) for very early analysis of the \emph{Diamond Princess} outbreak.
+\par}
+"What is the R-number?"  
+\pause
+The R-number is $\alpha \; n/\beta$: mean number of new infectives produced per infective at _start_ of epidemic.  
+Whittle's threshold theorem: R-number $\gg1$ means positive chance of epidemic infecting significant proportion of the population.
+\pause
+
+[*Wikipedia:*](https://en.wikipedia.org/wiki/COVID-19_pandemic_on_Diamond_Princess) 
+"The British-registered _Diamond Princess_ was the first cruise ship to have a major `[COVID-19]` outbreak on board, with the ship quarantined at Yokohama from 4 February 2020 for about a month. Of 3711 passengers and crew, around 700 people became infected and 9 people died."  
+Evidently $\alpha \; n/\beta \gg 1$ -- as was sadly later confirmed, a sorrow for us all.  
+![](image/Diamond_Princess.jpg){width=2in}
+
+Inference on the R-number
+=========================
+\note{
+The ``R-nunber" was the subject of continuing interest throughout the COVID-19 pandemic!
+\par}
+Important, because the R-number controls severity of epidemic. However:
+
+1. It's **tough**. _Either_ massive assumptions (homogeneous mixing) or far too many parameters;
+2. It's **really** **tough**. It's hard to get good information about infection times;
+3. It's **especially** **tough** early on. You most want to know the answer when there is hardly any information available (I devised a simplified exercise for a Warwick second-year statistics module to show how tough this can be);
+4. Markov chain Monte Carlo (MCMC) can be used [@ONeillRoberts-1999] but what about burn-in?
+5. Can we use \structure{perfect simulation}?
+
+An easier question
+==================
+\note{
+I learned the phrase ``algorithmic time" from Andrew Stuart.
+\par}
+1. Suppose we know $n$, $\alpha$, $\beta$​, observe removals, but *don't* observe infections which must be inferred.
+2. We need a new chain: namely, the whole S-I-R trajectory evolving in *algorithmic time* 
+using varying pattern of potential infections and removals.
+3. Visualize $n$ time lines, along which are scattered incidents: 
+   * potential removals, activated if time line is infected;
+   * potential infections, activated if time line is infected *and* if designated target time line is lowest uninfected time line.
+4. Using Poisson point processes of appropriate rates to scatter these incidents, we obtain an S-I-R epidemic.
+5. Now let the point patterns evolve _in algorithmic time_, adding and removing incidents according to spatial immigration-death processes.
+6. Result is a trajectory-valued chain which has unconditioned S-I-R as equilibrium.
+
+
+Conditioning on observed removals 
+=================================
+\note{
+Monotonicity is a key concept here. Note however
+that we can still sometimes generate perfect simulation algorithms
+even when monotonicity does not obtain.
+
+\bigskip
+We can also deal with ``unbounded" sample space
+using the notion of Dominated CFTP.
+
+\bigskip
+The heart of the matter lies in establishing (some variant of) monotonicity.
+
+\bigskip
+Additionally. for a complicated algorithm such as this one, it is important
+to test the underlying logic by implementing the algorithm in computer code
+(which has a way of revealing false hidden assumptions!).
+\par}
+* The trajectory-valued chain is *reversible*.
+* So if we forbid the evolution to get rid of observed removals, and forbid it to introduce new activated removals, then the modified chain has invariant probability measure which conditions on observed pattern of removals. Implications:
+  * conditioned removals can change time line (if still activated) but not time of occurrence;
+  * removals can be introduced only if they don't activate;
+  * sometimes infections cannot be removed (because that would result in losing a conditioned removal).
+* More housekeeping details required to define algorithm precisely and make sure reversibility and
+mootonicity still work.
+* Need to ensure irreducibility (or otherwise equilibrium will depend on starting point).
+* Does this produce a feasible algorithm?
+
+Example
+=======
+\note{
+We could vary the assumption concerning the initial and final numbers of infectives while still using essentially the same perfect simulation algorithm!
+This assumption amounts to assuming some Bayesian prior knowledge.
+
+\bigskip
+
+Implementation uses \emph{julia},
+which combines rapid development, an expressive syntax (very useful for involved algorithms),
+and remarkably fast execution using very good ``just in time" compilation techniques.
+\par}
+* Smallpox outbreak in a closed community of 120 individuals in Abakaliki, Nigeria [@ONeillRoberts-1999; @Bailey-1975, p. 125].
+* **Assume**  
+    - first observed removal is also the first removal: under a plausible improper prior we can then deduce what is the distribution of infectives $I_0$ at time $0$;
+    - all removals are recorded;
+    - there are no further removals after the last observed removal.
+* Coding in [_julia_](https://julialang.org/) [@BezansonEdelmanKarpinskiShah-2017],  we can derive
+[a perfect simulation drawing from conditional distribution of pattern of infections](https://www.warwick.ac.uk/WSK/animation-demo.gif).
+
+\only<1-5>{
+\uncover<5>{\includegraphics[height=1.5in]{image/demo-a.pdf}}
+}
+\only<6>{
+\includegraphics[height=1.5in]{image/demo-b.pdf}
+}
+\only<7>{
+\includegraphics[height=1.5in]{image/demo-c.pdf}
+}
+\only<8>{
+\includegraphics[height=1.5in]{image/demo-d.pdf}
+}
+\only<9>{
+\includegraphics[height=1.5in]{image/demo-e.pdf}
+}
+
+So what?
+========
+\note{
+In effect, perfect simulation supplies a well-behaved stochastic integration mechanism,
+reducing an MCMC algorithm to use a technique equivalent to a much more amenable Monte Carlo calculation.
+\par}
+* You may be wondering, why this emphasis on unobserved infections given fixed $\alpha$ and $\beta$, when what we really want is inference on R-number $\alpha \; n/\beta$ for _unknown_ $\alpha$ and $\beta$?
+* Good question. But a re-weighting argument allows us to get (unbiased) estimates based on *different* $\alpha$ and $\beta$. Essentially the perfect simulation provides an exact simulation-based computation which permits us to
+integrate out the pattern of unobserved infections. 
+* This means we can [**work in progress**, @ConnorKendall-2023]  
+    - construct a steepest ascent algorithm 
+  (in effect, a variant on a Robbins-Monro stochastic optimization algorithm)
+  to find *maximum a posterior* estimates of $\alpha$ and $\beta$;
+    - or even, with some computational effort, compute the entire posterior joint density for $\alpha$ and $\beta$!
 
 Conclusion  {#sec-conclusion}
 ==========
-* You don’t always have to put up with burn-in issues when doing MCMC;
+* You may not need to put up with burn-in issues when doing MCMC. 
+Consider the possibility of using perfect simulation!
 * CFTP works even for significantly complex and relevant models of real-life phenomena;
 * _Of course_ really detailed models are still going to resist perfect simulation: but it will always be helpful to compare with a simpler model (using fewer parameters!). 
-* CFTP is clearly an important tool to be considered by the investigator seeking to do accurate and informative MCMC.
+* CFTP is clearly an important tool to be considered by the investigator seeking to 
+implement accurate and informative MCMC.
 
 
-References {.allowframebreaks} 
+References {.allowframebreaks .t} 
 ==========
 
 \scriptsize
@@ -358,6 +565,7 @@ Technical information
 | \(M/M/c\) customers              | Result of code written by Stephen Connor |              | 
 | \(M/M/c\) runtimes                      | Result of code written by Stephen Connor |              | 
 | \(M/M/c\) loads                   | Result of code written by Stephen Connor |              | 
+| [_Diamond Princess_](https://commons.wikimedia.org/wiki/File:Diamond_Princess_(ship,_2004)_-_cropped.jpg) | Alpsdake | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 | Epidemic                                                   | Result of code written by WSK     |              | 
 
 : {tbl-colwidths="[22,50,28]"}
