@@ -426,9 +426,9 @@ The ``R-nunber" was the subject of continuing interest throughout the COVID-19 p
 \par}
 Important, because the R-number controls severity of epidemic. However:
 
-1. It's **tough**. _Either_ massive assumptions (homogeneous mixing) or far too many parameters;
-2. It's **really** **tough**. It's hard to get good information about infection times;
-3. It's **especially** **tough** early on. You most want to know the answer when there is hardly any information available (I devised a simplified exercise for a Warwick second-year statistics module to show how tough this can be);
+1. It's \alert{tough}. _Either_ massive assumptions (homogeneous mixing) or far too many parameters;
+2. It's \alert{really} \alert{tough}. It's hard to get good information about infection times;
+3. It's \alert{especially} \alert{tough} early on. You most need to know the answer when there is hardly any information available (I devised a simplified exercise for a Warwick second-year statistics module to show how tough this is);
 4. Markov chain Monte Carlo (MCMC) can be used [@ONeillRoberts-1999] but what about burn-in?
 5. Can we use \structure{perfect simulation}?
 
@@ -565,7 +565,7 @@ Technical information
 | \(M/M/c\) customers              | Result of code written by Stephen Connor |              | 
 | \(M/M/c\) runtimes                      | Result of code written by Stephen Connor |              | 
 | \(M/M/c\) loads                   | Result of code written by Stephen Connor |              | 
-| [_Diamond Princess_](https://commons.wikimedia.org/wiki/File:Diamond_Princess_(ship,_2004)_-_cropped.jpg) | Alpsdake | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| [_Diamond Princess_](https://commons.wikimedia.org/wiki/File:Diamond_Princess_(ship,_2004)_-_cropped.jpg) | Alpsdake | _[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)_ |
 | Epidemic                                                   | Result of code written by WSK     |              | 
 
 : {tbl-colwidths="[22,50,28]"}
