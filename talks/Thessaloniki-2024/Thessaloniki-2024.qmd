@@ -121,7 +121,7 @@ which are fundamental to MCMC and perfect simulation.
 \par}
 * \structure{Transition probabilities} \(p(a,b)\)  
 	![](image/mc1.jpg){height=0.7in}
-	\pause\qquad
+	\qquad
 	![](image/mc2.jpg){height=0.7in}
 \note[item]{\structure{Transition rates} in continuous time: 
 unified view using exponential distribution.
@@ -131,8 +131,8 @@ assign proportions of probability to neighbouring states \(b\).}
 * \structure{Εquilibrium probabilities} \(\pi(a)\) arise from balance equations;  
     ![](image/mc3.jpg){height=0.7in}  
 \note[item]{Solve balance equations: quickly now!}
-	\pause
-	solve balance equations: equilibrium probabilities defined by the ratio  
+
+* \structure{solve} balance equations: equilibrium probabilities defined by the ratio  
 	![](image/mc4.jpg){height=1in}
 
 ---
@@ -143,8 +143,6 @@ assign proportions of probability to neighbouring states \(b\).}
 Also, curiously, the chain is then \emph{reversible} when in equilibrium.}
 
 ![](image/mc5.jpg){height=1in}
-
-\pause
 
 ![](image/mc6.jpg){height=1in}
 
@@ -199,14 +197,14 @@ Sketch of MCMC (IV)   {#sec-MCMC-IV}
 Given the \(\pi(a)\), how to \structure{design}
 a Markov chain to have this as equilibrium?
 
-(i) \structure{Independence sampler}: draw from a fixed probability distribution,
+(i) \structure{Independence sampler}: propose a draw from a fixed probability distribution,
 apply Metropolis-Hastings;
 \note[item]{We'll use this.}
-(ii) \structure{Random walk Metropolis} or \structure{RWM}: propose move using a random walk,
+(ii) \structure{Random walk Metropolis} or \structure{RWM}: propose a move using a random walk,
 apply Metropolis-Hastings;
 \note[item]{We'll use this.}
 (iii) \structure{Metropolis-adjusted Langevin} or \structure{MALA}:
-make a Gaussian jump shifted using gradient of \(\log\pi\), apply Metropolis-Hastings.\pause
+propose a Gaussian jump shifted using gradient of \(\log\pi\), apply Metropolis-Hastings.\pause
 
 Can mix-and-match! RWM is often favourite: flexible, not too complicated.\pause
 \note[item]{We'll mix and match.}
@@ -307,9 +305,9 @@ Remarkably, this can easily be converted into a fully rigorous proof!}
 
 
 \only<1| handout:0>{\includegraphics[width=3.5in]{image/basic-rw3.png}}
-\only<2| handout:0>{\includegraphics[width=3.5in]{image/basic-rw3.png}}
-\only<3| handout:0>{\includegraphics[width=3.5in]{image/basic-rw4.png}}
-\only<4| handout:0>{\includegraphics[width=3.5in]{image/basic-rw5.png}}
+\only<2| handout:0>{\includegraphics[width=3.5in]{image/basic-rw4.png}}
+\only<3| handout:0>{\includegraphics[width=3.5in]{image/basic-rw5.png}}
+\only<4| handout:0>{\includegraphics[width=3.5in]{image/basic-rw6.png}}
 \only<5| handout:1>{\includegraphics[width=3.5in]{image/basic-rwCFTP.png}}
 
 
