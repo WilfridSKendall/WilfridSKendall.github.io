@@ -275,7 +275,7 @@ in mathematical geomorphology.}
 
 * Once the hole in the ground is covered, the pattern for the mammal never changes, whereas for the walker
 the pattern changes ceaselessly.
-\note[item]{That of ourse is the point for small hibernating mammals.}
+\note[item]{That of course is the point for small hibernating mammals.}
 
 * One may deduce, 
 [the animal's perceived pattern at coverage is distributed as the long-time equilibrium
