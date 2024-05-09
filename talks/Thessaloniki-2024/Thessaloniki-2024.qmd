@@ -53,7 +53,7 @@ Introduction   {#sec-introduction}
 
 Aristotle: 
 
-- "Pleasure in the job puts perfection in the work."
+- "Think as the wise men think, but talk like the simple people do."
 - "The more you know, the more you know you don't know."
 
 \pause
@@ -72,7 +72,7 @@ Handout available on the web: either use the `QR-code`
 
 ::::
 
-or visit <https://wilfridskendall.github.io/talks/Thessaloniki-2024/>.
+\qquad \qquad or visit <https://wilfridskendall.github.io/talks/Thessaloniki-2024/>.
 
 Sketch of MCMC (I)   {#sec-MCMC-I}
 ==================
@@ -116,7 +116,9 @@ The senior author was Edward Teller ("father of the H-bomb").
 
 Sketch of MCMC (II): basic Markov chain theory   {#sec-MCMC-II}
 ==============================================
-\note{We begin with a visual introduction to some simple ideas from Markov chain thery
+\note{We begin with a \textbf{visual} introduction 
+(pictures not equations!)
+to some simple ideas from Markov chain thery
 which are fundamental to MCMC and perfect simulation.
 \par}
 * \structure{Transition probabilities} \(p(a,b)\)  
@@ -130,9 +132,9 @@ assign proportions of probability to neighbouring states \(b\).}
 
 * \structure{Εquilibrium probabilities} \(\pi(a)\) arise from balance equations;  
     ![](image/mc3.jpg){height=0.7in}  
-\note[item]{Solve balance equations: quickly now!}
+\note[item]{Solve balance equations: quickly now! (Actually this can be \emph{very} onerous.)}
 
-* \structure{solve} balance equations: equilibrium probabilities defined by the ratio  
+* \structure{Solve} balance equations: equilibrium probabilities defined by the ratio  
 	![](image/mc4.jpg){height=1in}
 
 ---
@@ -140,6 +142,7 @@ assign proportions of probability to neighbouring states \(b\).}
 * \structure{detailed balance} \(\pi(a) p(a,b)=\pi(b) p(b,a)\), 
 	\structure{reversibility};
 \note[item]{It's \emph{much} easier if we can arrange balance between individual pairs of states!
+(Although determination of the normalizing constant can still be extremely challenging.)
 Also, curiously, the chain is then \emph{reversible} when in equilibrium.}
 
 ![](image/mc5.jpg){height=1in}
@@ -150,17 +153,17 @@ Also, curiously, the chain is then \emph{reversible} when in equilibrium.}
 ---
 	
 * \structure{Existence of equilibrium:} we need 
-\note{Failures for each of these as indicated:
+\note{Failures for each of these as indicated in the state diagrams:
 \par}
-    - aperiodicity, not  
+    - aperiodicity, not periodicity  
     ![](image/mc7.jpg){height=0.7in}  
 \note[item]{periodicity: chain alternates between blue and red states;}
-	- irreducibility, not  
+	- irreducibility, not reducibility  
 	![](image/mc8.jpg){height=1in}  
 \note[item]{reducibility: chain eventually leaves blue states never to return;}
-	- recurrence (uniform or geometric recurrence even better), not  
+	- recurrence (even uniform or geometric), not transience  
 	![](image/mc9.jpg){height=0.7in}
-\note[item]{transience: one can show the chain eventually drifts off to left never to return.}
+\note[item]{transience: one can show the chain eventually drifts off to \(-\infty\) never to return.}
 
 
 Sketch of MCMC (III)   {#sec-MCMC-III}
@@ -222,11 +225,16 @@ Question (A) is what this lecture is all about.
 Sketch of MCMC (V)   {#sec-MCMC-V}
 ===================
 * MCMC practicalities: Burn-in: what to do about it?
+	
 	- Theory tends to be much too pessimistic. Example: Zanella [-@Zanella-2014; -@Zanella-2015b] developed statistical methods for Anglo-Saxon history: a  _simplified_ model appeared to converge approximately in \(10^5\) steps (about 1 week on compute cluster), _versus_ \(10^9\) steps in theory (around 2 centuries);
+	
 	- Is (a) one long run better or (b) many short runs? (Option (b) requires starts of short runs spread "evenly" over the sample space — almost as hard in high dimensions as the original problem!)
+	
 	- Diagnostics? (Meta-theorem: for any diagnostic technique there is a chain for which the technique is deceptive!)
+	
 	- Conclusion: effective MCMC requires very careful thought about appropriate length of run — think deeply about the problem! 
-* Can there ever be a better way?
+	
+* So we are looking for ways to address burn-in where possible.
 \note[item]{This, of course, is what this lecture is about!}
 
 Perfect Simulation  {#sec-perfection}
@@ -251,6 +259,8 @@ to model images, hence CFTP can be used for image reconstruction.}
 because everyone knows it can't possibly be that good. That's exactly why the term was chosen!
 \note[item]{Otherwise some people might imagine “exact simulation” would 
 somehow miraculously defeat numerical approximation error :-).}
+
+* Aristotle: "Pleasure in the job puts perfection in the work."
 
 ---
 
@@ -345,6 +355,7 @@ Some theory about CFTP  {#sec-theory}
 	* cross-couple upper and lower envelope processes, 
 	* dominate by amenable “dominating process” (time-reversible, can draw from equilibrium, can couple target processes below dominating process); 
 \note[item]{To be computationally effective, the WSK (1998) fixes still require some associated notion of partial order and (perhaps weak) amenability of the dominating process.}
+
 * Theoretical limits:  _in principle_
 	- _Classical CFTP_ equivalent to uniform ergodicity [@FossTweedie-1998]. 
 	- _Dominated CFTP_ is achievable under geometric ergodicity [@Kendall-2004c]. 
@@ -353,9 +364,11 @@ Some theory about CFTP  {#sec-theory}
 and (Foster-)Lyapunov arguments. Note that the recipes given for these tend not to be computationally practical:
 they simply show the possibility of (possibly computationally infeasible) CFTP.
 They are intended as a challenge: when can one find \emph{practical} methods?}
+
 * We can use _Dominated CFTP_ to carry out perfect simulation for stable point processes [@KendallMoeller-2000];
 \note[item]{(Locally finite) point processes cannot in general be treated using Classic CFTP, 
 because the ``top" pattern would have points \emph{everywhere}.}
+
 * Detailed expositions are given by @Kendall-2005a, @Huber-2015. @Kendall-2014b shows
 how to implement CFTP in R.
 \note[item]{People who are interested in CFTP from a practical point of view may find it useful to work through WSK (2015).}
@@ -369,7 +382,7 @@ in which \textbf{both} queues \textbf{and} epidemics played a major part!
 
 We now consider perfect simulation applied to significant probabilistic systems
 in queuing theory and in epidemics.
-We'll pick up pace here. The primary purpose
+We'll pick up the pace here. The primary purpose
 is to demonstrate that perfect simulation is more than just a toy technique
 for wildly simple cases.
 
@@ -380,14 +393,16 @@ Perfect Queues  {#sec-queues}
 ==============
  The simplest queuing model (\(M/M/1\): Poisson arrivals, exponential service times, single server) can be analyzed very thoroughly indeed! However:
 
-* Poisson arrivals are not unreasonable, but exponential service times are ludicrous. The \(M/G/1\) case (general service time _for just one server_)
+* Poisson arrivals are not unreasonable, but exponential service times can be ludicrous. The \(M/G/1\) case (general service time _for just one server_)
 can be analyzed using the “embedded chain” (sample at each departure);
 \note[item]{Why are Exponential service times ludicrous? They imply that the fact that
 you have been waiting one hour for the previous customer to complete service 
 \textbf{has no bearing} on how much longer you still have to wait.
 On second thoughts this can be an accurate model in some dire cases! Fortunately,
 analysis of the \(M/G/1\) case can use the celebrated Pollaczek-Khintchine formula.}
+
 * Multi-server case: computation of _eg_ waiting-time distribution is out of reach so use simulation [and insights from @KieferWolfowitz-1955];
+
 \note[item]{Kiefer \& Wolfowitz (1955) is a remarkable paper, establishing a fundamental stochastic recursion
 for the \emph{KieferWolfowitz workload vector}.}
 *  @Sigman-2011 shows how to do CFTP in the "super-stable" case (traffic so low that it could have been handled by just one server), using Dominated CFTP and comparing to a "Processor-Sharing" discipline.
@@ -412,6 +427,7 @@ so long as we assign service times in order of commencement of service.}
     and  \(M/G/1\ \operatorname{PS}\) can be simulated backwards in time;  
 \note[item]{Calculations for time reversal apply the ideas underlying the Pollaczek-Khintchine formula.}
     - so \([M/G/1\ \operatorname{PS}]^c\) can be used to provide Dominated CFTP.
+    
 * @ConnorKendall-2014 describe 
     (a) CFTP coupling when dominating process empties, 
     (b) and a faster CFTP coupling using upper and lower processes 
@@ -577,10 +593,14 @@ The ``R-nunber" was the subject of continuing interest throughout the COVID-19 p
 \par}
 Important, because the R-number controls severity of epidemic. However:
 
-1. It's \alert{tough}. _Either_ massive assumptions (homogeneous mixing) or far too many parameters;
+1. It's \alert{tough}. _Either_ massive assumptions (homogeneous mixing) _or_ far too many parameters;
+
 2. It's \alert{really} \alert{tough}. It's hard to get good information about infection times;
+
 3. It's \alert{especially} \alert{tough} early on. You most need to know the answer when there is hardly any information available (I devised a simplified exercise for a Warwick second-year statistics module to show how tough this is);
+
 4. Markov chain Monte Carlo (MCMC) can be used [@ONeillRoberts-1999] but what about burn-in?
+
 5. Can we use \structure{perfect simulation}?
 
 An easier question
@@ -650,17 +670,13 @@ and remarkably fast execution using very good ``just in time" compilation techni
 
 [\only<1-6>{
 \uncover<6>{\includegraphics[height=1.5in]{image/demo-a.pdf}}
-}](animation/animation-IS-256.gif)
-\only<7| handout:0>{
+}](animation/animation-IS-256.gif)\only<7| handout:0>{
 \includegraphics[height=1.5in]{image/demo-b.pdf}
-}
-\only<8| handout:0>{
+}\only<8| handout:0>{
 \includegraphics[height=1.5in]{image/demo-c.pdf}
-}
-\only<9| handout:0>{
+}\only<9| handout:0>{
 \includegraphics[height=1.5in]{image/demo-d.pdf}
-}
-\only<10| handout:0>{
+}\only<10| handout:0>{
 \includegraphics[height=1.5in]{image/demo-e.pdf}
 }
 
@@ -671,8 +687,10 @@ In effect, perfect simulation supplies a well-behaved stochastic integration mec
 reducing an MCMC algorithm to use a technique equivalent to a much more amenable Monte Carlo calculation.
 \par}
 * You may be wondering, why this emphasis on unobserved infections given fixed $\alpha$ and $\beta$, when what we really want is inference on R-number $\alpha \; n/\beta$ for _unknown_ $\alpha$ and $\beta$?
+
 * Good question. But a re-weighting argument allows us to get (unbiased) estimates based on *different* $\alpha$ and $\beta$. Essentially the perfect simulation provides an exact simulation-based computation which permits us to
 integrate out the pattern of unobserved infections. 
+
 * This means we can [**work in progress**, @ConnorKendall-2023]  
     - construct a steepest ascent algorithm 
   (in effect, a variant on a Robbins-Monro stochastic optimization algorithm)
@@ -683,10 +701,14 @@ Conclusion  {#sec-conclusion}
 ==========
 * Are you worried about burn-in issues when doing MCMC. 
 Consider whether perfect simulation can be applied!
-* CFTP works even for significantly complex and relevant models of real-life phenomena;
+
+* CFTP works even for significantly complex and relevant models of real-life phenomena.
+
 * _Of course_ really detailed models will resist perfect simulation: but it can be helpful to compare with a simpler model (especially, using fewer parameters). 
+
 * CFTP is clearly an important tool to be considered by the investigator seeking to 
 implement accurate and informative MCMC.
+
 * Thank you for your attention! \alert{QUESTIONS?}
 
 References {.allowframebreaks .t} 
