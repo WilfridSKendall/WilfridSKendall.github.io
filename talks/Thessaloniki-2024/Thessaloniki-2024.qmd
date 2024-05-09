@@ -177,37 +177,134 @@ Sketch of MCMC (IV)   {#sec-MCMC-IV}
 
 Perfect Simulation  {#sec-perfection}
 ==================
-\note{
-Jim Propp described the discovery of CFTP as like walking down the street and suddenly noticing
-a 50\$ bill lying on the ground.
-\par}
-* The @ProppWilson-1996a  idea of exact simulation / Coupling from the Past (CFTP) / perfect simulation (Persi Diaconis: “Like seeing the landscape of Mars for the first time”);
-* Ideas (of “_classic CFTP_”): 
-	- extending simulation _backwards_ through time, 
-	- exploit monotonicity by coupling maximal and minimal processes, 
+* @ProppWilson-1996a invented exact simulation / Coupling from the Past (CFTP) / perfect simulation;
+\note[item]{Jim Propp described the discovery of CFTP as like walking down the street and suddenly noticing
+a 50\$ bill lying on the ground.}
+
+* The key ideas of “_classic CFTP_”: 
+	- extend simulation _backwards_ through time, 
+	- exploit monotonicity by _coupling_ maximal and minimal processes, 
 	- seek coalescence;
-* Details for _random-walk-CFTP_, which can be boosted as above to provide simple image reconstruction of an image using Ising model, @ProppWilson-1996a show how to vary a clever algorithm to get exact samples for 
-\structure{critical} Ising model (this is what impressed Diaconis);
-* “Perfect simulation” [@Kendall-1998d]: because everyone knows it isn’t going to be perfect, whereas people might imagine “exact simulation” would somehow miraculously defeat numerical approximation error :-).
+\note[item]{We will cover these key ideas in a single very specific example.}
+
+* We will study _random-walk-CFTP_, which can in fact be boosted to provide simple image reconstruction using Ising model;
+\note[item]{Propp \& Wilson (1996) show how to vary random walk CFTP to get exact samples for 
+\structure{critical} Ising model ( (Persi Diaconis: “Like seeing the landscape of Mars for the first time”)). 
+Ising model with external field can be used
+to model images, hence CFTP can be used for image reconstruction.}
+
+* Everyone immediately suspects the term “perfect simulation” [@Kendall-1998d],
+because everyone knows it can't possibly be that good. That's exactly why the term was chosen!
+\note[item]{Otherwise some people might imagine “exact simulation” would 
+somehow miraculously defeat numerical approximation error :-).}
+
+---
+
+Classic CFTP for a simple random walk (I)
+-----------------------------------------
+* Consider a simple random walk on \(\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}\).
+   - probability of \(+1\) jump is \(p\in(0.1)\), of \(-1\) jump is \(1-p\), **except that** 
+   - \(+1\) jump replaced by staying still at state \(9\), **and**
+   - \(-1\) jump replaced by staying still at state \(0\).
+\note[item]{This is asymmetric simple random walk on the integers, but forbidding any transitions
+outside the specified state-space. The result is irreducible \emph{and} aperiodic, so converges
+to the discrete uniform distribution (hint: use reversibility to check this!).}
+
+* Conventional MCMC picks a starting point, then runs the simple random walk for long time till approximate equilibrium.
+\note[item]{Conventional MCMC is overkill here: we could simulate directly from the equilibrium distribution.}
+
+* How long? One way to _estimate_ this is to run several coupled copies till they meet.
+If probability of meeting by time \(T\) is high, then deviation of \(X_T\) from equilibrium is statistically small,
+\note[item]{This observation originally formalized by Aldous. Here we use ``synchronous` coupling.}
+
+* Generally \alert{not true} that location at coupling is a draw from equilibrium.
+\note[item]{Clearly true in our case: coupling can only occur at \(0\) or \(9\)!}
+
+\only<1-5| handout:0>{\uncover<4-5>{\includegraphics[width=3.5in]{image/basic-rw1.png}}}
+\only<6-7| handout:1>{\includegraphics[width=3.5in]{image/basic-rw2.png}}
+
+---
+
+Classic CFTP for a simple random walk (I)
+-----------------------------------------
+* So now start at a negative time \(-T\), start at top (\(9\)) and bottom (\(0\)), and run to time \(0\). 
+\note[item]{Ideally one needs to choose \(T\) neither too small nor
+too large. But the result is not sensitive to this.}
+
+* If not coupled, than back-off to time \(-2T\) and repeat.
+\note[item]{Very important that one doesn't introduce different jumps for the same time \(-t\)
+in this binary back-off! We must \alert{re-use randomness}.}
+
+* We may need to repeat back-off several times.
+\note[item]{However the binary back-off procedure means, if \(T\) is too small
+then extra work is only ever a factor of \(4\)!}
+
+* If coupled, then return the common value at time \(0\).
+\note[item]{Re-use of randomness means there is now no point in continuing: the common value
+at time \(0\) will be the same however far we extend into the past with further back-offs.}
+
+* The common value is an exact draw from equilibrium!
+\note[item]{Why is the common value an exact draw from equilibrium?
+Informally, because one would get the same result however far 
+one backed-off: therefore the draw is effectively a draw from time \(-\infty\).
+Remarkably, this can easily be converted into a fully rigorous proof!}
 
 
-An example and some theory  {#sec-example}
-==========================
-\note{To be very clear, the special ``dead leaves" example of CFTP
+\only<1| handout:0>{\includegraphics[width=3.5in]{image/basic-rw3.png}}
+\only<2| handout:0>{\includegraphics[width=3.5in]{image/basic-rw3.png}}
+\only<3| handout:0>{\includegraphics[width=3.5in]{image/basic-rw4.png}}
+\only<4| handout:0>{\includegraphics[width=3.5in]{image/basic-rw5.png}}
+\only<5| handout:1>{\includegraphics[width=3.5in]{image/basic-rwCFTP.png}}
+
+
+A very graphic example  {#sec-graphic-example}
+======================
+* Many people find _DeadLeaves-CFTP_ helpful [@KendallThoennes-1999];
+\note[item]{One of a small class of instances of ``\emph{Occluded CFTP}".
+To be clear, this special ``dead leaves" example of CFTP
 was probably well-known to the French workers in 
-statistics of geology who invented the ``dead leaves" model, well before CFTP had been formally invented.
-\par}
-* An intensely visual example, which helps many people see intuitively what is going on here, is _DeadLeaves-CFTP_ [@KendallThoennes-1999] (technically, _Occluded CFTP_);
+statistics of geology who invented the ``dead leaves" model, well before CFTP had been formally invented.}
+* You are walking in a forest in Autumn.
+\note[item]{Specifically, the forest at Versailles!}
+* You view the leaves falling down on the red soil.
+\note[item]{It's an ever-changing pattern. The long-run equilibrium is an important tractable model
+in mathematical geomorphology.}
+
+* Change your point of view! Consider a small mammal looking up from a hole in the ground to the blue sky. 
+\note[item]{The leaves fall down to form a pattern which is statistically very similar to the pattern viewed from above.}
+
+* Once the hole in the ground is covered, the pattern for the mammal never changes, whereas for the walker
+the pattern changes ceaselessly.
+\note[item]{That of ourse is the point for small hibernating mammals.}
+
+* One may deduce, 
+[the animal's perceived pattern at coverage is distributed as the long-time equilibrium
+for the walker's pattern]((https://wilfridskendall.github.io/talks/Thessaloniki-2024//animation/LEAF63.gif)).
+\note[item]{This amounts to noting that in the {i.i.d} case the sequences \(\{X_1, \ldots, X_n\}\) 
+and \(\{X_n, \ldots, X_1\}\) have the same distribution (this is the time-reversal component of the CFTP argument here!}
+
+\uncover<3->{\includegraphics[width=1in]{image/LEAF63-empty1.png}} \uncover<4->{\includegraphics[width=1in]{image/LEAF63-empty2.png}} \qquad \uncover<5->{\includegraphics[width=2in]{image/LEAF63-full.png}}
+
+Some theory about CFTP  {#sec-theory}
+======================
 * What about cases where monotonicity fails? or there isn’t a sensible “maximal” process? @Kendall-1998d: 
 	* cross-couple upper and lower envelope processes, 
 	* dominate by amenable “dominating process” (time-reversible, can draw from equilibrium, can couple target processes below dominating process); 
+\note[item]{To be computationally effective, the WSK (1998) fixes still require some associated notion of partial order and (perhaps weak) amenability of the dominating process.}
 * Theoretical limits:  _in principle_
 	- _Classical CFTP_ equivalent to uniform ergodicity [@FossTweedie-1998]. 
 	- _Dominated CFTP_ is achievable under geometric ergodicity [@Kendall-2004c]. 
 	- It is even possible to carry out Dominated CFTP in some **non**-geometrically ergodicity cases [@ConnorKendall-2007a; _nb_ corrigendum];
+\note[item]{Basic ideas: use the notion of regenerative sets (``small sets"),
+and (Foster-)Lyapunov arguments. Note that the recipes given for these tend not to be computationally practical:
+they simply show the possibility of (possibly computationally infeasible) CFTP.
+They are intended as a challenge: when can one find \emph{practical} methods?}
 * We can use _Dominated CFTP_ to carry out perfect simulation for stable point processes [@KendallMoeller-2000];
+\note[item]{(Locally finite) point processes cannot in general be treated using Classic CFTP, 
+because the ``top" pattern would have points \emph{everywhere}.}
 * Detailed expositions are given by @Kendall-2005a, @Huber-2015. @Kendall-2014b shows
 how to implement CFTP in R.
+\note[item]{People who are interested in CFTP from a practical point of view may find it useful to work through WSK (2015).}
 
 Applications to Queues and Epidemics  {#sec-applications}
 ====================================
