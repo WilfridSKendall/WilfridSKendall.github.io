@@ -279,11 +279,11 @@ the pattern changes ceaselessly.
 
 * One may deduce, 
 [the animal's perceived pattern at coverage is distributed as the long-time equilibrium
-for the walker's pattern]((https://wilfridskendall.github.io/talks/Thessaloniki-2024//animation/LEAF63.gif)).
+for the walker's pattern](https://wilfridskendall.github.io/talks/Thessaloniki-2024/animation/leaf63.gif).
 \note[item]{This amounts to noting that in the {i.i.d} case the sequences \(\{X_1, \ldots, X_n\}\) 
 and \(\{X_n, \ldots, X_1\}\) have the same distribution (this is the time-reversal component of the CFTP argument here!}
 
-\uncover<3->{\includegraphics[width=1in]{image/LEAF63-empty1.png}} \uncover<4->{\includegraphics[width=1in]{image/LEAF63-empty2.png}} \qquad \uncover<5->{\includegraphics[width=2in]{image/LEAF63-full.png}}
+[\uncover<3->{\includegraphics[width=1in]{image/LEAF63-empty1.png}}](animation/leaf63.gif) \uncover<4->{\includegraphics[width=1in]{image/LEAF63-empty2.png}} \qquad \uncover<5->{\includegraphics[width=2in]{image/LEAF63-full.png}}
 
 Some theory about CFTP  {#sec-theory}
 ======================
@@ -592,11 +592,11 @@ and remarkably fast execution using very good ``just in time" compilation techni
     - all removals are recorded;
     - there are no further removals after the last observed removal.
 * Coding in [_julia_](https://julialang.org/) [@BezansonEdelmanKarpinskiShah-2017],  we can construct
-[a perfect simulation GIF resulting in a draw from the conditional distribution of pattern of infections](https://wilfridskendall.github.io/talks/Thessaloniki-2024//animation/animation-IS-256.gif).
+[a perfect simulation GIF resulting in a draw from the conditional distribution of pattern of infections](https://wilfridskendall.github.io/talks/Thessaloniki-2024/animation/animation-IS-256.gif).
 
-\only<1-6>{
+[\only<1-6>{
 \uncover<6>{\includegraphics[height=1.5in]{image/demo-a.pdf}}
-}
+}](animation/animation-IS-256.gif)
 \only<7| handout:0>{
 \includegraphics[height=1.5in]{image/demo-b.pdf}
 }
@@ -657,7 +657,7 @@ Technical information
 | [Edward Teller](https://commons.wikimedia.org/wiki/File:Edward_Teller_in_1958.jpg) | Lawrence Livermore National Laboratory                       | _[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)_    |
 |               | restored by w:User:Greg L, Papa Lima Whiskey                       | via Wikimedia Commons    |  
 | Perfect Ising                                              | Result of code written by WSK     |              | 
-| Dead leaves                                                | Result of code written by WSK     |              | 
+| Classic CFTP and Dead leaves                               | Result of code written by WSK     |              | 
 | [Queues](https://covidposters.github.io/images/queues.png) | <https://covidposters.github.io/> |_Open source_ | 
 | \(M/M/c\) customers              | Result of code written by Stephen Connor |              | 
 | \(M/M/c\) runtimes                      | Result of code written by Stephen Connor |              | 
