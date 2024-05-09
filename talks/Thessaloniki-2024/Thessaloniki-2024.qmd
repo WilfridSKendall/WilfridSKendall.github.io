@@ -64,7 +64,8 @@ Aristotle:
 
 \bigskip
 
-Handout available on the web: either use the `QR-code`  
+Handout available on the web: either use the `QR-code`
+
 \qquad\qquad ![](image/talk_URL.jpg)
 
 :::
@@ -113,48 +114,102 @@ The senior author was Edward Teller ("father of the H-bomb").
 
 
 
-Sketch of MCMC (II)   {#sec-MCMC-II}
-===================
+Sketch of MCMC (II): basic Markov chain theory   {#sec-MCMC-II}
+==============================================
 \note{We begin with a visual introduction to some simple ideas from Markov chain thery
 which are fundamental to MCMC and perfect simulation.
 \par}
-* \structure{Markov chain basics}:
-	- \structure{Transition probabilities} \(p(a,b)\) 
-	(or \structure{transition rates} in continuous time: 
-	unified view using exponential distribution);
-	- Εquilibrium probabilities \(\pi(a)\), balance,  
-	\qquad \structure{detailed balance} \(\pi(a) p(a,b)=\pi(b) p(b,a)\), 
+* \structure{Transition probabilities} \(p(a,b)\)  
+	![](image/mc1.jpg){height=0.7in}
+	\pause\qquad
+	![](image/mc2.jpg){height=0.7in}
+\note[item]{\structure{Transition rates} in continuous time: 
+unified view using exponential distribution.
+The transition probabilities \(p(a,b)\) for state \(a\) 
+assign proportions of probability to neighbouring states \(b\).}
+
+* \structure{Εquilibrium probabilities} \(\pi(a)\) arise from balance equations;  
+    ![](image/mc3.jpg){height=0.7in}  
+\note[item]{Solve balance equations: quickly now!}
+	\pause
+	solve balance equations: equilibrium probabilities defined by the ratio  
+	![](image/mc4.jpg){height=1in}
+
+---
+
+* \structure{detailed balance} \(\pi(a) p(a,b)=\pi(b) p(b,a)\), 
 	\structure{reversibility};
-	- Aperiodicity, recurrence (and uniform and geometric recurrence);
-	- under detailed balance we can \structure{condition} by forbidding transitions;  
+\note[item]{It's \emph{much} easier if we can arrange balance between individual pairs of states!
+Also, curiously, the chain is then \emph{reversible} when in equilibrium.}
+
+![](image/mc5.jpg){height=1in}
+
+\pause
+
+![](image/mc6.jpg){height=1in}
+
+
+---
 	
-* We can modify any chain, transition probabilities \(p(a,b)\),
-to leave a specified target distribution \(\pi(a)\)
+* \structure{Existence of equilibrium:} we need 
+\note{Failures for each of these as indicated:
+\par}
+    - aperiodicity, not  
+    ![](image/mc7.jpg){height=0.7in}  
+\note[item]{periodicity: chain alternates between blue and red states;}
+	- irreducibility, not  
+	![](image/mc8.jpg){height=1in}  
+\note[item]{reducibility: chain eventually leaves blue states never to return;}
+	- recurrence (uniform or geometric recurrence even better), not  
+	![](image/mc9.jpg){height=0.7in}
+\note[item]{transience: one can show the chain eventually drifts off to left never to return.}
+
+
+Sketch of MCMC (III)   {#sec-MCMC-III}
+====================
+The following points are key to designing Markov chains which have the desired target
+equilibrium distribution.
+
+* Under detailed balance we can \structure{condition} on specific parts of the state-space by forbidding transitions;  
+\note[item]{As long as irreducibility and aperiodicity are preserved, this works fine,
+since detailed balance is automatically preserved!}
+
+* We can \structure{modify} any chain, transition probabilities \(p(a,b)\),
+to result in a specified target distribution \(\pi(a)\)
 \structure{invariant}, by \structure{censoring} each possible transition 
 \(a\to b\) with probability \(\alpha(a,b)\in[0,1]\)
 such that  
 \qquad
 \(\alert{\alpha(a,b)}\pi(a) p(a,b)=\alert{\alpha(b,a)}\pi(b) p(b,a)\);
+\note[item]{We choose the censoring probability \(\alpha(a,b)\) to force detailed balance to hold!}
+
 * Common choice: \structure{Metropolis-Hastings}  
 \qquad\(\alpha(a,b) = \min\{1,(\pi(b) p(b,a)) / (\pi(a) p(a,b))\}\).
-* If result still irreducible aperiodic, then \(\pi(a)\)
-is its long-term equilibrium.
-* This is MCMC, now of intense interest to statisticians. 
-* But, physicists always remind us, physicists got there fifty years earlier!
+\note[item]{There are even some optimality arguments for this, though current research
+also investigates other options.}
 
-Sketch of MCMC (III)   {#sec-MCMC-III}
+* If still irreducible aperiodic, then long-term equilibrium is \(\pi(a)\).
+
+* Markov chain Monte Carlo (MCMC), of great statistical importance. 
+
+* But, \alert{physicists always remind us,} physicists got there fifty years earlier!
+
+Sketch of MCMC (IV)   {#sec-MCMC-IV}
 ====================
 Given the \(\pi(a)\), how to \structure{design}
 a Markov chain to have this as equilibrium?
 
 (i) \structure{Independence sampler}: draw from a fixed probability distribution,
 apply Metropolis-Hastings;
+\note[item]{We'll use this.}
 (ii) \structure{Random walk Metropolis} or \structure{RWM}: propose move using a random walk,
 apply Metropolis-Hastings;
+\note[item]{We'll use this.}
 (iii) \structure{Metropolis-adjusted Langevin} or \structure{MALA}:
 make a Gaussian jump shifted using gradient of \(\log\pi\), apply Metropolis-Hastings.\pause
 
 Can mix-and-match! RWM is often favourite: flexible, not too complicated.\pause
+\note[item]{We'll mix and match.}
 
 Issues:
 
@@ -166,7 +221,7 @@ that is for another day.\pause
 
 Question (A) is what this lecture is all about.
 
-Sketch of MCMC (IV)   {#sec-MCMC-IV}
+Sketch of MCMC (V)   {#sec-MCMC-V}
 ===================
 * MCMC practicalities: Burn-in: what to do about it?
 	- Theory tends to be much too pessimistic. Example: Zanella [-@Zanella-2014; -@Zanella-2015b] developed statistical methods for Anglo-Saxon history: a  _simplified_ model appeared to converge approximately in \(10^5\) steps (about 1 week on compute cluster), _versus_ \(10^9\) steps in theory (around 2 centuries);
@@ -174,6 +229,7 @@ Sketch of MCMC (IV)   {#sec-MCMC-IV}
 	- Diagnostics? (Meta-theorem: for any diagnostic technique there is a chain for which the technique is deceptive!)
 	- Conclusion: effective MCMC requires very careful thought about appropriate length of run — think deeply about the problem! 
 * Can there ever be a better way?
+\note[item]{This, of course, is what this lecture is about!}
 
 Perfect Simulation  {#sec-perfection}
 ==================
