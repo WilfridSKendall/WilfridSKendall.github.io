@@ -1,0 +1,159 @@
+---
+title:       "Three centuries of random lines: from Buffon's needle to scale-invariant networks"
+subtitle:    Theo Cacoullos Memorial Lecture 2024
+date:        16 May 2024
+author:     
+    - name:           Wilfrid S Kendall
+      url:            https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf
+      affiliation:    University of Warwick Department of Statistics
+      affilation-url: https://www.warwick.ac.uk/statsdept
+institute: University of Warwick
+license:    "CC BY"
+abstract: "This talk will focus on (a) the history of some stochastic geometry dating from Buffon's famous thought-experiment concerning baguettes, through (b) a variety of proposed geometric models for city and traffic flow, to (c) a general and intuitive description of a recent approach to spatial transportation networks. It is intended that there should be something of interest for everyone (including an opportunity for audience participation concerning design of a statistical experiment with stochastic geometry overtones)."
+keywords: Buffon’s needle; Poisson line patterns; spatial transportation models
+---
+
+
+---
+from: markdown+tex_math_single_backslash
+
+format: 
+    beamer:
+        date-format:     "D MMMM YYYY"
+        logo:            image/WarwickStatistics-small.png
+        titlegraphic:    image/talk_URL.jpg
+
+        theme:           Boadilla
+        mainfont:        "Times New Roman"
+        monofont:        "JuliaMono"
+        incremental:     true
+        link-citations:  true
+        citecolor:       blue
+        hyperrefoptions:
+            - pdfstartview=Fit
+
+        include-in-header:
+            - "Kozani-Cacoullos-2024.sty"
+        nocite: |
+            @Rmanual-2010
+---
+
+Introduction {#sec-introduction}
+============
+
+# Orientation {#sec-orientation}
+![\scriptsize Georges-Louis Leclerc, Comte de Buffon (7 September, 1707 – 16 April, 1788)](image/Georges-Louis_Leclerc_de_Buffon.jpg){width=1.5in}
+
+Particle Tracks in Apatite Crystals
+===================================
+![Apatite crystal](image/Apatite_taillee.jpg){width=2in}
+ - Nearly half a century ago, one of my first papers, still attracting citations [@LaslettKendallGleadowDuddy-1982]: study lengths of fission tracks in apatite crystals (produced from fission 238U nuclei, revealed by slicing the apatite crystal, then etching to reveal tracks which intercept slice);
+ - Length histogram indicates thermal history hence geological history; however direct observation is biased by (a) length bias, (b) truncation (a kind of _Wicksell Problem_), (c) projection (if non-horizontal);
+ - How to model a pattern of segments? (_Poisson segment process_: a kind of _Boolean model_);
+ - How best to estimate length histogram? (select only _horizontal_ enclosed tracks hitting tracks that intersect slice).
+
+Throwing baguettes over one’s shoulder
+======================================
+![ Baguettes as used by the Count](image/baguette-de-pain-.jpg){width=2in}
+
+ - Comte de Buffon, the man [Buffon-1829, @HeyNeugebauerPasca-2010];
+ - Probability from geometry not gambling;
+ - A whole sub-culture of experimental determinations of $\pi$ [@Lazzarini-1901; @Stigler-1991], most recently UCL Bloomsbury Probability Colloquium March 2024;
+ - Strips at 3cm, pins at 1.5cm, with 24 intersections out of 45 throws. This estimates $\pi$ at 45/21=2.14...!
+	     
+![](image/Table-1.jpg){width=1in}
+	     
+ - Design your own Buffon experiment: patience versus accuracy (ask people to vote);
+ - Display results and explain with continued fractions;
+ - “dualization” using random lines rather than random baguette; 
+ - @Steinhaus-1930 approach to measurement of length of fibres.
+
+Poisson line processes {#sec-plp}
+======================
+![Poisson line process](image/PlP.jpg){width=1in}
+
+* Parametrization (actually coordinatization of once-punctured projective plane) [@ChiuStoyanKendallMecke-2013]:
+	- invariant measure $\tfrac12 \text{d}r \, \text{d}\theta$ ;
+	- Higher-dimensional analogues _eg_ of lines in 3-space;
+* Alternate parametrization:
+	- invariant measure now $\tfrac12 \sin\phi \; \text{d}r \, \text{d}\phi$;
+* Random line pattern using _Poisson point process_:
+	- mention “void probability” approach;
+* Simple (standard) line-process calculations:
+	- mean number of lines hitting segment equals segment length;
+	- mean number of lines hitting two sides a and b of a triangle but missing side c equals (a+b-c)/2;
+	- mean number of lines passing through two opposing sides of a rectangle (two other sides of length b, and diagonals of length f) equals (2f  2b)/2 = f-b.
+* Notion of “conditioning on a line at the origin”: Slivnyak, _Palm probability_, extremely useful in showing how to reason with general constructions;
+* Marks, _eg_ speed-marked line process (write down intensity measure on state space).
+
+Also: some results concerning (a) efficiency criteria and (b) traffic flow in Poisson line networks.
+
+Stochastic geometry of online maps {#sec-stochgeom}
+==================================
+![All the roads in South America](https://pbs.twimg.com/media/Fs8aWE1XoAEsxmv.jpg)
+
+---
+
+* Modelling transportation systems;
+* Visual approach to axioms for online maps:	- Holland and Northwest Germany;
+	- Generating networks by a (random) mechanism;
+	- Axioms:
+		1. Scale invariance	;
+		2. Finite mean-length;
+		3. “SIRSN” property (Scale-Invariant Random Spatial Network).
+	- Bertrand Russell: “The axiomatic method has many advantages over honest work.”
+	- Settling the existential question:	 
+	 	- randomized dyadic speed-marked planar lattice [@Aldous-2012];
+	 	- speed-marked Poisson line process [@Aldous-2012; @Kendall-2014c; @Kahn-2015] using the line process theory discussed above.
+* More realistic models:
+	 - Sticks instead of lines;
+	 - Thick stick soup;
+	 - Thick Pareto stick soup;
+	 - Thick stiff fibre soup.
+
+Some further remarks {#sec-conclusion}
+====================
+![Much more work is still to be done](https://socks-studio.com/img/blog/William_Heath_Robinson_Inventions_-_Page_034.jpg)
+
+---
+
+* “Thickness” is a simplifying assumption and still has reality problems:
+	- using finite-mean-length sticks with infinite second-length-moment, means that _any_ selected stick will have infinite-mean-length (length-biasing!);
+	- reasonable to suppose that it suffices to have super-critical percolation for the configuration of fibres of greated than unit speed;
+	- But stick percolation is _hard_! Still working to try to develop some relevant theory.
+* Everything still works for lines in higher-dimensional space:
+	- Dimension 3 is currently the only other case of interest (could be of interest when studying the human connective!);
+	- Blanc has recently published nice work on an analogue in hyperbolic space.
+* A big attraction of the theory in its present state is that one can consider relaxing parts of the scaling symmetry assumption. The “SIRSN effect” (Axiom 3) is probably still going to work if controlled spatial inhomogeneity is allowed. So this approach now provides a flexible framework for statistical and operational research modelling.
+* We can introduce traffic, for example by supposing traffic along the connecting route to be uniformly generated between any pair of points. @Gameros-2017 worked this out for a simpler model and compared it to empirical results concerning British rail traffic before and after the 1960’s Beeching railway cuts.
+
+
+
+References {.allowframebreaks .t} 
+==========
+
+\scriptsize
+
+::: {#refs}
+
+:::
+
+Technical information
+=====================
+
+\scriptsize
+
+::: {style="font-size: 15%;"} 
+
+| Image            | Original location                                      |                     |
+| ---------------- | ------------------------------------------------------ | ------------------- |
+| Comte de Buffon  | [Buffon_1707-1788.jpg](http://en.wikipedia.org/wiki/Image:Buffon_1707-1788.jpg) | [Free of copyright](https://creativecommons.org/publicdomain/mark/1.0/deed.en) |
+| Apatite crystal  | [Apatite_taillée.jpg](https://en.wikipedia.org/wiki/Apatite#/media/File:Apatite_taill%C3%A9e.jpg) | By Didier Descouens - Own work, [CC BY 3.0](https://commons.wikimedia.org/w/index.php?curid=9056233) |
+| Baguette         | [baguette-de-pain-.jpg](https://www.publicdomainpictures.net/pictures/210000/velka/baguette-de-pain-.jpg) | Free stock photo - Public Domain |
+| Buffon Table     |By kind permission of Terry Soo (UCL)                   |                     |
+| Poisson line process |[Image by Lukas Mosser ](https://www.researchgate.net/profile/Lukas-Mosser/publication/267765286/figure/fig1/AS:613960231428102@1523390934594/Poisson-line-process-with-uniform-orientation-distribution-The-set-of-chords-creates-a.png)                                             |  |
+| [XXX]            |attribution                                             | licence if applic   |
+: {tbl-colwidths="[22,50,28]"}
+:::
+
+\scriptsize
