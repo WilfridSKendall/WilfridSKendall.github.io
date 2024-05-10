@@ -41,7 +41,7 @@ format:
 Introduction   {#sec-introduction}
 ============
 
-:::: {.columns}
+:::: {.columns layout="[ 45, 55 ]"}
 
 ::: {.column}
 
@@ -59,20 +59,21 @@ Aristotle:
 \pause
 
 \bigskip
-
 \text{ }
-
 \bigskip
 
-Handout available on the web: either use the `QR-code`
+Handout available on the web:
+either use the `QR-code`
 
-\qquad\qquad ![](image/talk_URL.jpg)
+\medskip
+
+\text{ }\qquad\quad ![](image/talk_URL.jpg)
 
 :::
 
 ::::
 
-\qquad \qquad or visit <https://wilfridskendall.github.io/talks/Thessaloniki-2024/>.
+\qquad \quad or visit <https://wilfridskendall.github.io/talks/Thessaloniki-2024/>.
 
 Sketch of MCMC (I)   {#sec-MCMC-I}
 ==================
@@ -381,10 +382,12 @@ in which \textbf{both} queues \textbf{and} epidemics played a major part!
 \bigskip
 
 We now consider perfect simulation applied to significant probabilistic systems
-in queuing theory and in epidemics.
+in (1) queuing theory and (2) epidemics.
 We'll pick up the pace here. The primary purpose
 is to demonstrate that perfect simulation is more than just a toy technique
 for wildly simple cases.
+So we will only discuss brief indications of proofs and methods: a full treatment
+would require at least an hour for each of the two topics!
 
 \par}
 ![An illustration introducing _both_ queues _and_ epidemics!](https://covidposters.github.io/images/queues.png){width=3.5in}
@@ -724,7 +727,7 @@ Technical information
 
 \scriptsize
 
-::: {style="font-size: 15%;"}
+:::
 
 | Image         | Attribution                                                                    |              |
 | ------------- | ------------------------------------------------------------------------------ | ------------ |
