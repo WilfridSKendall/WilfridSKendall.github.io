@@ -1,5 +1,6 @@
 ---
-title:       "Three centuries of random lines: from Buffon's needle to scale-invariant networks"
+title:       "Three centuries of random lines: 
+				from Buffon's needle to scale-invariant networks"
 subtitle:    Theo Cacoullos Memorial Lecture 2024
 date:        16 May 2024
 author:     
@@ -26,7 +27,7 @@ format:
         theme:           Boadilla
         mainfont:        "Times New Roman"
         monofont:        "JuliaMono"
-        incremental:     true
+        incremental:     false
         link-citations:  true
         citecolor:       blue
         hyperrefoptions:
@@ -35,42 +36,251 @@ format:
         include-in-header:
             - "Kozani-Cacoullos-2024.sty"
         nocite: |
-            @Rmanual-2010
+            Steinhaus-1930
 ---
 
 Introduction {#sec-introduction}
 ============
 
-# Orientation {#sec-orientation}
-![\scriptsize Georges-Louis Leclerc, Comte de Buffon (7 September, 1707 – 16 April, 1788)](image/Georges-Louis_Leclerc_de_Buffon.jpg){width=1.5in}
+:::: {.columns layout="[ 45, 55 ]"}
 
-Particle Tracks in Apatite Crystals
-===================================
-![Apatite crystal](image/Apatite_taillee.jpg){width=2in}
- - Nearly half a century ago, one of my first papers, still attracting citations [@LaslettKendallGleadowDuddy-1982]: study lengths of fission tracks in apatite crystals (produced from fission 238U nuclei, revealed by slicing the apatite crystal, then etching to reveal tracks which intercept slice);
- - Length histogram indicates thermal history hence geological history; however direct observation is biased by (a) length bias, (b) truncation (a kind of _Wicksell Problem_), (c) projection (if non-horizontal);
- - How to model a pattern of segments? (_Poisson segment process_: a kind of _Boolean model_);
- - How best to estimate length histogram? (select only _horizontal_ enclosed tracks hitting tracks that intersect slice).
+::: {.column}
 
-Throwing baguettes over one’s shoulder
-======================================
-![ Baguettes as used by the Count](image/baguette-de-pain-.jpg){width=2in}
+![](image/Theophilos-Cacoullos-600x800.jpg){width=2in}
 
- - Comte de Buffon, the man [Buffon-1829, @HeyNeugebauerPasca-2010];
+\medskip\scriptsize
+Theophilos Cacoullos 1932-2020
+
+:::
+
+::: {.column}
+
+Cacoullos:  
+"An excellent teacher who never used notes but did use spontaneous humor"  
+\text{ }\hfill (IMS obituary November 16, 2021)
+
+\bigskip\pause
+
+I count it a real honour to be invited to present the second Theo Cacoullos Memorial lecture.
+
+These remarks on his presentational style make it clear that Theo Cacoullos Memorial lecturers have much to live up to!
+I will do my very best.
+
+:::
+
+::::
+
+
+Recent Origins: Particle Tracks in Apatite Crystals
+===================================================
+:::: {.columns layout="[ 25, 75 ]"}
+
+::: {.column}
+
+![](image/Apatite_taillee.jpg){width=1in}
+
+\medskip\scriptsize
+An apatite crystal
+
+:::
+
+
+::: {.column}
+
+\pause
+
+* Nearly half a century ago, I assisted in a study 
+[@LaslettKendallGleadowDuddy-1982]
+of 
+fission track lengths in apatite crystals (tracks from fission of \({}^{238}\text{U}\) nuclei; 
+crystal is sliced then etched to reveal intercepting tracks);
+\note[item]{Apatite crystals as silent sensors of continental drift!}
+\pause
+
+* _In principle_ the length histogram indicates thermal hence geological history; 
+but direct observation is massively \alert{biased} by 
+\note[item]{Bias is a constant companion in stochastic geometry.}
+
+	(a) length selection bias, 
+	(b) truncation (a kind of _Wicksell Problem_), 
+	(c) projection effects (if non-horizontal);
+\pause
+
+* How to model a pattern of segments? (_Poisson segment process_: a kind of _Boolean model_);
+\note[item]{Elegant but simple stochastic model, which (unusually for stochastic geometry)
+lends itself at least partially to exact calculation.}
+\pause
+
+* How to get good length histogram? (select _horizontal_ enclosed tracks hitting tracks that intersect slice).
+\note[item]{Not many tracks qualify under this sampling procedure, but a much clearer picture results.}
+
+:::
+
+::::
+
+
+Historical Origins: pre-Revolutionary France {#sec-orientation}
+============================================
+:::: {.columns layout="[ 48, 52 ]"}
+
+::: {.column}
+
+![](image/Georges-Louis_Leclerc_de_Buffon.jpg){width=1.7in}
+
+\medskip\scriptsize
+Georges-Louis Leclerc,  
+Comte de Buffon, 1707 – 1788
+
+:::
+
+
+::: {.column}
+
+Buffon rose from undistinguished origins in the France of the _Ancien Regime_,
+to become a major and celebrated philosopher and scientist.
+He embodied a remarkable mixture of empiricism and rationalism.
+\note[item]{Somehow these later diverged into Anglo-empiricism and Franco-rationalism.}
+
+\bigskip
+
+"Writing well consists of thinking, feeling and expressing well, of clarity of mind, soul and taste ... The style is the man himself"
+\note[item]{"The style is the man/woman him/herself": I take this very much to heart.}
+
+:::
+
+::::
+
+
+Throwing baguettes over one’s shoulder (I)
+==========================================
+:::: {.columns layout="[ 40, 60 ]"}
+
+::: {.column}
+
+![](image/baguette-de-pain-.jpg){width=1.5in}
+
+\medskip\scriptsize
+Baguette as used by the Count.
+
+\text{ }\bigskip
+
+
+\uncover<4->{
+
+\includegraphics[width=1.5in]{image/Table-1.jpg}
+
+\medskip\scriptsize
+Table used by UCL experiment
+
+}
+
+:::
+
+
+::: {.column}
+
+ - Comte de Buffon was very interested in probability [read him in @HeyNeugebauerPasca-2010];
+\note[item]{The Comte de Buffon was interested in \emph{everything}!}
+ 
+\pause
  - Probability from geometry not gambling;
- - A whole sub-culture of experimental determinations of $\pi$ [@Lazzarini-1901; @Stigler-1991], most recently UCL Bloomsbury Probability Colloquium March 2024;
- - Strips at 3cm, pins at 1.5cm, with 24 intersections out of 45 throws. This estimates $\pi$ at 45/21=2.14...!
-	     
-![](image/Table-1.jpg){width=1in}
-	     
- - Design your own Buffon experiment: patience versus accuracy (ask people to vote);
- - Display results and explain with continued fractions;
- - “dualization” using random lines rather than random baguette; 
- - @Steinhaus-1930 approach to measurement of length of fibres.
+\note[item]{He was uneasy about the way in which probability arise entirely from gambling considerations,
+and wanted a purely geometrical derivation.
+So he described his famous experiment of throwing a baguette over his shoulder while walking on a
+linearly tiled floor,
+and considering the event that the baguette hit a line of the tiling.}
 
+\pause
+ - There ensued a whole sub-culture of experimental determinations of $\pi$ [see @Lazzarini-1901; @Stigler-1991], 
+\note[item]{There are great stories about experimental determinations of $\pi$: 
+for example, recovering war-wounded with time on their hands in time of American civil war, 
+basically anyone with plenty of time to spare.}
+ 
+\text{ }\bigskip
+ 
+\pause
+ - Most recently at the inaugural UCL Bloomsbury Probability Colloquium March 2024;
+\note[item]{March 2024, just after \(\pi\)-day.}
+
+\pause
+ - Strips at 3cm, pins at 1.5cm, with 24 intersections out of 45 throws.
+\note[item]{Two of the 45 throws are mine.}
+ 
+\pause
+ - This estimates \(\pi\approx45/21=2.14\ldots\):
+the true value of \(\pi\) lies just inside the \(95\%\) confidence interval!
+\note[item]{UCL faculty are busier than injured soldiers of the American civil war.}
+
+:::
+
+::::
+
+Throwing baguettes over one’s shoulder (II)
+===========================================
+Suppose you have to design such an experiment.
+
+* Unit-length needle, unit-ruled floor. You must choose \(n\) the number of trials.
+\note[item]{It will be a matter of balancing your desire to determine \(\pi\) accurately
+versus your patience and available time.}
+
+\pause
+* The number of successes \(X\) is Binomial(\(n\), \(2/\pi\)).
+\note[item]{A nice piece of stochastic geometry: at angle \(\theta\) there is a \(\sin\theta\) bias ...}
+
+\pause
+* Measure success by \(1/\sqrt{|2/\pi - X/n|}\).
+\note[item]{Square root to ensure integrability if we treat \(X/n\) as Uniform\((0,1)\).}
+
+\pause
+* Use your skill and judgement (and your balance between accuracy and patience!)
+to decide on total number of trials \(n\in[300,400]\)
+\note[item]{Get people to vote!}
+
+\pause
+In the next slide, we graph the mean measure of success against \(n\)
+to see how much the choice of \(n\) actually makes any difference!
+
+Throwing baguettes over one’s shoulder (III)
+===========================================
+\note{What is going on here?
+I have of course cheated.
+The continued fraction expansion of \(\pi\) shows,\\
+ \(355/113\) is a particularly good approximation.
+\\
+So \(X=2\times113=226\) gives a particularly high contribution to the 
+expected measure of success when \(n=355\).
+
+\medskip
+
+Why is this of interest for us today?
+\par}
+\note[item]{There is an implicit ``dualization": randomize lines not baguettes.}
+\note[item]{Steinhaus (1930) devised a related approach to measurement of length of fibres in terms
+of "line measure" of intersecting lines. This finds enormous practical use today in \emph{stereology},
+the science of microscopy: put down a random linear transect, count intersections with cell boundaries,
+repeat. It is cost-effective for microscopists to measure this and other geometrical features in that fashion.}
+\note[item]{Much of the content of stereology then concerns resolution of bias!}
+\note[item]{And so we are led to questions of random lines and patterns of lines.}
+![](image/Buffon-and-number-theory.png){width=3.5in}
+
+\scriptsize
+Log of mean of  \(1/\sqrt{|2/\pi - X/n|}\) \\
+for \(X\) with distribution Binomial(\(n\), \(2/\pi\)).
+\pause
+ \begin{multline*}
+  \pi=
+  3 + \frac{1}{7+\frac{1}{\alert<2| handout:0>{5}+\frac{1}{1+ \frac{1}{\alert<3>{292}+\frac{1}{1+\frac{1}{\ldots}}}}}}
+\only<2| handout:0>{\quad\approx\quad 3 + \frac{1}{7} = \frac{\alert{22}}{7} = \alert{3.14}2857142857143}
+\uncover<3>{
+ \quad\approx\quad 3 + \frac{1}{7+\frac{1}{15+1/1}}
+= \frac{\alert{355}}{113} = \alert{3.141592}9203539825}\,.
+ \end{multline*}
+
+
+ 
 Poisson line processes {#sec-plp}
 ======================
-![Poisson line process](image/PlP.jpg){width=1in}
+![Poisson line process](image/city.png){width=1in}
 
 * Parametrization (actually coordinatization of once-punctured projective plane) [@ChiuStoyanKendallMecke-2013]:
 	- invariant measure $\tfrac12 \text{d}r \, \text{d}\theta$ ;
@@ -88,9 +298,15 @@ Poisson line processes {#sec-plp}
 
 Also: some results concerning (a) efficiency criteria and (b) traffic flow in Poisson line networks.
 
+\note[item]{“dualization” using random lines rather than random baguette.}
+
+\note[item]{Steinhaus (1930) approach to measurement of length of fibres.}
+ 
+ 
+
 Stochastic geometry of online maps {#sec-stochgeom}
 ==================================
-![All the roads in South America](https://pbs.twimg.com/media/Fs8aWE1XoAEsxmv.jpg)
+![All the roads in South America](image/SouthAmericaRoadsDark.jpg){height=3in}
 
 ---
 
@@ -113,7 +329,7 @@ Stochastic geometry of online maps {#sec-stochgeom}
 
 Some further remarks {#sec-conclusion}
 ====================
-![Much more work is still to be done](https://socks-studio.com/img/blog/William_Heath_Robinson_Inventions_-_Page_034.jpg)
+![Much more work is still to be done](image/HeathRobinson.jpg){height=3in}
 
 ---
 
@@ -145,15 +361,20 @@ Technical information
 
 ::: {style="font-size: 15%;"} 
 
-| Image            | Original location                                      |                     |
-| ---------------- | ------------------------------------------------------ | ------------------- |
-| Comte de Buffon  | [Buffon_1707-1788.jpg](http://en.wikipedia.org/wiki/Image:Buffon_1707-1788.jpg) | [Free of copyright](https://creativecommons.org/publicdomain/mark/1.0/deed.en) |
+| Image            | Original location                                       |                     |
+| ---------------- | ------------------------------------------------------- | ------------------- |
+| Theo Cacoullos   | [IMS Bulletin obituary, November 2021](https://imstat.org/2021/11/16/obituary-theophilos-cacoullos-1932-2020/)  |                  |
 | Apatite crystal  | [Apatite_taillée.jpg](https://en.wikipedia.org/wiki/Apatite#/media/File:Apatite_taill%C3%A9e.jpg) | By Didier Descouens - Own work, [CC BY 3.0](https://commons.wikimedia.org/w/index.php?curid=9056233) |
+| Comte de Buffon  | [Buffon_1707-1788.jpg](http://en.wikipedia.org/wiki/Image:Buffon_1707-1788.jpg) | [Free of copyright](https://creativecommons.org/publicdomain/mark/1.0/deed.en) |
 | Baguette         | [baguette-de-pain-.jpg](https://www.publicdomainpictures.net/pictures/210000/velka/baguette-de-pain-.jpg) | Free stock photo - Public Domain |
-| Buffon Table     |By kind permission of Terry Soo (UCL)                   |                     |
-| Poisson line process |[Image by Lukas Mosser ](https://www.researchgate.net/profile/Lukas-Mosser/publication/267765286/figure/fig1/AS:613960231428102@1523390934594/Poisson-line-process-with-uniform-orientation-distribution-The-set-of-chords-creates-a.png)                                             |  |
-| [XXX]            |attribution                                             | licence if applic   |
-: {tbl-colwidths="[22,50,28]"}
+| Buffon and Number Theory | WSK calculation                                 |                     |
+| Buffon Table     |By kind permission of Terry Soo (UCL)                    |                     |
+| Poisson line process | WSK calculation                                     |                     |
+| S.\ American Roads|By kind permission of \@PythonMaps                      |                     |
+| Heath Robinson   |[Testing Golf Drivers](https://socks-studio.com/img/blog/William_Heath_Robinson_Inventions_-_Page_034.jpg)                                              |             |
+: {tbl-colwidths="[20,45,35]"}
 :::
+
+Poisson line process
 
 \scriptsize
