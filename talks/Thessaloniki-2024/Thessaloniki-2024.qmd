@@ -7,7 +7,7 @@ author:
       url:            https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf
       affiliation:    University of Warwick Department of Statistics
       affilation-url: https://www.warwick.ac.uk/statsdept
-institute: Department of Statistics, University of Warwick
+institute: University of Warwick
 license:    "CC BY"
 ---
 
@@ -53,10 +53,12 @@ Introduction   {#sec-introduction}
 
 Aristotle: 
 
+::: {.nonincremental}
+
 - "Think as the wise men think, but talk like the simple people do."
 - "The more you know, the more you know you don't know."
 
-\pause
+:::
 
 \bigskip
 \text{ }
@@ -177,8 +179,8 @@ equilibrium distribution.
 since detailed balance is automatically preserved!}
 
 * We can \structure{modify} any chain, transition probabilities \(p(a,b)\),
-to result in a specified target distribution \(\pi(a)\)
-\structure{invariant}, by \structure{censoring} each possible transition 
+to result in a chosen \structure{invariant} target distribution \(\pi(a)\).
+Simply \structure{censor} each possible transition 
 \(a\to b\) with probability \(\alpha(a,b)\in[0,1]\)
 such that  
 \qquad
@@ -720,6 +722,7 @@ References {.allowframebreaks .t}
 \scriptsize
 
 ::: {#refs}
+
 :::
 
 Technical information
@@ -727,7 +730,7 @@ Technical information
 
 \scriptsize
 
-:::
+::: {style="font-size: 15%;"} 
 
 | Image         | Attribution                                                                    |              |
 | ------------- | ------------------------------------------------------------------------------ | ------------ |
