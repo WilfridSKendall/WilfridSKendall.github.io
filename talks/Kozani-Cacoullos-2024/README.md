@@ -18,7 +18,11 @@ make handout
 make notes
 ```
 
-The talk handout is located at <https://wilfridskendall.github.io/talks/Thessaloniki-2024/Kozani-Cacoullos-2024-handout.pdf>. The QR code for the handout is generated (as a `PNG` file) by
+The talk handout is located at <https://wilfridskendall.github.io/talks/Kozani-Cacoullos-2024/Kozani-Cacoullos-2024-handout.pdf>. 
+
+------
+
+The QR code for the handout is generated (as a `PNG` file) by
 
 ```bash
 qrencode -s 3 -l H -o "image/talk_URL.png" \
