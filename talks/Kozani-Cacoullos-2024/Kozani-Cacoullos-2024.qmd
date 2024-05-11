@@ -36,7 +36,7 @@ format:
         include-in-header:
             - "Kozani-Cacoullos-2024.sty"
         nocite: |
-            Steinhaus-1930
+            @Steinhaus-1930, @SchneiderWeil-2008, @Kendall-2011b, @Kendall-2014a, @Kendall-2014c, @Kahn-2015
 ---
 
 Introduction {#sec-introduction}
@@ -45,27 +45,26 @@ Introduction {#sec-introduction}
 :::: {.columns layout="[ 40, 60 ]"}
 
 ::: {.column}
-
 ![](image/Theophilos-Cacoullos-600x800.jpg){width=1.5in}
 
 \medskip\scriptsize
 Theophilos Cacoullos 1932-2020
-
 :::
 
 ::: {.column}
-
 \scriptsize
 
 Cacoullos:  
-"An excellent teacher who never used notes but did use spontaneous humor"  
+"An excellent teacher who never used notes
+but did use spontaneous humor"  
 \text{ }\hfill (IMS obituary November 16, 2021)
 
 \bigskip\pause
 
 I count it a real honour to be invited to present the second Theo Cacoullos Memorial lecture.
 
-These remarks on his presentational style make it clear that Theo Cacoullos Memorial lecturers have much to live up to!
+These remarks on his presentational style make it clear 
+that Theo Cacoullos Memorial lecturers have much to live up to!
 I will do my very best.
 
 \medskip
@@ -76,7 +75,6 @@ either use the `QR-code`
 \medskip
 
 \text{ }\qquad\quad ![](image/talk_URL.jpg)
-
 :::
 
 ::::
@@ -88,45 +86,38 @@ Recent Origins: Particle Tracks in Apatite Crystals
 :::: {.columns layout="[ 25, 75 ]"}
 
 ::: {.column}
-
 ![](image/Apatite_taillee.jpg){width=1in}
 
 \medskip\scriptsize
 An apatite crystal
-
 :::
 
-
 ::: {.column}
-
-\pause
-
+::: {.incremental}
 * Nearly half a century ago, I assisted in a study 
 [@LaslettKendallGleadowDuddy-1982]
 of 
-fission track lengths in apatite crystals (tracks from fission of \({}^{238}\text{U}\) nuclei; 
+fission track lengths in apatite crystals (tracks from fission of \(\text{ }^{238}\text{U}\) nuclei; 
 crystal is sliced then etched to reveal intercepting tracks);
 \note[item]{Apatite crystals as silent sensors of continental drift!}
-\pause
+
 
 * _In principle_ the length histogram indicates thermal hence geological history; 
-but direct observation is massively \alert{biased} by 
+but direct observation is massively \alert{biased} by
 \note[item]{Bias is a constant companion in stochastic geometry.}
-
-	(a) length selection bias, 
-	(b) truncation (a kind of _Wicksell Problem_), 
+	(a) length selection bias,
+	(b) truncation (a kind of _Wicksell Problem_),
 	(c) projection effects (if non-horizontal);
-\pause
 
 * How to model a pattern of segments? (_Poisson segment process_: a kind of _Boolean model_);
 \note[item]{Elegant but simple stochastic model, which (unusually for stochastic geometry)
 lends itself at least partially to exact calculation. We will shortly encounter a variant:
 the Poisson line process.}
-\pause
+
 
 * How to get good length histogram? (select _horizontal_ enclosed tracks hitting tracks that intersect slice).
 \note[item]{Not many tracks qualify under this sampling procedure, but a much clearer picture results.}
-
+:::
 :::
 
 ::::
@@ -137,28 +128,28 @@ Historical Origins: pre-Revolutionary France {#sec-orientation}
 :::: {.columns layout="[ 48, 52 ]"}
 
 ::: {.column}
-
 ![](image/Georges-Louis_Leclerc_de_Buffon.jpg){width=1.7in}
 
 \medskip\scriptsize
 Georges-Louis Leclerc,  
 Comte de Buffon, 1707 – 1788
-
 :::
 
 
 ::: {.column}
-
 Buffon rose from undistinguished origins in the France of the _Ancien Regime_,
 to become a major and celebrated philosopher and scientist.
 He embodied a remarkable mixture of empiricism and rationalism.
 \note[item]{Somehow these later diverged into Anglo-empiricism and Franco-rationalism.}
 
-\bigskip
+\bigskip\pause
 
-"Writing well consists of thinking, feeling and expressing well, of clarity of mind, soul and taste ... The style is the man himself"
+"Writing well consists of thinking, feeling and expressing well, of clarity of mind, soul and taste ... 
+The style is the man himself."
+
+\bigskip\text{ }\bigskip\text{ }
+
 \note[item]{"The style is the man/woman him/herself": I take this very much to heart.}
-
 :::
 
 ::::
@@ -166,10 +157,12 @@ He embodied a remarkable mixture of empiricism and rationalism.
 
 Throwing baguettes over one’s shoulder (I)
 ==========================================
+\note{"Throwing baguettes over one’s shoulder": a description of how Buffon
+undertook his classic experiment in geometric probability.
+\\par}
 :::: {.columns layout="[ 40, 60 ]"}
 
 ::: {.column}
-
 ![](image/baguette-de-pain-.jpg){width=1.5in}
 
 \medskip\scriptsize
@@ -186,16 +179,14 @@ Baguette as used by the Count.
 Table used by UCL experiment
 
 }
-
 :::
 
 
 ::: {.column}
-
+::: {.incremental}
  - Comte de Buffon was very interested in probability [read him in @HeyNeugebauerPasca-2010];
 \note[item]{The Comte de Buffon was interested in \emph{everything}!}
  
-\pause
  - Probability from geometry not gambling;
 \note[item]{He was uneasy about the way in which probability arise entirely from gambling considerations,
 and wanted a purely geometrical derivation.
@@ -203,7 +194,6 @@ So he described his famous experiment of throwing a baguette over his shoulder w
 linearly tiled floor,
 and considering the event that the baguette hit a line of the tiling.}
 
-\pause
  - There ensued a whole sub-culture of experimental determinations of $\pi$ [see @Lazzarini-1901; @Stigler-1991], 
 \note[item]{There are great stories about experimental determinations of $\pi$: 
 for example, recovering war-wounded with time on their hands in time of American civil war, 
@@ -211,19 +201,16 @@ basically anyone with plenty of time to spare.}
  
 \text{ }\bigskip
  
-\pause
  - Most recently at the inaugural UCL Bloomsbury Probability Colloquium March 2024;
 \note[item]{March 2024, just after \(\pi\)-day.}
 
-\pause
  - Strips at 3cm, pins at 1.5cm, with 24 intersections out of 45 throws.
 \note[item]{Two of the 45 throws are mine.}
  
-\pause
  - This estimates \(\pi\approx45/21=2.14\ldots\):
 the true value of \(\pi\) lies just inside the \(95\%\) confidence interval!
 \note[item]{UCL faculty are busier than injured soldiers of the American civil war.}
-
+:::
 :::
 
 ::::
@@ -231,25 +218,25 @@ the true value of \(\pi\) lies just inside the \(95\%\) confidence interval!
 Throwing baguettes over one’s shoulder (II)
 ===========================================
 Suppose you have to design such an experiment.
+\pause
 
-* Unit-length needle, unit-ruled floor. You must choose \(n\) the number of trials.
+::: {.incremental}
+* Unit-length needle, unit-ruled floor. Choose \(n\) the number of trials.
 \note[item]{It will be a matter of balancing your desire to determine \(\pi\) accurately
 versus your patience and available time.}
 
-\pause
 * The number of successes \(X\) is Binomial(\(n\), \(2/\pi\)).
 \note[item]{A nice piece of stochastic geometry: at angle \(\theta\) there is a \(\sin\theta\) bias ...}
 
-\pause
 * Measure success by \(1/\sqrt{|2/\pi - X/n|}\).
 \note[item]{Square root to ensure integrability if we treat \(X/n\) as Uniform\((0,1)\).}
 
-\pause
 * Use your skill and judgement (and your balance between accuracy and patience!)
 to decide on total number of trials \(n\in[300,400]\)
 \note[item]{Get people to vote!}
+:::
 
-\pause
+\bigskip\pause
 In the next slide, we graph the mean measure of success against \(n\)
 to see how much the choice of \(n\) actually makes any difference!
 
@@ -293,69 +280,608 @@ for \(X\) with distribution Binomial(\(n\), \(2/\pi\)).
  
 Poisson line processes {#sec-plp}
 ======================
-![Poisson line process](image/city.png){width=1in}
+:::: {.columns layout="[ 40, 60 ]"}
+::: {.column}
 
-* Parametrization (actually coordinatization of once-punctured projective plane) [@ChiuStoyanKendallMecke-2013]:
-	- invariant measure $\tfrac12 \text{d}r \, \text{d}\theta$ ;
-	- Higher-dimensional analogues _eg_ of lines in 3-space;
-* Alternate parametrization:
-	- invariant measure now $\tfrac12 \sin\phi \; \text{d}r \, \text{d}\phi$;
-* Random line pattern using _Poisson point process_:
-	- mention “void probability” approach;
-* Simple (standard) line-process calculations:
-	- mean number of lines hitting segment equals segment length;
-	- mean number of lines hitting two sides a and b of a triangle but missing side c equals (a+b-c)/2;
-	- mean number of lines passing through two opposing sides of a rectangle (two other sides of length b, and diagonals of length f) equals (2f  2b)/2 = f-b.
-* Notion of “conditioning on a line at the origin”: Slivnyak, _Palm probability_, extremely useful in showing how to reason with general constructions;
-* Marks, _eg_ speed-marked line process (write down intensity measure on state space).
+![](image/city.png){width=1in fig-align="center"}
+:::
 
-Also: some results concerning (a) efficiency criteria and (b) traffic flow in Poisson line networks.
+::: {.column}
+How to build random patterns of lines?
+:::
 
-\note[item]{“dualization” using random lines rather than random baguette.}
+::::
 
-\note[item]{Steinhaus (1930) approach to measurement of length of fibres.}
+\note{Lines in higher-dimensional spaces: clever constructions using embeddings of frame bundle, but better to use the geometry rather than calculate explicitly!
+\par}
+
+\pause
+
+::: {.incremental}
+1. There is a theory of \structure{Random Closed Sets}. More constructively,
+\note[item]{Beautiful connection with Choquet capacity: characterize a random closed set \(\Xi\) 
+by void-probabilities \(\Prob{\Xi\cap A=\emptyset}\).}
+2. \structure{Boolean model}: union of sets located are Poisson points.
+\note[item]{Boolean: because we take union, we don't add.}
+3. Random lines \(\ell\) are not localized, so this must be adapted.
+\note[item]{How to describe the location of a line? NB however Schneider \& Weil (2008).}
+4. \structure{Simple solution:} parametrize by signed perpendicular distance \(r\), angle \(\theta\):
+    (i) represent each line \(\ell\) by a point \((r,\theta)\) in representation space;
+    (ii) view Poisson line process as Poisson point process in representation space.
+    Use \structure{invariant line measure} \(\half{\d}r{\d}\theta\).
+\note[item]{Here \(\theta\in[0,\pi)\) because we consider undirected lines only.
+Note the link to \structure{invariant line measure}. There are higher-dimensional analogues covering, for example,
+lines in \(d\)-space.}
+5. The representation space is a \alert{cylinder with twist}.
+\note[item]{Directed lines: no twist in the representation space.
+Measure theory: twist doesn't matter! and undirected lines are often more convenient.}
+6. Calculations typically reduce to computation of probabilities that there are
+\alert{no} lines of particular forms.
+:::
+
+\note[item]{Reducing to empty-space probabilities, 
+together with careful use of invariance, makes calculations much clearer. 
+The trick is to avoid writing down explicit formulae as much as possible.}
+
+---
+
+Examples of calculations with lines
+-----------------------------------
+The probability of there being no lines in (the representation space subset) \(E\) is
+\(\exp\left(-\mu(E)\right)\), where \({\d}\mu=\half\d r\d \theta\) is the invariant measure.
+\structure{Compute:}
+\note[item]{This is based on the line process being a \alert{Poisson process} of points in 
+representation space.}
+\pause
+
+::: {.incremental}
+* \(\Prob{\text{no lines hit a unit segment}}\):
+    - \includegraphics[height=0.5in]{image/lines1.jpg}
+    - By (a) translation invariance, (b) choice of normalizing constant \(\half\), 
+the probability can be computed to be \(\exp(-1)\).
+\note[item]{Under \({\d}\mu=\half\d r\d \theta\), the mean number of lines hitting a segment
+of unit length is equal to \(1\).}
+* \(\Prob{\text{all lines hitting a triangle \(ABC\) actually hit side \(AC\)}}\):
+    - \includegraphics[height=0.5in]{image/lines2.jpg}
+    - By a counting argument(!) this is \(\exp\left(-\half(|AB| + |BC| - |AC|)\right)\).
+\note[item]{Using a counting argument this is almost obvious. By any other route it would
+be a tricky computation!}
+* \(\Prob{\text{no lines pass between \(AD\) and \(BC\) of rectangle \(ABCD\)}}\):
+    - \includegraphics[height=0.5in]{image/lines3.jpg}
+    - Counting argument again(!): \(\exp\left(-\half(|AC| + |BD| - |AD| - |BC|)\right)\).
+\note[item]{Every time I come back to this subject, I have to puzzle out what ends up being a
+rather easy counting argument.}
+:::
+
+---
+
+Other relevant notions
+----------------------
+
+::: {.incremental}
+* An \structure{alternate parametrization} can be very convenient for calculations: 
+\(p\) is distance of intercept along a reference line,
+while \(\phi\) is angle as before.
+	- invariant measure now $\tfrac12 \sin\phi \; \text{d}p \, \text{d}\phi$;
+\note[item]{Think of a gunfight in a saloon in the Wild West: 
+the bias \(\sin\phi\) corresponds to the way in which
+everyone lies down on the floor to
+minimize chances of getting shot!}
+	
+* Notion of “conditioning on a line at the origin”: 
+    - \structure{Slivnyak's theorem} says that the remainder of the line pattern
+behaves just like the original Poisson line process!
+This is the theory of _Palm probability_, extremely useful in showing how to reason with general constructions;
+\note[item]{As with conditional probability, this gets somewhat counter-intuitive.
+Best formulated in measure-theoretic terms, by writing down general equations which it must satisfy.}
+
+* The use of \structure{marks} for the points / lines:
+    - _eg_ speed-marked line process.
+\note[item]{Write down intensity measure on state space extended to take account of marks.}
+:::
  
+Application to network efficiency
+=================================
+\note{We begin with some specific remarks, concerning the use of line processes in thinking about network design (or evolution).
+
+Consider a historical example: Roman emperors had to face agonizing financial choices.
+}
+\note[item]{PRO: Roads are needed to move legions quickly around the country;} 
+\note[item]{CON: Roads are expensive to build and maintain;}
+\note[item]{\emph{Pro optimo quod faciendum est?}}
+\note[item]{It isn't easy, being an emperor}
+:::: {.columns layout="[40,-20,40]"}
+
+::: {.column}
+![](image/roads-in-britain-x.png){height=2in}
+:::
+
+::: {.column}
+\pause![](image/hadrian.jpg){height=2in}
+:::
+
+::::
+
+\pause
+\structure{Choose:} spend money on expensive roads, or be unable to shoot trouble fast.
+
+\pause
+Can the Poisson line process help the Roman Emperor?
+
+Network Efficiency: mathematical model
+======================================
+\note{\scriptsize Consider question of efficient connection.
+
+Simplify to the case when the landscape is replaced by a featureless square plane region, within which cities are placed at average unit density.
+
+Do \emph{not} suppose anything about the placement of the cities, which may be systematic, or may be random in some fashion.
+\medskip
+
+}
+Long-range transport can be almost maximally efficient (compared to a complete planar graph),
+simply by laying down straight roads according to a sparse Poisson line process.
+
+::: {.incremental}
+* Network connecting \(N\) cities in rectangle side \(\sqrt{N}\).
+	(A) Measure efficiency by minimizing connecting stuff? (Steiner tree)
+    (B) Measure efficiency by average excess of connection distance over Euclidean? (Complete planar graph)
+
+* @AldousKendall-2007: start with Steiner tree:
+    - Add sparse set of random lines from a \structure{Poisson line process};
+    - Add sparse rectilinear grid connecting lines and tree;
+    - Add some box structures to avoid hotspots.
+
+    * Resulting network (large \(N\)) is economical with connection stuff (not much more than Steiner tree), 
+but average excess over complete planar graph is only logarithmic in \(N\).
+
+* Debunks a "natural" statistic for network efficiency [more on this in @AldousShun-2010].
+:::
+
+\note{One might reasonably suppose, in order to get
+  \(\average(G(x^{(N)}))\) close to the Euclidean distance (``as the
+  crow flies"), one needs substantially more than the minimum
+  possible distance (\(\length(\ST(x^{(N)}))=O(N)\) where \(\ST(x^{(N)})\)
+  is the Steiner minimum
+  tree for the configuration \(x^{(N)}\)).
+
+\medskip
+We note in passing that the Steiner minimum tree is typically
+computationally difficult (NP-complete!), though approximation (in planar case) is
+feasible using randomized algorithms.
+
+\medskip
+Notice: for general configurations we expect \(\average(G(x^{(N)}))=\Omega(\sqrt{N})\);
+the average will be minimized for the complete planar graph but then
+\(\length(G(x^{(N)}))= O(N^{5/2})\). 
+
+\medskip
+Control using \emph{near geodesics}, semi-perimeters of cells containing \(x\) and \(y\) formed from lines not separating \(x\) and \(y\).
+Censor lines separating source and destination, then use the cell containing source and destination to provide two alternative ``near geodesic" routes.
+This is algorithmically \emph{much} simpler than considering true geodesics.
+\par}
+
+Network Efficiency: some details
+================================
+\note{
+\scriptsize
+See Aldous \& WSK (2008), WSK (2011, 2014). Also compare the notion of \emph{spanners} in geometric graph theory.}
+
+::: {.incremental}
+* Logarithmic upper bound for "mean connection distance minus Euclidean distance" using Poisson line process.  
+    - (Steinhaus estimator for distance, study intersections of original Poisson line process and independent copy,
+focus on a certain Poisson polygon);
+
+\note[item]{This debunks an apparently natural network statistic: Aldous \& WSK (2008).
+See also Aldous \& Shun (2010).}
+
+* The logarithmic upper bound is of the correct order for a network based on a Poisson line process.
+This justifies use of \emph{near geodesics} ("approximate geodesics").  
+    - (Stereological estimation using 60-year-old refinements of Mills ratio inequality);
+
+\note[item]{The logarithmic upper bound of Aldous \& WSK (2008) 
+is based on ``near-geodesics" (solutions produced by a greedy algorithm
+for producing connection paths of small connection length). 
+Aldous \& WSK (2008) produce a root-logarithmic lower bound for general suitable networks,
+and WSK (2011) improves this to a logarithmic lower bound 
+for the network produced by the invariant Poisson line process.
+\newline
+Incidentally, this suggests an open problem: is there a class of network constructions which would produce 
+strictly sub-logarithmic excess?}
+
+* Controlling fluctuations by bounding variance of excess connection distance.  
+    - (represent perimeter of a Poisson polygon using theory of Lévy processes and self-similar processes).
+
+\note[item]{WSK (2011) shows that near-geodesic fluctuations are of root-logarithmic order.
+Arguments makes strong use of L\'evy processes, self-similar processes, and the Lamperti transform.}
+:::
+
+Traffic in networks
+===================
+\note{The second of our problems concerns line processes and traffic.
+
+The image presents a case of congestion in a major capital city.
+
+How might we get a handle on volume of traffic?
+
+We need a useful model for a network of road connections in a city, and a good model for traffic in the network.
+\par}
+\note[item]{Is there a limiting mean for traffic through the centre?}
+\note[item]{Is there a limiting distribution?}
+\note[item]{or might there be a ``congestion effect"?}
+
+![](image/Moscow_traffic.jpg){width=4in}
+
+
+The Poissonian City
+===================
+ \note{This model is found in WSK (2011). 
  
+ If you don't like this ``cross-country" fudge then (a) there is an asymptotic model in which this disappears, (b) or we can replace by a model in which traffic generated only between points
+ on the network, using a Palm distribution argument.
+\par}
+
+\structure{Design an idealized city!}
+
+\only<1| handout:0>{ Start with disc of radius \(n\), source/destination pair \(x\)/\(y\).\\
+  \includegraphics[width=2.8in]{image/city1.png}}
+  \note[item]{Generic source / destination pair \(x\)/\(y\) is indicated.}
+\only<2| handout:0>{ Lay down roads using Poisson line process.\\
+  \includegraphics[width=2.8in]{image/city2.png}}
+  \note[item]{Defined \emph{via} parametrization of lines.}
+\only<3| handout:0>{ Remove separating roads.\\
+  \includegraphics[width=2.8in]{image/city3.png}}
+  \note[item]{Follows Aldous \& WSK (2008): construction of near-geodesics.}
+\only<4| handout:0>{ Move off-road in least-favourable direction.\vphantom{g}\\
+  \includegraphics[width=2.8in]{image/city4.png}}
+  \note[item]{We need to get on to the network!}
+\only<5| handout:0>{ Move off-road in least-favourable direction.\vphantom{g}\\
+  \includegraphics[width=2.8in]{image/city5.png}}
+  \note[item]{So progress ``cross-country".}
+\only<6| handout:0>{ Proceed round cell-boundary \ldots\\
+  \includegraphics[width=2.8in]{image/city6.png}}
+  \note[item]{Two possible directions!}
+\only<7| handout:0>{ \ldots till at opposite side (form cell \(\partial\Cell(x,y)\)).\\
+  \includegraphics[width=2.8in]{image/city7.png}}
+  \note[item]{Note; two possible near-geodesics.}
+\only<8>{ Complete the \(2\) possible routes using a final off-road section.\\
+  \includegraphics[width=2.8in]{image/city8.png}}
+  \note[item]{Hence: two possible routes.}
+
+
+The Poissonian City (results)
+=============================
+\structure{Recall:} traffic generated uniformly between all pairs in a disk of radius \(n\),
+routes formed by near-geodesics from standard Poisson line process, divided equally between 
+two possible routes.
+
+
+::: {.incremental}
+* As disk radius \(n\) tends to \(\infty\), traffic through the centre behaves as \(2n^3\);
+\note[item]{Simple computation of multiple integral.}
+* Re-scaling, there is a limiting distribution for traffic through the centre;
+\note[item]{Not really surprising: there is no interaction so we expect no congestion effects.}
+* Limiting behaviour of traffic can be expressed as volume of a certain 4-dimensional Poisson polytope
+generated by an improper Poisson line process.
+\note[item]{This is an attractive way to identify the limiting distribution, and works for traffic \emph{not} at the centre too!}
+* @Gameros-2017 worked this out for a simpler model and compared it to empirical results concerning British rail traffic before and after the 1960’s Beeching railway cuts.
+\note[item]{The Gameros (2017) generalization models Britain by the interior of a matched ellipse!
+While there is no quantitative fit, there is a clear structural resemblance. The theoretical curve
+provides an interesting benchmark (nothing like this was available to Beeching!),}
+:::
 
 Stochastic geometry of online maps {#sec-stochgeom}
 ==================================
-![All the roads in South America](image/SouthAmericaRoadsDark.jpg){height=3in}
+![](image/SouthAmericaRoadsDark.jpg){height=3in}
 
----
+\note{This amazing and inspirational figure shows all the roads of all sizes 
+(every road from six-lane motorway to dirt track) in South America!
+\structure{Homage} to the wonderful work of @PythonMaps.
 
-* Modelling transportation systems;
-* Visual approach to axioms for online maps:	- Holland and Northwest Germany;
-	- Generating networks by a (random) mechanism;
-	- Axioms:
-		1. Scale invariance	;
-		2. Finite mean-length;
-		3. “SIRSN” property (Scale-Invariant Random Spatial Network).
-	- Bertrand Russell: “The axiomatic method has many advantages over honest work.”
-	- Settling the existential question:	 
-	 	- randomized dyadic speed-marked planar lattice [@Aldous-2012];
-	 	- speed-marked Poisson line process [@Aldous-2012; @Kendall-2014c; @Kahn-2015] using the line process theory discussed above.
-* More realistic models:
-	 - Sticks instead of lines;
-	 - Thick stick soup;
-	 - Thick Pareto stick soup;
-	 - Thick stiff fibre soup.
+We'd like to be able to discuss road systems on a continental scale,
+and consider how to model online map route-finder software. Clearly we should
+eventually aim to move beyond Poisson line processes, and also relax stationarity and
+isotropy, but we will take a simple-minded approach first.
+\par}
 
-Some further remarks {#sec-conclusion}
+What do we require of a model for an online map?
+================================================
+\structure{Axioms} [following @AldousGanesan-2013; @Aldous-2012].
+\note{We are interested in \structure{SIRSN},
+scale-invariant random spatial networks.
+
+Aldous suggested these three axioms to specify suitable mechanisms to choose the "fastest" / best route
+\(\Route(\xx,\yy)=\Route(\yy,\xx)\)
+from \(\xx\) to \(\yy\).
+Note that the underlying construction routes is pairwise (as opposed to the Minimal Spanning Tree
+or the Steiner Tree,
+which by their tree-like nature would give very poor solutions for some pairs of points!
+\par}
+
+The online map software generates routes between pairs of nodes, hence networks between any given set of nodes.
+
+\structure{Given:} (random) network \(\Network(\xx_1,\ldots,\xx_n)\) \structure{connecting} nodes. \structure{Require:}
+
+1. \structure{Scale-invariance:} for each Euclidean similarity 
+\(\Similarity\),
+\(\Law{N(\Similarity \xx_1,\ldots,\Similarity \xx_n)}=\Law{\Similarity N(\xx_1,\ldots,\xx_n)}\).
+\note[item]{We need (statistical) scaling symmetry, as well as Euclidean symmetry
+(stationarity and isotropy).}
+
+2.  If \(D_1\) is length of fastest route between two points at unit distance apart then
+\structure{mean length is finite:} \(\Expect{D_1}<\infty\).
+\note[item]{Routes should have finite arc-length.}
+    
+3.  \structure{Weak SIRSN property:} network connecting points of (independent) unit intensity Poisson point process has finite average length density;  
+**or**  
+    \structure{(Strong) SIRSN property}: finite length intensity of
+    "long-range" routes for points of _dense_ Poisson point process.
+\note[item]{On the other hand if one assembles all possible routes between source/destinations spread
+out over the entire plane (for example \emph{via} an independent Poisson point process)
+then the resulting fibre process of routes should have finite (mean) 
+length intensity.}
+
+A visual introduction to axioms for online maps
+===============================================
+![SIRSN as mechanism generating unique _routes_ \(\Route(\xx,\yy)\) from \(\xx\) to \(\yy\).](image/SIRSN-def.png){ height=200px }
+\note{The illustration depicts the chosen route between Köln and Bonn.
+(Please shut your eyes to the existence of the Rhine in this running example!)
+\par}
+
+\note[item]{Think of the online map mechanism as a random map from finite sets of nodes
+to networks connecting up these nodes, behaving consistently with respect to subsets of nodes
+and introduction of new nodes.
+In particular the online map mechanism
+is determined by the routing function
+(a symmetric function from pairs of nodes to connecting route).
+The image indicates a particular route.}
+\note[item]{It is important to emphasize that the routing function is symmetric: 
+we require \(\Route(\xx,\yy)=\Route(\yy,\xx)\).
+Additionally, if \(\zz\) lies between \(\xx\) and \(\yy\) on \(\Route(\xx,\yy)\) then
+\(\Route(\xx,\zz)\) must be a sub-path of \(\Route(\xx,\yy)\).}
+\note[item]{\emph{Uniqueness} of route is required by the application context
+(and interacts with proofs of other properties); 
+checking uniqueness holds in actual models can require non-trivial work!}
+
+Given locations \(\xx_1, \ldots, \xx_n\), the SIRSN should generate a _network_ 
+\[
+\Network(\xx_1, \ldots, \xx_n)\quad=\quad 
+\bigcup\left\{\Route(\xx_i,\xx_j)\;;\; 1\leq i < j \leq n\right\}
+\]
+of chosen _routes_ \(\Route(\xx_i,\xx_j)\) connecting \(\xx_i\) to \(\xx_j\).
+
+Axiom 1: (Statistical) scale-invariance of networks
+===================================================
+![SIRSN networks must be scale-equivariant.](image/SIRSN-def.png){ height=200px }
+![](image/SIRSN-scale.png){ height=200px }
+\note{Here we compare chosen routes between between Köln and Bonn (left)
+and (the longer route) Köln and Düsseldorf (right).
+\par}
+\note[item]{We discuss the general case of \(\Reals^m\): current applications concern \(m=2\),
+but the general case is striking and no harder.}
+
+Axiom 1 requires that SIRSN networks must be _scale invariant_ under similarities \(\Similarity\) on \(\Reals^m\):
+\[
+\Law{\Similarity\Network(\xx_1, \ldots, \xx_n)}\quad=\quad 
+\Law{\Network(\Similarity \xx_1, \ldots, \Similarity \xx_n)}\,.
+\]
+\note[item]{Scale-invariance: equivariance under rotation, translation, \emph{and} scaling.
+\alert{Statistical} details of the chosen route should depend neither on orientation nor location.
+This also deals with boundary effects of scale by imposing the empirically satisfying notion
+of scale-invariance. Compare notion of \emph{statistical shape}.}
+\note[item]{The illustration indicates scale-invariance just for single routes, but we need scale invariance for all networks connecting multiple source/terminus locations \(\xx_1, \ldots, \xx_n\).}
+\note[item]{Scale-invariance is related -- by the need for a hierarchy related to scales -- to the existence of a scale-index \(\Index\): more on this later.}
+\note[item]{In order to be able to formulate the notion of scale-invariance at all, the mechanism
+\alert{must} have some randomness.}
+(Model route \(\Route(\xx_i,\xx_j)\) hence network \(\Network(\xx_1, \ldots, \xx_n)\) as random.)
+
+Axiom 2: Finite mean length of routes
+=====================================
+![Realistic routes should have _controlled length_.](image/SIRSN-length.png){ height=200px }
+\note{Here we depict the chosen route between Düsseldorf and Bochum. 
+\par}
+
+Axiom 2 insists that SIRSN routes must have finite mean length.
+
+\note[item]{\emph{Obviously} we don't want this route to be infinitely long.}
+\note[item]{This requirement provides a possible parameter for the SIRSN mechanism:
+namely the mean length of route between
+two nodes separated by unit Euclidean distance.}
+\note[item]{This axiom \alert{rules out} the use of Brownian paths!}
+
+Axiom 3: SIRSN property
+=======================
+![SIRSN routes should be massively re-used.](image/SIRSN-SIRSN.png){ height=125px }
+\note{Here we repeat the original display of a network of chosen connections between a number of cities in
+the west of Germany and Holland.
+\par}
+
+Axiom 3 requires that the (strong) SIRSN property holds (considerable re-use of routes).
+
+. . .
+
+(Weak) Source/terminus nodes spread evenly everywhere. 
+"Route-re-use" means there is a relatively small mean-network-length-per-unit-area.
+\note[item]{Nodes "spread evenly everywhere": leads to \textbf{weak SIRSN property}.}
+
+. . .
+
+(Strong) Source/terminus nodes spread \alert{densely} everywhere.
+"Route-re-use" means there is still only a relatively small mean-network-length-per-unit-area
+for the "long-distance" network.
+\note[item]{"Long-distance" network: formed by parts of routes at least unit distance from both source and terminus.
+\newline
+Nodes "spread densely everywhere": \textbf{(strong) SIRSN property}.}
+
+\note[item]{A weaker requirement is to ask for
+finite-network-length-per-unit-area (\emph{i.e.} not mean length!): \textbf{pre-SIRSN property}.}
+
+\note[item]{Note that for any of these variant SIRSN properties to make sense, we require finite length of routes as specified
+in the second axiom.}
+
+\note[item]{The length intensity of the fibre process of (long-range) routes provides a further possible SIRSN parameter.}
+
+\note[item]{This axiom \alert{rules out} the use of complete Euclidean graphs!}
+
+
+But do SIRSN exist at all?
+==========================
+
+![](image/Bertrand_Russell_1949.jpg){ width=140px }
+
+
+\structure{Bertrand Russell (1872-1970):} "The axiomatic method has many advantages over honest work."  
+But it is useless if in fact there are no possible examples!
+
+\note[item]{The axiomatic method requires one to demonstrate consistency! Do there
+exist \emph{any} SIRSN?}
+
+. . .
+
+\alert{First example:} Hierarchical SIRSN [@Aldous-2012],  
+a \emph{\alert{randomized}} dense dyadic speed-marked planar _\alert{lattice}_.
+\note[item]{Aldous (2014) exhibited a somewhat contrived example,
+based on a randomized dense dyadic grid. Very good for people living in New York,
+but could be criticized as globally randomized, inelegant, \emph{ad hoc}.}
+\note[item]{Also based on infinitely extensible absolutely straight lines.}
+\note[item]{Note by the way that the Aldous lattice-based construction has a claim to be theirnearest possible
+to a purely deterministic SIRSN construction.}
+
+Do SIRSN exist at all? a more natural answer
+============================================
+\alert{Second example:}
+\structure{Poisson line process} (Plp) SIRSN: 
+planar _and also_ in higher dimensions too [@Aldous-2012; @Kendall-2014c; @Kahn-2015].
+\note{Aldous (2014) asked whether something could be done using Poisson line processes (Plp).
+WSK and Kahn showed this can indeed be done.
+
+
+Remarkably, the Plp example extends to all dimensions \(m\geq 2\)!
+\par}
+
+. . .
+
+\structure{Construction} uses speed-marked (improper) Plp \(\Pi\).
+\note{\bigskip
+\((0,\infty)\times\Reals\times[0,\pi):\)
+speed, signed distance from \(\origin\), unsensed direction.
+
+The construction uses an \emph{improper} random line process.
+Lines are everywhere dense, but differentiated by \emph{speed-\structure{marks}}.
+(Many slow lines, but fast lines form locally finite line processes.)
+\par}
+
+. . .
+
+\(\Pi\) is governed by intensity measure \(\varpi_\text{Plp}\) 
+on \(\alert<5>{(0,\infty)}\times\alert<4>{\Reals\times[0,\pi)}\):
+\[
+{\d}\varpi_\text{Plp}
+\quad=\quad
+\alert<4>{\half}
+\alert<5-8>{(\gamma{-}1) v^{-\gamma} {\d}v }\; 
+\alert<4>{{\d}r {\d}\theta}
+\qquad \text{(require \(\gamma>2\))}\,.
+\]
+
+. . .
+
+\structure{NB:} \alert<4>{\(\half{\d}r {\d}\theta\)}: intensity measure for \structure{standard Poisson line process}.
+\note{\bigskip
+The parameter \(\gamma\) is constrained by \(\gamma>2\). If this fails
+then
+\newline
+\(\gamma<2\): too many fast lines and one can reach infinity in finite time:
+\newline
+\(\gamma\leq2\): not enough slow lines and one cannot reach arbitrary prescribed points
+\emph{off} the line process in finite time.
+
+In practice (see simulations) the interesting regime is that
+of small \(\gamma>2\).
+
+NB: \(\gamma>m\) required in \(m\)-dimensional space. Use
+\(\gamma=(m-1)(\Index-1)+1\) to separate dimension \(m\) from scaling index \(\nu\).
+\par}
+
+. . .
+
+Use fastest \(\Pi\)-paths for routes. Require \(\gamma>2\) so
+
+* \(\Pi\)-paths cannot reach \(\infty\) in finite time;  
+* \(\Pi\)-paths can reach any prescribed point in finite time.
+
+. . .
+
+\structure{NB} (\(\gamma>1\)): Lines of speed \(>1\) form \alert<5>{standard Poisson line process \(\Pi^{(\geq1)}\)}. 
+
+. . .
+
+Proof of SIRSN axioms (especially third axiom) is non-trivial!
+
+
+Some further remarks {#sec-further}
 ====================
-![Much more work is still to be done](image/HeathRobinson.jpg){height=3in}
+![](image/HeathRobinson.jpg){height=3in}
+\note{Much more work is still to be done\par}
 
 ---
 
-* “Thickness” is a simplifying assumption and still has reality problems:
-	- using finite-mean-length sticks with infinite second-length-moment, means that _any_ selected stick will have infinite-mean-length (length-biasing!);
-	- reasonable to suppose that it suffices to have super-critical percolation for the configuration of fibres of greated than unit speed;
-	- But stick percolation is _hard_! Still working to try to develop some relevant theory.
-* Everything still works for lines in higher-dimensional space:
-	- Dimension 3 is currently the only other case of interest (could be of interest when studying the human connective!);
-	- Blanc has recently published nice work on an analogue in hyperbolic space.
-* A big attraction of the theory in its present state is that one can consider relaxing parts of the scaling symmetry assumption. The “SIRSN effect” (Axiom 3) is probably still going to work if controlled spatial inhomogeneity is allowed. So this approach now provides a flexible framework for statistical and operational research modelling.
-* We can introduce traffic, for example by supposing traffic along the connecting route to be uniformly generated between any pair of points. @Gameros-2017 worked this out for a simpler model and compared it to empirical results concerning British rail traffic before and after the 1960’s Beeching railway cuts.
+\note{The notion of ``thickness".
+\par}
 
+
+::: {.incremental}
+* Lines are unsatisfactory models for roads: they are too long(!)
+and too straight.
+* The proof that Plp-SIRSN satisfies the axioms has now been generalized
+so that it only depends on getting good bounds on the time taken to transit between the two "flat ends"
+of a cylinder.
+* We'd like to move from lines to line segments (and then to curved fibres).
+* Clearly we'd need to know when random patterns of line segments \alert{percolate}
+(connect up enough to provide long-distance routes).
+This is a dramatically hard problem!
+* However we can finesse by considering a \structure{"thickness"} property: 
+if the length of a typical unit-speed line segment 
+has finite first moment but infinite second moment then the two "flat ends"
+of any cylinder will be connected by (perhaps very slow) single fibres. 
+* Under a slight quantification of the divergence of the second moment,
+the SIRSN property can then be proved.
+:::
+
+Conclusion {#sec-conclusion}
+==========
+Many questions remain!
+
+::: {.incremental}
+1. “Thickness” is a simplifying assumption and still has reality problems:
+	- if sticks have finite-mean-length but infinite second-length-moment, then _any_ selected stick will have infinite-mean-length (length-biasing!);
+	- \structure{Conjecture:} it suffices to have  super-critical percolation for the configuration of fibres of greater than unit speed;
+\note[item]{Stick percolation is \emph{hard}! Still working to try to develop some relevant theory.}
+2. Everything still works for lines in higher-dimensional space:
+\note[item]{It is really extraordinary that the results extend to higher dimensions, in which there are no intersections between pairs of lines in general position!}
+	- Dimension 3 is another case of interest (_eg_ human connectome!);
+	- Blanc has recently obtained results on an analogue in hyperbolic space.
+3. One can now relax parts of the scaling symmetry assumption while maintaining the “SIRSN effect” (Axiom 3), _eg_ under controlled spatial inhomogeneity. Thus we have a flexible framework for statistical and operational research modelling.
+\note[item]{This was a major motivation for generalizing to thick patterns of segments.}
+4. Introduce _traffic_, _eg_ supposing traffic between any pair of points to be uniformly generated along the connecting route. One can now develop @Gameros-2017 comparisons.
+\note[item]{This offers great opportunities, since traffic data is now collected extensively and widely.}
+:::
+
+---
+
+
+![](image/mastiles.jpg)
+
+\note{Transportation networks are very old as well as very modern.
+\bigskip
+\text{ }
+\par}
+\note[item]{Mastiles Lane is part of a 2000-year-old transportation network used for medieval sheep farming in North of England.
+\bigskip
+\text{ }}
+\note[item]{\alert{QUESTIONS?}}
+
+
+Thank you for your attention! \alert{QUESTIONS?}
 
 
 References {.allowframebreaks .t} 
@@ -388,6 +914,6 @@ Technical information
 : {tbl-colwidths="[20,45,35]"}
 :::
 
-Poisson line process
+
 
 \scriptsize
