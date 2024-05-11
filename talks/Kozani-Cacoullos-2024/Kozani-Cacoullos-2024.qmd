@@ -779,7 +779,7 @@ on \(\alert<5>{(0,\infty)}\times\alert<4>{\Reals\times[0,\pi)}\):
 \quad=\quad
 \alert<4>{\half}
 \alert<5-8>{(\gamma{-}1) v^{-\gamma} {\d}v }\; 
-\alert<4>{{\d}r {\d}\theta}
+\alert<4>{ {\d}r {\d}\theta }
 \qquad \text{(require \(\gamma>2\))}\,.
 \]
 
