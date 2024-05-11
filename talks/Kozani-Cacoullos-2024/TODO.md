@@ -1,8 +1,12 @@
-#  TODO list for Thessaloniki May 2024
+#  TODO list for Kozani_Cacoullos May 2024
 
-- [x] Compute ratios for equilibrium using julia `Rational` numbers;
-- [ ] Fix up perfect SIR simulation GIFs to take just 128 time steps;
-- [ ]  Print talk notes
+- [ ] Complete drafting of talk:
+  - [x] Recent origins: apatite crystals
+  - [x] Historical origins: baguettes
+  - [ ] Poisson line processes
+  - [ ] Stochastic geometry of online maps
+  - [ ] (Some further remarks)
+- [ ] Check QR code, add hyperlink to talk handout
+- [ ] Print talk notes
 - [ ] Place talk PDFs in GoodReader
-- [ ] Prepare memory stick for talk PDFs and GIFs
-- [ ] Note need to fix proposal for initial condition
+- [ ] Prepare memory stick for talk PDFs 

@@ -53,6 +53,9 @@ $(biblio): $(biblio-source)
 		"$<" > $(biblio)
 
 qrcode: image/talk_URL.jpg
+	qrencode -s 6 -l H -o image/talk_URL.png "https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf"
+	convert -scale 25% image/talk_URL.png image/talk_URL.jpg
+	rm image/talk_URL.png
 
 #################################################
 

@@ -42,11 +42,11 @@ format:
 Introduction {#sec-introduction}
 ============
 
-:::: {.columns layout="[ 45, 55 ]"}
+:::: {.columns layout="[ 40, 60 ]"}
 
 ::: {.column}
 
-![](image/Theophilos-Cacoullos-600x800.jpg){width=2in}
+![](image/Theophilos-Cacoullos-600x800.jpg){width=1.5in}
 
 \medskip\scriptsize
 Theophilos Cacoullos 1932-2020
@@ -54,6 +54,8 @@ Theophilos Cacoullos 1932-2020
 :::
 
 ::: {.column}
+
+\scriptsize
 
 Cacoullos:  
 "An excellent teacher who never used notes but did use spontaneous humor"  
@@ -66,10 +68,20 @@ I count it a real honour to be invited to present the second Theo Cacoullos Memo
 These remarks on his presentational style make it clear that Theo Cacoullos Memorial lecturers have much to live up to!
 I will do my very best.
 
+\medskip
+
+Handout available on the web:
+either use the `QR-code`
+
+\medskip
+
+\text{ }\qquad\quad ![](image/talk_URL.jpg)
+
 :::
 
 ::::
 
+\qquad or visit <https://wilfridskendall.github.io/talks/Kozani-Cacoullos-2024/>
 
 Recent Origins: Particle Tracks in Apatite Crystals
 ===================================================
