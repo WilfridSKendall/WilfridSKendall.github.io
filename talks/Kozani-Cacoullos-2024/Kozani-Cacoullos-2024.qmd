@@ -120,7 +120,8 @@ but direct observation is massively \alert{biased} by
 
 * How to model a pattern of segments? (_Poisson segment process_: a kind of _Boolean model_);
 \note[item]{Elegant but simple stochastic model, which (unusually for stochastic geometry)
-lends itself at least partially to exact calculation.}
+lends itself at least partially to exact calculation. We will shortly encounter a variant:
+the Poisson line process.}
 \pause
 
 * How to get good length histogram? (select _horizontal_ enclosed tracks hitting tracks that intersect slice).
