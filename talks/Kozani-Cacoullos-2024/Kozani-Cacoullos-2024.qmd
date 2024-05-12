@@ -159,7 +159,7 @@ Throwing baguettes over one’s shoulder (I)
 ==========================================
 \note{"Throwing baguettes over one’s shoulder": a description of how Buffon
 undertook his classic experiment in geometric probability.
-\\par}
+\par}
 :::: {.columns layout="[ 40, 60 ]"}
 
 ::: {.column}
