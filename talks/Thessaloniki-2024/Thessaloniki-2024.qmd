@@ -139,7 +139,9 @@ assign proportions of probability to neighbouring states \(b\).}
 
 * \structure{Solve} balance equations: equilibrium probabilities defined by the ratio  
 	![](image/mc4.jpg){height=1in}
-
+\note[item]{For typical binary image. more than \(2^\text{million}\) states,
+Compare number of electrons in observable universe, estimated at less than \(2^300\).
+}
 ---
 
 * \structure{detailed balance} \(\pi(a) p(a,b)=\pi(b) p(b,a)\), 
@@ -150,8 +152,11 @@ Also, curiously, the chain is then \emph{reversible} when in equilibrium.}
 
 ![](image/mc5.jpg){height=1in}
 
+\pause
+
 ![](image/mc6.jpg){height=1in}
 
+\note[item]{Note that there can be no solution, if chain is \emph{irreversible}.}
 
 ---
 	
@@ -175,7 +180,7 @@ The following points are key to designing Markov chains which have the desired t
 equilibrium distribution.
 
 * Under detailed balance we can \structure{condition} on specific parts of the state-space by forbidding transitions;  
-\note[item]{As long as irreducibility and aperiodicity are preserved, this works fine,
+\note[item]{As long as irreducibility and aperiodicity and recurrence are preserved, this works fine,
 since detailed balance is automatically preserved!}
 
 * We can \structure{modify} any chain, transition probabilities \(p(a,b)\),
@@ -192,7 +197,7 @@ such that
 \note[item]{There are even some optimality arguments for this, though current research
 also investigates other options.}
 
-* If still irreducible aperiodic, then long-term equilibrium is \(\pi(a)\).
+* If still irreducible aperiodic recurrent, long-term equilibrium still \(\pi(a)\).
 
 * Markov chain Monte Carlo (MCMC), of great statistical importance. 
 
@@ -238,10 +243,12 @@ Sketch of MCMC (V)   {#sec-MCMC-V}
 	- Conclusion: effective MCMC requires very careful thought about appropriate length of run — think deeply about the problem! 
 	
 * So we are looking for ways to address burn-in where possible.
-\note[item]{This, of course, is what this lecture is about!}
+\note[item]{End of visual introduction to MCMC, recap!}
 
 Perfect Simulation  {#sec-perfection}
 ==================
+\note{We now consider a visual introduction to CFTP / perfect simulation.
+\par}
 * @ProppWilson-1996a invented exact simulation / Coupling from the Past (CFTP) / perfect simulation;
 \note[item]{Jim Propp described the discovery of CFTP as like walking down the street and suddenly noticing
 a 50\$ bill lying on the ground.}
@@ -254,7 +261,7 @@ a 50\$ bill lying on the ground.}
 
 * We will study _random-walk-CFTP_, which can in fact be boosted to provide simple image reconstruction using Ising model;
 \note[item]{Propp \& Wilson (1996) show how to vary random walk CFTP to get exact samples for 
-\structure{critical} Ising model ( (Persi Diaconis: “Like seeing the landscape of Mars for the first time”)). 
+\structure{critical} Ising model ( (Persi Diaconis: “Like seeing the landscape of Mars for the first time”).
 Ising model with external field can be used
 to model images, hence CFTP can be used for image reconstruction.}
 
@@ -289,7 +296,8 @@ If probability of meeting by time \(T\) is high, then deviation of \(X_T\) from 
 
 \only<1-5| handout:0>{\uncover<4-5>{\includegraphics[width=3.5in]{image/basic-rw1.png}}}
 \only<6-7| handout:1>{\includegraphics[width=3.5in]{image/basic-rw2.png}}
-
+\note[item]{Blue line (coupled maximum process) \alert{not correct: needs to jag downwards}. But only couples at a boundary,
+which is the essential poimt!}
 ---
 
 Classic CFTP for a simple random walk (I)
@@ -372,9 +380,11 @@ They are intended as a challenge: when can one find \emph{practical} methods?}
 \note[item]{(Locally finite) point processes cannot in general be treated using Classic CFTP, 
 because the ``top" pattern would have points \emph{everywhere}.}
 
-* Detailed expositions are given by @Kendall-2005a, @Huber-2015. @Kendall-2014b shows
+* Detailed expositions are given by @Kendall-2005a, @Huber-2015.
+@Kendall-2014b shows
 how to implement CFTP in R.
-\note[item]{People who are interested in CFTP from a practical point of view may find it useful to work through WSK (2015).}
+\note[item]{This is the end of the visual introduction to CFTP.
+People who are interested in CFTP from a practical point of view may find it useful to work through WSK (2015).}
 
 Applications to Queues and Epidemics  {#sec-applications}
 ====================================
@@ -498,7 +508,8 @@ the \(c\) servers, bearing in mind the \(\operatorname{FCFS}\) queueing discipli
 The coordinates are correlated, and increase monotonically with ``server" (actually, 
 Kiefer-Wolfowitz dimension).
 Note that the last coordinate
-is more skewed, so anticipated to do noticeably more work!
+is more skewed, so anticipated to do noticeably more work! (Note that the most heavily loaded
+server is \emph{not} predestined, but is a function of how work is allocated on arrival.)
 
 \bigskip
 
