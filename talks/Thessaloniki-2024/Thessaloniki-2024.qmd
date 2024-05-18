@@ -727,6 +727,8 @@ implement accurate and informative MCMC.
 
 * Thank you for your attention! \alert{QUESTIONS?}
 
+![](image/talk_URL.jpg){width=1in fig-align="center"}
+
 References {.allowframebreaks .t} 
 ==========
 
