@@ -729,8 +729,7 @@ But do SIRSN exist at all?
 ![](image/Bertrand_Russell_1949.jpg){ width=140px }
 
 
-\structure{Bertrand Russell (1872-1970):} 
-\newline
+\structure{Bertrand Russell (1872-1970):}
 "The axiomatic method has many advantages over honest work."  
 But it is useless if in fact there are no possible examples!
 
@@ -739,7 +738,6 @@ exist \emph{any} SIRSN?}
 
 . . .
 
-\bigskip
 
 \alert{First example:} Hierarchical SIRSN [@Aldous-2012],  
 a \emph{\alert{randomized}} dense dyadic speed-marked planar _\alert{lattice}_.
