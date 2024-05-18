@@ -1,5 +1,10 @@
 #  TODO list for Kozani-Cacoullos-2024
 
+Talk versions:
+
+1. Theo Cacopoulos Memorial lecture, Kozima, 16 May 2024.
+
+
 - [x] Complete drafting of talk:
   - [x] Recent origins: apatite crystals
   - [x] Historical origins: baguettes

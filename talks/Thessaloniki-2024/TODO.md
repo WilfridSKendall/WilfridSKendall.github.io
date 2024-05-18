@@ -1,5 +1,9 @@
 #  TODO list for Thessaloniki May 2024
 
+Talk versions:
+
+1. Aristotle University Thessaloniki, 15 May 2024.
+
 - [x] Compute ratios for equilibrium using julia `Rational` numbers;
 - [x]  Print talk notes
 - [x] Place talk PDFs in GoodReader
