@@ -1,7 +1,7 @@
 ---
 title:       "Three centuries of random lines: 
 				from Buffon's needle to scale-invariant networks"
-subtitle:    Theo Cacoullos Memorial Lecture 2024
+subtitle:    Theo Cacoullos Memorial Lecture at Kozani 2024
 date:        16 May 2024
 author:     
     - name:           Wilfrid S Kendall
@@ -739,6 +739,8 @@ exist \emph{any} SIRSN?}
 
 . . .
 
+\bigskip
+
 \alert{First example:} Hierarchical SIRSN [@Aldous-2012],  
 a \emph{\alert{randomized}} dense dyadic speed-marked planar _\alert{lattice}_.
 \note[item]{Aldous (2014) exhibited a somewhat contrived example,
@@ -871,7 +873,7 @@ Many questions remain!
 ---
 
 
-![](image/mastiles.jpg)
+![](image/mastiles.jpg){width=3in fig-align="center"}
 
 \note{Transportation networks are very old as well as very modern.
 \bigskip
@@ -882,9 +884,12 @@ Many questions remain!
 \text{ }}
 \note[item]{\alert{QUESTIONS?}}
 
+\centering
 
 Thank you for your attention! \alert{QUESTIONS?}
 
+
+![](image/talk_URL.jpg){width=1in fig-align="center"}
 
 References {.allowframebreaks .t} 
 ==========
