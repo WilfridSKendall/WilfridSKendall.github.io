@@ -623,7 +623,7 @@ length intensity.}
 A visual introduction to axioms for online maps
 ===============================================
 ![SIRSN as mechanism generating unique _routes_ \(\Route(\xx,\yy)\) from \(\xx\) to \(\yy\).](image/SIRSN-def.png){ height=200px }
-\note{The illustration depicts the chosen route between Köln and Bonn.
+\note{The illustration depicts the chosen route between Koln and Bonn.
 (Please shut your eyes to the existence of the Rhine in this running example!)
 \par}
 
