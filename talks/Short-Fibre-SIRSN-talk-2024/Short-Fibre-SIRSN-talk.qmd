@@ -411,14 +411,15 @@ Sticks and stiff fibres: foundations
 \note[item]{Object process: classical idea from stochastic geometry.}
 \note[item]{"Soup": borrowed to indicate scale-invariant model, 
 but not (as far as I can tell) related to any process resembling a LERW.}
-\note[item]{One-dimensional objects, so length makes sense (and eventually SIRSN property is not invalidated!),}
-Use _object processes_ (random objects located at points of a Poisson process):  
+\note[item]{One-dimensional objects, so length makes sense (and eventually does not risk trivial invalidation of SIRSN property!),}
+Use \structure{object processes} (random objects located at points of a Poisson process):  
 
 ::: {.incremental}
 
 * \alert<9>{Scale-invariant}, so speed-marked ("object soup");
 * Sticks or \(C^1\) fibres, so notion of length;
-* _Stiff_ fibres (each fibre within \(\eps\) of its intrinsic overall direction).
+* \structure{Stiff} fibres \alert<4>{(each fibre within \(\eps\) of its intrinsic overall direction).}
+\note[item]{This definition of stiffness is more particular than we need, but is simple to work with and seems well suited to applications!}
 * Define using intensity measure on \structure{configuration space}:
 \note[item]{Everything depends on formulating a configuration space and a \(\sigma\)-finite invariant measure.
 All calculations flow from this (typically a calculation is about computing or estimating the probability of \emph{absence} of objects falling in a suitable set).
@@ -450,6 +451,9 @@ x && \omega && r && \alert<6>{\shape} && v
 
 Sticks and stiff fibres: techniques
 ===================================
+\note{We can generalize classical Sobolev-space results to apply to the measurable
+orientation field defined by the dense soup of fibres.
+\par}
 
 1. Integrate the measurable field of orientations using Lipschitz paths;
 \note[item]{Measurable so massive non-uniqueness. Speculate about turbulence?!}
@@ -493,7 +497,7 @@ for the family of fibres of greater than unit speed.
 :::
 
 \note{I can sketch a proof of SIRSN property for highly percolative stiff non-thick fibre soups, based on
-(a very inefficient) comparison with bond percolation.
+(an inefficient) comparison with bond percolation.
 \par
 
 The conjecture seems reasonable, but is expressed in deliberately bold terms.
