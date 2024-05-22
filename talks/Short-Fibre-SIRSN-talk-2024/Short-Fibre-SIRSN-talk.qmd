@@ -7,7 +7,6 @@ institute:  Warwick
 date:       29 May 2024
 author:     
     - name:           Wilfrid S Kendall
-      url:            https://www.warwick.ac.uk/WSK/Short-Fibre-SIRSN-handout.pdf
       affiliation:    University of Warwick Department of Statistics
       affilation-url: https://www.warwick.ac.uk/statsdept
 thanks:         |
@@ -46,7 +45,7 @@ format:
 \center
 
 \scriptsize
-<https://wilfridskendall.github.io/talks/Short-Fibre-SIRSN-talk/Short-Fibre-SIRSN-talk-handout.pdf>
+<https://wilfridskendall.github.io/talks/Short-Fibre-SIRSN-talk-2024/Short-Fibre-SIRSN-talk-handout.pdf>
 
 ---
 
