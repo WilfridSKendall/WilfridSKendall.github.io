@@ -486,9 +486,10 @@ The SIRSN property should not need "thickness" (single-fibre connection).
 . . .
 
 ::: {.conjecture}
-## Conjecture: Super-critical percolation suffices
+## Conjecture: Super-critical percolation suffices.
 I conjecture that a Poisson soup of stiff fibres can form a SIRSN 
-if the family of fibres of greater than unit speed exhibits super-critical percolation.
+if there is  super-critical percolation
+for the family of fibres of greater than unit speed.
 :::
 
 \note{I can sketch a proof of SIRSN property for highly percolative stiff non-thick fibre soups, based on
@@ -499,44 +500,63 @@ The conjecture seems reasonable, but is expressed in deliberately bold terms.
 \par
 
 Note that Popov and Vachkovskaia (2002) exhibit a "discretely-scale-invariant" 
-or multi-scale stick model for which percolation fails!
+or multi-scale stick model for which percolation fails! By monotonicity, this 
+applies to case of sticks of speeds \emph{lower} than a specified threshold.
 \par}
 
 . . .
 
-:::: {.columns layout="[40,58]"}
+::::: {.columns layout="[52,48]" .t}
 
-::: {.column}
+:::: {.column}
+
+Simulation of a caricature:
+
+  - Scaled stick-length \(=1\);
+
+  - large clusters coloured red, \newline
+  small clusters coloured blue;
+  
+  - using \only<3>{stick-length 1;}\only<4| handout:0>{stick-lengths 1, 2;}\only<5| handout:0>{stick-lengths 1, 2, 4;}\only<6-| handout:0>{stick-lengths 1, 2, 4, 8;}
+  
+  - length intensities reduce inversely.
+  
+\bigskip
+
+\uncover<6->{Percolation is plausible.}
+  
+::::
+
+
+:::: {.column}
 
 \only<1-3>{\includegraphics[width=2in]{image/40x40-level1.pdf}}
-\only<4|  handout:0>{\includegraphics[width=2in]{image/40x40-level2.pdf}}
-\only<5|  handout:0>{\includegraphics[width=2in]{image/40x40-level3.pdf}}
-\only<6|  handout:0>{\includegraphics[width=2in]{image/40x40-level4.pdf}}
-\only<7|  handout:0>{\includegraphics[width=2in]{image/40x40-level4.pdf}}
-\only<8-|  handout:0>{\includegraphics[width=2in]{image/40x40-level4.pdf}}
-:::
-
-::: {.column .t}
-\uncover<7->{A suitable first-passage percolation property may suffice
-(routes can use ``instantaneous stops'').
-}
-\note[item]{Because of the possibility of ``instantaneous stops'',
-first-passage percolation covers situations where ordinary percolation may fail.
-Here ``suitable'' is likely to require bounded exponential-fractional moment on longest time-distance of
-point on circle to circle centre.}
-:::
+\only<4| handout:0>{\includegraphics[width=2in]{image/40x40-level2.pdf}}
+\only<5| handout:0>{\includegraphics[width=2in]{image/40x40-level3.pdf}}
+\only<6-| handout:0>{\includegraphics[width=2in]{image/40x40-level4.pdf}}
 
 ::::
 
 
-\note[item]{First-passage percolation: exponential-fractional moment should suffice!}
+:::::
+
+
+\note[item]{By monotonicity, the discrete geometrically scaled variety of stick lengths
+gives information about the continuously scaled case!}
+
+\note[item]{Because of the possibility of ``instantaneous stops'',
+first-passage percolation may cover situations where ordinary percolation may fail.
+Here ``suitable'' is likely to require bounded exponential-fractional moment on longest time-distance of
+point on circle to circle centre.}
+
 
 
 Conclusion
 ==========
 
 ::: {.incremental}
-* Strong positive evidence that "SIRSN are everywhere!" (not just when infinite lines are involved).
+* Strong positive evidence that "SIRSN are everywhere!" \newline
+(not just when infinite lines are involved).
 \note[item]{We've progressed from having just two somewhat unrealistic models to possessing a whole Poisson plethora of possibilities!}
 * There are very simple scale-invariant stick soups which are thick:  
 so this theory is not vacuous!
@@ -591,12 +611,12 @@ Previous versions of this talk {.appendix}
 
 \scriptsize
 
-* Colloquium lecture _Scale-invariant random spatial networks (SIRSN) from line patterns_: Auckland 9 August 2016; Bern 10 June 2016; Aarhus 6 June 2016; Manchester Probability Seminar 13 April 2016; Journée de Rham lecture at Lausanne 22 April 2015.
+* Colloquium lecture _Scale-invariant random spatial networks (SIRSN) from line patterns_: Journée de Rham lecture at Lausanne 22/4/2015; Auckland 9/8/2016; Bern 10/6/2016; Aarhus 6/6/2016; Manchester Probability Seminar 13/4/2016.
 
-* Four-lecture course _Poisson line processes and spatial transportation networks_: Edinburgh 21-22 June 2018.
+* Four-lecture course _Poisson line processes and spatial transportation networks_: Edinburgh 21-22/6/2018.
 
-* Talks on more general varieties of SIRSN: Dunkerque 17-19 November 2021, Singapore 21 June 2022, Bern 15 September 2022, Cologne 29 March 2023.
+* Talks on more general varieties of SIRSN: Sandbjerg 16 February 2020; Dunkerque 17-19 November 2021; Singapore 21/6/2022; Bern 15/9/2022; Cologne 29/3/2023; UCD 24/4/2024.
 
-* Shorter form talks (25-30 minutes): "Warwick Stats 50" 8 September 2022, Baxendale birthday workshop Warwick 9 June 2023, OEBN memorial workshop Aarhus 29 May 2024.
+* Shorter form talks (25-30 minutes): "Warwick Stats 50" 8/9/2022; Baxendale birthday Warwick 9/6/2023; OEBN memorial Aarhus 29/5/2024.
 
 :::
