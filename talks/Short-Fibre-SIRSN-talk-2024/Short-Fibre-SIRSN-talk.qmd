@@ -603,8 +603,6 @@ References  {.allowframebreaks .t}
 ::: {#refs}
 :::
 
-
-
 Previous versions of this talk {.appendix}
 ===============
 \scriptsize
