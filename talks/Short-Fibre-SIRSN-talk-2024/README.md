@@ -8,11 +8,11 @@ I will give an overview of work I have been interested in for the last decade or
 
 ### References
 
-Aldous, D J. "Scale-Invariant Random Spatial Networks." Electronic Journal of Probability 19, no. 15 (April
-2014): 1-41. https://doi.org/10.1214/EJP.v19-2920.
-Kahn, J. "Improper Poisson Line Process as SIRSN in Any Dimension." Annals of Probability 44, no. 4
-(July 2016): 2694-2725. https://doi.org/10.1214/15-AOP1032.
-WSK "From Random Lines to Metric Spaces." Annals of Probability 45, no. 1 (2017): 469-517. https://doi.org/10.1214/14-AOP935.
+* Aldous, D J. "Scale-Invariant Random Spatial Networks." Electronic Journal of Probability 19, no. 15 (April
+  2014): 1-41. https://doi.org/10.1214/EJP.v19-2920.
+* Kahn, J. "Improper Poisson Line Process as SIRSN in Any Dimension." Annals of Probability 44, no. 4
+  (July 2016): 2694-2725. https://doi.org/10.1214/15-AOP1032.
+* WSK "From Random Lines to Metric Spaces." Annals of Probability 45, no. 1 (2017): 469-517. https://doi.org/10.1214/14-AOP935.
 
 ---------------------
 
