@@ -1,8 +1,8 @@
  
 
-# Handouts for talks by Wilfrid Kendall (WSK)
+[TOC]
 
-### 29 May 2024, Ole E. Barndorff-Nielsen memorial conference (Aarhus, Denmark)
+##### 29 May 2024, Ole E. Barndorff-Nielsen memorial conference (Aarhus, Denmark)
 
 Short form (25 minutes) of [Wandering around a fibrous network (when all the paths look very much alike)](https://wilfridskendall.github.io/talks/Short-Fibre-SIRSN-talk-2024/Short-Fibre-SIRSN-talk-handout.pdf).
 
@@ -10,13 +10,13 @@ Short form (25 minutes) of [Wandering around a fibrous network (when all the pat
 
 ###### References
 
-Aldous, D J. "Scale-Invariant Random Spatial Networks." *Electronic Journal of Probability* 19, no. 15 (April 2014): 1-41. https://doi.org/10.1214/EJP.v19-2920.
-Kahn, J. "Improper Poisson Line Process as SIRSN in Any Dimension." *Annals of Probability* 44, no. 4 (July 2016): 2694-2725. https://doi.org/10.1214/15-AOP1032.  
-WSK "From Random Lines to Metric Spaces." *Annals of Probability* 45, no. 1 (2017): 469-517. https://doi.org/10.1214/14-AOP935.
+Aldous, D J. "Scale-Invariant Random Spatial Networks." *Electronic Journal of Probability* 19, no. 15 (April 2014): 1-41 <https://doi.org/10.1214/EJP.v19-2920>.  
+Kahn, J. "Improper Poisson Line Process as SIRSN in Any Dimension." *Annals of Probability* 44, no. 4 (July 2016): 2694-2725 <https://doi.org/10.1214/15-AOP1032>.  
+WSK "From Random Lines to Metric Spaces." *Annals of Probability* 45, no. 1 (2017): 469-517 <https://doi.org/10.1214/14-AOP935>.
 
 ------
 
-### 16 May 2024, Theo Cacoullos Memorial Lecture (Kozani, Greece)
+##### 16 May 2024, Theo Cacoullos Memorial Lecture (Kozani, Greece)
 
 Colloquium-style talk (45 minutes) [Three centuries of random lines: from Buffon’s needle to scale-invariant networks](https://wilfridskendall.github.io/talks/Kozani-Cacoullos-2024/Kozani-Cacoullos-2024-handout.pdf).
 
@@ -26,15 +26,15 @@ Colloquium-style talk (45 minutes) [Three centuries of random lines: from Buffon
 
 ###### References
 
-Aldous, D J and Ganesan, K (2013). True scale-invariant random spatial networks. *Proc. Nat. Acad. Sci. USA* 110.22 8782-8785.
-Aldous D J andWSK (2008). Short-length routes in low-cost networks via Poisson line patterns. *Advances in Applied Probability* 40.1 1-21.
-Hey, John D, Neugebauer, Tibor M, Pasca, and Carmen M (2010). Georges-Louis Leclerc de Buffon's `Essays on Moral Arithmetic' (1777), *The Selten School of Behavioral Economics* (Edited by Sadrieh, A, Ockenfels, A). 245-282.
-WSK (2014). Lines and networks. *Markov Processes and Related Fields* 20.1, 81-106.
+Aldous, D J and Ganesan, K (2013). True scale-invariant random spatial networks. *Proc. Nat. Acad. Sci. USA* 110.22 8782-8785.  
+Aldous D J and WSK (2008). Short-length routes in low-cost networks via Poisson line patterns. *Advances in Applied Probability* 40.1 1-21.  
+Hey, John D, Neugebauer, Tibor M, Pasca, and Carmen M (2010). Georges-Louis Leclerc de Buffon's `Essays on Moral Arithmetic' (1777), *The Selten School of Behavioral Economics* (Edited by Sadrieh, A, Ockenfels, A). 245-282.  
+WSK (2014). Lines and networks. *Markov Processes and Related Fields* 20.1, 81-106.  
 Stigler S M (1991). Stochastic simulation in the nineteenth century. *Statistical Science* 6.1 89-97.
 
 ------
 
-### 15 May 2024, Markov chain Monte Carlo and Perfect Simulation (Thessaloniki, Greece)
+##### 15 May 2024, Markov chain Monte Carlo and Perfect Simulation (Thessaloniki, Greece)
 
 Seminar for graduate students (45 minutes) [Markov chain Monte Carlo and Perfect Simulation](https://wilfridskendall.github.io/talks/Thessaloniki-2024/Thessaloniki-2024-handout.pdf).
 
@@ -44,11 +44,11 @@ Seminar for graduate students (45 minutes) [Markov chain Monte Carlo and Perfect
 
 ###### References
 
-Connor S B and WSK (2015): Perfect simulation of M/G/c queues, *Advances in Applied Probability* 47.4, 1039-1063.
-Huber M (2015): *Perfect Simulation*. Chapman and Hall/CRC.
-WSK(2005): Notes on Perfect Simulation, in *Markov Chain Monte Carlo*, edited by WSK, Liang F and Wang J-S, World Scientific, Singapore.
-Metropolis N, Rosenbluth A W, Rosenbluth M N, Teller A H and Teller E (1953): Equation of State Calculations by Fast Computing Machines, *Journal of Chemical Physics* 21.6, 1087-1092.
-Propp J G and Wilson D B (1996): Exact sampling with coupled Markov chains and applications to statistical mechanics, *Random Structures and Algorithms* 9, 223-252.
+Connor S B and WSK (2015): Perfect simulation of M/G/c queues, *Advances in Applied Probability* 47.4, 1039-1063 <https://doi.org/10.1239/aap/1449859799>.  
+Huber M (2015): *Perfect Simulation*. Chapman and Hall/CRC [ https://doi.org/10.1201/b19235 ](https://doi.org/10.1201/b19235).  
+WSK (2005): Notes on Perfect Simulation, in *Markov Chain Monte Carlo: Innovations and Applications*, edited by WSK, Liang F and Wang J-S, World Scientific, Singapore <https://doi.org/10.1142/5904>.  
+Metropolis N, Rosenbluth A W, Rosenbluth M N, Teller A H and Teller E (1953): Equation of State Calculations by Fast Computing Machines, *Journal of Chemical Physics* 21.6, 1087-1092 <https://doi.org/10.1063/1.1699114>.  
+Propp J G and Wilson D B (1996): Exact sampling with coupled Markov chains and applications to statistical mechanics, *Random Structures and Algorithms* 9, 223-252 <https://doi.org/10.1002/(SICI)1098-2418(199608/09)9:1/2%3C223::AID-RSA14%3E3.0.CO;2-O>.
 
 ------
 
