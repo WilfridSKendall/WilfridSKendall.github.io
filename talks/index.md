@@ -26,11 +26,11 @@ Colloquium-style talk (45 minutes) [Three centuries of random lines: from Buffon
 
 ###### References
 
-Aldous, D J and Ganesan, K (2013). True scale-invariant random spatial networks. *Proc. Nat. Acad. Sci. USA* 110.22 8782-8785.  
-Aldous D J and WSK (2008). Short-length routes in low-cost networks via Poisson line patterns. *Advances in Applied Probability* 40.1 1-21.  
-Hey, John D, Neugebauer, Tibor M, Pasca, and Carmen M (2010). Georges-Louis Leclerc de Buffon's `Essays on Moral Arithmetic' (1777), *The Selten School of Behavioral Economics* (Edited by Sadrieh, A, Ockenfels, A). 245-282.  
-WSK (2014). Lines and networks. *Markov Processes and Related Fields* 20.1, 81-106.  
-Stigler S M (1991). Stochastic simulation in the nineteenth century. *Statistical Science* 6.1 89-97.
+Aldous, D J and Ganesan, K (2013). True scale-invariant random spatial networks. *Proc. Nat. Acad. Sci. USA* 110.22 8782-8785 <https://doi.org/10.1073/pnas.1304329110>.  
+Aldous D J and WSK (2008). Short-length routes in low-cost networks via Poisson line patterns. *Advances in Applied Probability* 40.1 1-21 <https://doi.org/10.1239/aap/1208358883>.  
+Hey, John D, Neugebauer, Tibor M, Pasca, and Carmen M (2010). Georges-Louis Leclerc de Buffon's `Essays on Moral Arithmetic' (1777), *The Selten School of Behavioral Economics* (Edited by Sadrieh, A, Ockenfels, A). 245-282 <https://doi.org/10.1007/978-3-642-13983-3_15>.  
+WSK (2014). Lines and networks. *Markov Processes and Related Fields* 20.1, 81-106 <https://math-mprf.org/journal/articles/id1322/>.  
+Stigler S M (1991). Stochastic simulation in the nineteenth century. *Statistical Science* 6.1 89-97 <https://doi.org/10.1214/ss/1177011943>.
 
 ------
 
