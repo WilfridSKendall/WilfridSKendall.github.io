@@ -343,7 +343,7 @@ scaling speed \(v\to\lambda v\) versus space \(x\to\lambda^{\gamma-1}x\):
 {\d}\varpi_\text{Plp}
 \quad=\quad
 \alert<4>{\half}
-\alert<5-8>{(\gamma{-}1) v^{-\gamma} {\d}v }\; 
+\alert<5-7>{(\gamma{-}1) v^{-\gamma} {\d}v }\; 
 \alert<4>{{\d}r {\d}\theta}
 \qquad \text{(make sure \(\gamma>1\)!)}\,.
 \]
