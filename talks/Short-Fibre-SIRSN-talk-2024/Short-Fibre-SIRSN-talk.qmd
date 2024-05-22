@@ -35,7 +35,7 @@ format:
         include-in-header:
             - "Short-Fibre-SIRSN-talk.sty"
         nocite: |
-            @PlatzmanBartholdi-1989, @PopovVachkovskaia-2002
+            @PlatzmanBartholdi-1989, @PopovVachkovskaia-2002, @DGKendallBardenCarneLe-1999
 ---
 
 ![](image/barndorff_nielsen_ole_small.jpg)
@@ -59,18 +59,29 @@ particularly concerning line process models for online maps:
 
 . . .
 
-\structure{Objective of this work:} model online maps,
+\structure{Current objective:} model online maps,
 but replace infinitely long straight lines by line segments ("sticks")
 or moderately curved paths ("stiff fibres").
 
-\note{Very much work-in-progress!
+\note{The notion of a SIRSN is now well established (work of Aldous, Kahn, WSK),
+but only in terms of rather special explicit constructions using infinitely long straight lines.
+The aim of this research programme is to explore how SIRSNs can appear in a very wide
+variety of more natural contexts.
+
+\bigskip
+
+It means a great deal to me to present this work at Ole's memorial conference.
+I owe a great deal to Ole, not least his enthusiasm and encouragement of new ideas.
+I believe and trust he would have been surprised by and thus taken pleasure 
+in the development of the ideas surrounding SIRSN.
 \par}
 
 . . .
 
-Structure of talk:
+\structure{Structure:}
 
-1. Modelling efficient spatial transport systems (illustrating and setting up axiomatic approach to SIRSN);
+1. Modelling efficient spatial transport systems by an axiomatic approach to 
+\structure{scale-invariant random spatial networks} (SIRSN);
 2. Practicalities (why the two current SIRSN models are unsatisfactory);
 3. Sticks and fibres (brief notes on some key results and proofs).
 
@@ -87,7 +98,7 @@ is a mechanism constructing routes from source-destination pairs.}
 2. "Scale -invariant" networks (\structure{SIRSN}) as potential models; 
 \note[item]{Aldous (2014) axioms for suitable random mechanisms.  
 Are there any examples?  
-Are there "many" examples?}
+Are there ``many'' examples?}
 
 3. What do "best routes" look like? 
 \note[item]{Given the axioms, and a mechanism, we'd also like to know some qualitative information
@@ -107,7 +118,7 @@ distribution of traffic load over the network?}
  - "Transit nodes" [@BastFunkeSandersSchultes-2007].  
 
 \note[item]{Related work on: what mathematical cities might look like,
-how to get from A to B, fast route-finding using "portals".}
+how to get from A to B, fast route-finding using ``portals''.}
 
 . . .
 
@@ -128,8 +139,8 @@ Online maps look as if they might be scale-invariant!
 =====================================================
 ![Road connections between six European cities including Köln  
 \hfill (data from \texttt{GraphHopper} and \texttt{OpenStreetMap}).](image/SIRSN-illustration.png){ height=250px }
-\note{Here is a network of connections between some cities in
-the west of Germany and Holland.
+\note{\alert{We present a visual introduction to the SIRSN axiomatic framework.} 
+Here is a network of connections in Holland and the west of Germany.
 
 Varying translucence indicates route re-use.
 
@@ -137,7 +148,7 @@ Varying translucence indicates route re-use.
 
 \note[item]{Some visual indication of scale-invariance / self-similarity.
 Coupled with this, scale-invariance is a good device for 
-focussing attention on a model without having to worry about arbitrary "edge effects" at small or large scale!}
+focussing attention on a model without having to worry about arbitrary ``edge effects'' at small or large scale!}
 
 \note[item]{Routes re-use roads.
 Consider the portions of routes connecting a given set of nodes
@@ -149,8 +160,7 @@ could actually be bounded above,
 regardless of the total number of nodes.}
 
 \note[item]{The underlying challenge: capture the essence of
-a good online map axiomatically!  \\
-\textcolor{red}{Here is a visual introduction to the basic axiomatic framework.}}
+a good online map axiomatically!}
 
 An online map as a mechanism for generating networks
 ====================================================
@@ -170,9 +180,10 @@ Here is a particular route.}
 we require \(\Route(x,y)=\Route(y,x)\).
 Additionally, if \(z\) lies between \(x\) and \(y\) on \(\Route(x,y)\) then
 \(\Route(x,z)\) should be the appropriate sub-path of \(\Route(x,y)\)!}
-\note[item]{\emph{Uniqueness} of route is intrinsically necessary 
+\note[item]{\emph{Uniqueness} of (fragments of) route is intrinsically necessary 
 (and interacts with proofs of other properties); 
-checking this in actual models can require non-trivial work!}
+checking this in actual models can require non-trivial work!
+However recently it has been shown how to enforce uniqueness by a scale-invariant choice mechanism.}
 
 Given \(x_1, \ldots, x_n\), the online map should generate a _network_
 \[
@@ -181,7 +192,7 @@ Given \(x_1, \ldots, x_n\), the online map should generate a _network_
 \]
 
 \scriptsize
-**NB:** we disallow one-way streets: \(\Route(x_i,x_j)=\Route(x_j,x_i)\).
+**NB:** disallow one-way streets: \(\Route(x_i,x_j)=\Route(x_j,x_i)\).
 
 Axiom 1: (Statistical) scale-invariance of networks
 ===================================================
@@ -200,14 +211,14 @@ We require _statistical scale invariance_: for all similarities \(\Similarity\) 
 \note[item]{Scale-invariance: equivariance under rotation, translation, \emph{and} scaling.
 The statistical details of the route should depend neither on orientation nor location:
 and we avoid the need to think about boundary effects of scale by imposing the empirically satisfying notion
-of scale-invariance. Compare notion of \emph{statistical shape}.}
+of scale-invariance. Compare the D.G.Kendall \emph{et al.} (1999) notion of \structure{statistical shape}.}
 \note[item]{The illustration indicates scale-invariance just for single routes, but it needs to hold for all networks connecting multiple source/terminus locations \(x_1, \ldots, x_n\).}
 \note[item]{Scale-invariance is related -- by the need for a hierarchy related to scales -- to the existence of a scale-index \(\Index\): more on this later.}
-\note[item]{In order to be able to formulate the notion of scale-invariance at all, the mechanism
+\note[item]{In order to be able to formulate the notion of (statistical) scale-invariance at all, the mechanism
 \alert{must} have some randomness.}
 
 \scriptsize
-**NB:** we model \(\Route(x_i,x_j)\) hence \(\Network(x_1, \ldots, x_n)\) as random.
+**NB:** model \(\Route(x_i,x_j)\) hence \(\Network(x_1, \ldots, x_n)\) as random.
 
 Axiom 2: Finite mean length of routes
 =====================================
@@ -218,16 +229,17 @@ Axiom 2: Finite mean length of routes
 We insist that all routes have finite mean length.
 
 \note[item]{\emph{Obviously} we don't want this route to be infinitely long.}
-\note[item]{This requirement provides a parameter for the SIRSN mechanism:
+\note[item]{This requirement provides a possible parameter for the SIRSN mechanism:
 namely the mean length of route between
 two nodes separated by unit Euclidean distance.}
-\note[item]{This \alert{rules out} the use of Brownian paths!}
+\note[item]{The finite-length requirement \alert{rules out} the use of Brownian paths!}
 
 Axiom 3: SIRSN property
 =======================
 ![SIRSN routes should be massively re-used.](image/SIRSN-SIRSN.png){ height=125px }
 \note{Here we repeat the original display of a network of connections between a number of cities in
-the west of Germany and Holland.
+Holland and 
+the west of Germany.
 \par}
 
 **NB:** \structure{SIRSN} = 
@@ -239,17 +251,17 @@ We require massive re-use of route components (strong SIRSN property).
 
 \structure{Weak SIRSN:} Source/terminus nodes spread evenly everywhere on plane. 
 "Route-re-use" means mean-network-length-per-unit-area must be finite.
-\note[item]{Nodes "spread evenly everywhere": leads to \textbf{weak SIRSN property}.}
+\note[item]{Nodes ``spread evenly everywhere'': leads to \textbf{weak SIRSN property}.}
 
 . . .
 
 \structure{Strong SIRSN:} Source/terminus nodes spread \alert{densely} everywhere on plane.
 "Route-re-use" means 
 mean-network-length-per-unit-area is finite
-_for "long-distance" network_.
-\note[item]{"Long-distance" network: formed by parts of routes at least unit distance from both source and terminus.
+_for the "long-distance" network_.
+\note[item]{``Long-distance'' network: formed by parts of routes at least unit distance from both source and terminus.
 \newline
-Nodes "spread densely everywhere": \textbf{(strong) SIRSN property}.}
+Nodes ``spread densely everywhere'': \textbf{(strong) SIRSN property}.}
 
 \note[item]{A weaker requirement is to ask for
 finite-network-length-per-unit-area (\emph{i.e.} not mean length!): \textbf{pre-SIRSN property}.}
@@ -259,15 +271,16 @@ in the second axiom.}
 
 \note[item]{This key property \alert{rules out} the use of complete Euclidean graphs!}
 
-\note[item]{The length intensity of the fibre process of (long-range) routes provides a further SIRSN parameter.}
+\note[item]{The length intensity of the fibre process of (long-range) routes provides a further 
+possible SIRSN parameter.}
 
 \note[item]{Contrast Platzman \& Bartholdi (1989): spacefilling curves and travelling salesman problem
-\emph{eg} for 15k "cities" over all of Germany.}
+\emph{eg} for 15k ``cities'' over all of Germany.}
 
 Scale-Invariant Random Spatial Networks (SIRSN) {#sec-SIRSN}
 ===============================================
 \structure{Axioms} [following @AldousGanesan-2013; @Aldous-2012].
-\note{Aldous introduced these three axioms for a mechanism producing the chosen (think, "fastest") route
+\note{Aldous introduced these three axioms for a mechanism producing the chosen (think, ``fastest'') route
 \(\Route(x,y)=\Route(y,x)\)
 connecting \(x\) and \(y\).
 \par}
@@ -298,7 +311,7 @@ length intensity.}
 . . .
 
 \structure{Do SIRSN exist at all?}
-\note[item]{Russell: "The axiomatic method has many advantages over honest work."
+\note[item]{Russell: ``The axiomatic method has many advantages over honest work.''
 But the axiomatic method requires one to demonstrate consistency! Do there
 exist \emph{any} SIRSN?}
 
@@ -318,7 +331,7 @@ Do SIRSN exist at all? a more natural answer
 Poisson line process SIRSN: 
 planar _and also_ higher dimensions too [@Aldous-2012; @Kendall-2014c; @Kahn-2015].
 \note{Aldous (2014) asked whether something could be done using Poisson line processes (Plp).
-WSK and Kahn showed this can indeed be done, using "speed" to select routes.
+WSK and Kahn showed this can indeed be done, using ``speed'' to select routes.
 
 
 Remarkably, the Plp example extends to all dimensions \(m\geq 2\)!
@@ -382,7 +395,7 @@ Use fastest \(\Pi\)-paths for routes. Require \(\gamma>2\) so
 
 . . .
 
-Proving \(\Pi\) forms a SIRSN is non-trivial!
+It is non-trivial to prove that \(\Pi\) forms a SIRSN!
 
 
 
@@ -441,7 +454,9 @@ x && \omega && r && \alert<6>{\shape} && v
 \]
 * Parameters: 
   - fibre \alert<6>{shape} distribution;
-\note[item]{Statistical shape (exactly the DGK notion) is trivial for sticks!}
+\note[item]{Statistical shape (exactly the DGK notion) is trivial for sticks!
+Configuration space collapses in the stick case, involving minor simplification and the
+need to check formulae carefully.}
   - \alert<7>{rescaled length} distribution (joint with shape);
   - \alert<8>{specific length intensity} \(\lambda\) for set of fibres of more than unit speed;
   - \alert<9>{scaling index} \(\gamma\).
@@ -460,7 +475,7 @@ orientation field defined by the dense soup of fibres.
 2. Sobolev compactness theorem for Lipschitz paths: hence existence of "geodesics" (fastest connecting paths);
 \note[item]{Follows linear theory very closely.}
 3. For routes, select geodesics in scale-invariant way using auxiliary scale-invariant randomness;
-\note[item]{Let each fibre support a random dense Poisson point process marked by positive "priorities" so that low values are locally finite.}
+\note[item]{Let each fibre support a random dense Poisson point process marked by positive ``priorities'' so that low values are locally finite.}
 4. Validation of SIRSN axioms depends on comparison of (fractional power) of connection
 time with Exponential distribution.
 \note[item]{Validation of SIRSN axioms depends on little more than this comparison once uniqueness of routes is assured!}
@@ -480,7 +495,7 @@ and do the sums for
 * deriving exponential moment of fractional power(connection time);
 * deriving estimate on "time-diameter" for compact set.
 \note[item]{You've probably guessed, 
-the heart of the matter now is to study a stick-based first-passage percolation problem.}
+the key for future progress is to study stick-based first-passage percolation problems!}
 
 (III) Beyond thickness: percolation
 ===================================
@@ -503,9 +518,9 @@ for the family of fibres of greater than unit speed.
 The conjecture seems reasonable, but is expressed in deliberately bold terms.
 \par
 
-Note that Popov and Vachkovskaia (2002) exhibit a "discretely-scale-invariant" 
-or multi-scale stick model for which percolation fails! By monotonicity, this 
-applies to case of sticks of speeds \emph{lower} than a specified threshold.
+Popov and Vachkovskaia (2002) exhibit a ``discretely-scale-invariant'' 
+or multi-scale stick model for which percolation fails! Monotonicity arguments
+then apply to case of sticks of speeds \emph{slower} than a specified threshold.
 \par}
 
 . . .
@@ -527,7 +542,7 @@ Simulation of a caricature:
   
 \bigskip
 
-\uncover<6->{Percolation is plausible.}
+\uncover<6->{Simulation: percolation is plausible.}
   
 ::::
 
@@ -565,7 +580,7 @@ Conclusion
 * There are very simple scale-invariant stick soups which are thick:  
 so this theory is not vacuous!
 \note[item]{The simple examples are based on Pareto distribution for scaled-stick-length, 
-hence "Poisson-Pareto thick stick soup"!}
+hence ``Poisson-Pareto thick stick soup''!}
 
 * Future prospects:
 \note[item]{Many interesting theoretical questions. For example, no known examples yet
@@ -589,7 +604,7 @@ Thank you for your attention! \alert{QUESTIONS?}
 \note{Transportation networks are very old as well as very modern.
 \par}
 \note[item]{Mastiles Lane is part of a 2000-year-old transportation network used for medieval sheep farming in North of England.}
-\note[item]{Also a reminder that "the road goes ever on and on"! \newline
+\note[item]{Also a reminder that ``the road goes ever on and on''! \newline
 (Bilbo Baggins)}
 \note[item]{\alert{QUESTIONS?}}
 
