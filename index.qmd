@@ -46,7 +46,7 @@ and [Elke Thonnes](https://warwick.ac.uk/fac/sci/statistics/staff/academic-resea
 - - -
 
 ## Recent talks
-Visit [my talks page](wilfridskendall.github.io/talks/), which links to handouts (PDF) of slides for recent talks.
+Visit [my talks page](talks/index.html), which links to handouts (PDF) of slides for recent talks.
 
 - - -
 
