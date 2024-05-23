@@ -1,7 +1,6 @@
 ---
 title:      |       
     Wilfrid Kendall's Personal Page
-institute:  Warwick
 date:       today
 dateformat: "D MMMM YYYY"
 
@@ -14,11 +13,15 @@ format: html
 ---
 
 
-:::: {.columns layout="[70,30]" .t}
+:::: {.columns layout="[65,30]" .t}
 
 ::: {.column}
 
 I am an emeritus professor in the [Statistics department](https://www.warwick.ac.uk/statsdept) at the [University of Warwick](https://www.warwick.ac.uk).  My research interests lie mostly in probability theory:  random processes, stochastic geometry, stochastic calculus, computer algebra in statistics and probability, and perfect simulation. 
+
+My occasional blog [Random Curiosities](https://blogs.warwick.ac.uk/randomcuriosities/) records some thoughts arising when teaching or researching.
+
+Contact me at  `w dot s dot kendall at warwick dot ac dot uk`.
 
 :::
 
@@ -30,8 +33,7 @@ I am an emeritus professor in the [Statistics department](https://www.warwick.ac
 
 ::::
 
-My occasional blog [Random Curiosities](https://blogs.warwick.ac.uk/randomcuriosities/) records some thoughts arising when teaching or researching.
-
+- - -
 
 ## Recent and partial biography
 
@@ -41,10 +43,12 @@ I served as President of the [Bernoulli Society](https://www.bernoullisociety.or
 Here is a **[memento](https://www.bernoullisociety.org/files/BernoulliNews2019-2.pdf#page=20)** of a very happy occasion at the end of 2019, kindly organized by [Stephen Connor](https://www.york.ac.uk/maths/staff/stephen-connor/) 
 and [Elke Thonnes](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/thonnes/personal).
 
+- - -
 
 ## Recent talks
 Visit [my talks page](wilfridskendall.github.io/talks/), which links to handouts (PDF) of slides for recent talks.
 
+- - -
 
 ## Recent research projects
 
@@ -58,6 +62,8 @@ Additionally, with [Giacomo Zanella](https://sites.google.com/site/gzanellawebpa
 
  * [Anglo-Saxon Placenames and Point Processes](https://blogs.warwick.ac.uk/settlements/).
 
+- - -
+ 
 ## Recent publications
 
 Four different ways in which information about my publications is accumulated on the web:
@@ -73,36 +79,35 @@ Here is a [list (no longer maintained) of my older Warwick preprints](https://ww
  * linked by topic,
  * including (some) illustrative pictures.
 
+- - -
+
 ## Github software repositories
 These repositories hold software related to miscellaneous computing projects:
 
-:::: {.columns layout="[70,30]" .t}
+:::: {.columns layout="[65,30]" .t}
 
 ::: {.column}
 
- * **Detector Checker** funded by [The Alan Turing Institute](https://www.turing.ac.uk/))  
-(two repositories [DetectorChecker code](https://github.com/alan-turing-institute/DetectorChecker) and
-[DetectorChecker WebApp](https://github.com/alan-turing-institute/DetectorCheckerWebApp)) This project concerns [`R`](https://www.R-project.org/) software developed in collaboration with my colleague [Julia Brettschneider](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/brettschneider/), and [Turing Institute](https://www.turing.ac.uk/) research software engineers [Tomas Lazauskas](https://github.com/tomaslaz) and [Oscar Giles](https://github.com/OscartGiles). The project developed [`R` software](https://github.com/alan-turing-institute/DetectorChecker) and a [Web App](https://github.com/alan-turing-institute/DetectorCheckerWebApp) to aid in the assessment of damage to CT scanners arising from exposure to high energy radiation. While the target application concerns CT scanners, this package can also be used to analyze screen damage arising from other sources.  
-Initially the Web App was available online, but host funding expired. The 
-[Web App](https://github.com/alan-turing-institute/DetectorCheckerWebApp) repository includes instructions for running the Web App in a docker image.  
-The Detector Checker project is no longer being developed, though the repositories remain accessible.
+1. **Detector Checker**, funded by [The Alan Turing Institute](https://www.turing.ac.uk/).  
+This corresponds to two repositories [DetectorChecker code](https://github.com/alan-turing-institute/DetectorChecker) and
+[DetectorChecker WebApp](https://github.com/alan-turing-institute/DetectorCheckerWebApp). It concerns [`R`](https://www.R-project.org/) software developed in collaboration with my colleague [Julia Brettschneider](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/brettschneider/), and [Turing Institute](https://www.turing.ac.uk/) research software engineers [Tomas Lazauskas](https://github.com/tomaslaz) and [Oscar Giles](https://github.com/OscartGiles). 
 
 :::
 
 ::: {.column}
 
-![**Detector Checker**](image/damagedPixels.png){width=15%}
+![](image/damagedPixels.png){width=2in}
 
 :::
 
 :::: 
 
- * [**LaTeX-writing:**](https://github.com/WilfridSKendall/LaTeX-writing)  
+This project developed [`R` software](https://github.com/alan-turing-institute/DetectorChecker) and a [Web App](https://github.com/alan-turing-institute/DetectorCheckerWebApp) to aid in the assessment of damage to CT scanners arising from exposure to high energy radiation. While the target application concerns CT scanners, this package can also be used to analyze screen damage arising from other sources.  
+Initially the Web App was available online, but host funding expired. The 
+[Web App](https://github.com/alan-turing-institute/DetectorCheckerWebApp) repository includes instructions for running the Web App in a docker image. The Detector Checker project is no longer being developed, though the repositories remain accessible.
+
+2. [**LaTeX-writing:**](https://github.com/WilfridSKendall/LaTeX-writing)  
 This project has developed [LaTeX](https://www.latex-project.org/) packages to assist in writing mathematics (namely, `WSKmaths.cls`) and annotating it with revision notes _et cetera_ (namely `WSKtracking.cls`). The packages are still under occasional development, and I use them all the time!
 
----
 
-`w dot s dot kendall at warwick dot ac dot uk`
-
-This web-page was last updated 2024-05-23.
 
