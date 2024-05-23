@@ -9,7 +9,8 @@ author:
     - name:           Wilfrid S Kendall
       affiliation:    University of Warwick Department of Statistics
       affilation-url: https://www.warwick.ac.uk/statsdept
-license:    "CC BY"
+
+format: html
 ---
 
 
