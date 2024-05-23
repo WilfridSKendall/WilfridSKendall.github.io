@@ -1,4 +1,17 @@
-# Wilfrid Kendall's Personal Page
+---
+title:      |       
+    Wilfrid Kendall's Personal Page
+institute:  Warwick
+date:       today
+dateformat: "D MMMM YYYY"
+
+author:     
+    - name:           Wilfrid S Kendall
+      affiliation:    University of Warwick Department of Statistics
+      affilation-url: https://www.warwick.ac.uk/statsdept
+license:    "CC BY"
+---
+
 
 :::: {.columns layout="[70,30]" .t}
 
