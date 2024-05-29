@@ -58,6 +58,16 @@ $(biblio): $(biblio-source)
 		"$<" > $(biblio)
 
 #################################################
+# Creating abstract
+Abstract.docx: Abstract.qmd Abstract-paragraph.qmd
+	$(QUARTO) render Abstract.qmd - --to=docx $(QUARTO_OPT) \
+	--citeproc --bibliography=$(biblio) --csl=$(csl)
+Abstract.txt: Abstract.qmd Abstract-paragraph.qmd
+	$(QUARTO) render Abstract.qmd  --to plain $(QUARTO_OPT) \
+	--citeproc --bibliography=$(biblio) --csl=$(csl)
+
+
+#################################################
 # Creating other pdf files:
 %-handout.pdf: %.qmd $(biblio) # $(figures-pdf)
 	$(SED) -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \

@@ -1,0 +1,7 @@
+
+
+I will give an overview of work I have been interested in for the last decade or so, concerned with generating models based on Poisson processes
+which supply insight into route-finding and traffic flows. Initial constructions [@Aldous-2012; @Kahn-2015; @Kendall-2014c] showed existence of such
+models satisfying the SIRSN axioms formulated by @Aldous-2012. But these constructions all involve infinitely long linear paths, and in particular
+do not easily admit local influences. Can one do better? I shall discuss recent work showing that SIRSN can indeed arise under far less stringent
+conditions, based on line segments or even suitably stiff fibres.

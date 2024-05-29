@@ -35,12 +35,28 @@ format:
         include-in-header:
             - "Short-Fibre-SIRSN-talk.sty"
         nocite: |
-            @PlatzmanBartholdi-1989, @PopovVachkovskaia-2002, @DGKendallBardenCarneLe-1999
+            @PlatzmanBartholdi-1989, @PopovVachkovskaia-2002, @DGKendallBardenCarneLe-1999 @Chartier-2017
 ---
 
 ![](image/barndorff_nielsen_ole_small.jpg)
 
+:::: {.columns layout="[18,-4, 78]" .t}
+
+::: {.column}
+
 ![](image/talk_URL.jpg){width=1in fig-align="center"}
+
+:::
+
+::: {.column}
+
+\scriptsize
+**Abstract: **
+{{< include Abstract-paragraph.qmd >}}
+
+:::
+
+::::
 
 \center
 
@@ -56,14 +72,20 @@ particularly concerning line process models for online maps:
 
 ![](image/talk_URL.jpg){width=1in fig-align="center"}
 
-
 . . .
 
 \structure{Current objective:} model online maps,
 but replace infinitely long straight lines by line segments ("sticks")
 or moderately curved paths ("stiff fibres").
 
-\note{The notion of a SIRSN is now well established (work of Aldous, Kahn, WSK),
+\note{
+Online mapping has been
+calculated to add multi-trillion dollar value annually (Chartier 2017).
+The is excellent motivation for mathematical modelling of online maps!
+
+\bigskip
+
+The notion of a SIRSN is now well established (work of Aldous, Kahn, WSK),
 but only in terms of rather special explicit constructions using infinitely long straight lines.
 The aim of this research programme is to explore how SIRSNs can appear in a very wide
 variety of more natural contexts.
@@ -71,14 +93,19 @@ variety of more natural contexts.
 \bigskip
 
 It means a great deal to me to present this work at Ole's memorial conference.
-I owe a great deal to Ole, not least his enthusiasm and encouragement of new ideas.
+I owe a great deal to Ole, not least his enthusiasm for and encouragement of new ideas.
 I believe and trust he would have been surprised by and thus taken pleasure 
 in the development of the ideas surrounding SIRSN.
+
+\bigskip
+
+\structure{TLDR:} We can now model online maps using not just lines but also segments or fibres.
+But there is still quite a lot more work to do.
 \par}
 
 . . .
 
-\structure{Structure:}
+\structure{Structure of talk:}
 
 1. Modelling efficient spatial transport systems by an axiomatic approach to 
 \structure{scale-invariant random spatial networks} (SIRSN);
@@ -320,9 +347,11 @@ exist \emph{any} SIRSN?}
 \alert{Yes} (first version): Hierarchical SIRSN [@Aldous-2012],  
 a \emph{\alert{randomized}} dense dyadic speed-marked planar _\alert{lattice}_.
 \note[item]{Aldous (2014) exhibited a somewhat contrived example,
-based on a randomized dense dyadic grid. Fine for people living in New York but
-could be criticized as weakly randomized, inelegant, \emph{ad hoc}. As near
-as possible to a deterministic model!}
+based on a randomized dense dyadic grid.
+As near
+as possible to a deterministic model!
+Fine for people living in New York but
+could be criticized as weakly randomized, inelegant, \emph{ad hoc}.}
 
 
 Do SIRSN exist at all? a more natural answer
@@ -332,7 +361,7 @@ Poisson line process SIRSN:
 planar _and also_ higher dimensions too [@Aldous-2012; @Kendall-2014c; @Kahn-2015].
 \note{Aldous (2014) asked whether something could be done using Poisson line processes (Plp).
 WSK and Kahn showed this can indeed be done, using ``speed'' to select routes.
-
+Blanc and collaborators (2022+) have recently made remarkable contributions to our understanding of Plp-SIRSN.
 
 Remarkably, the Plp example extends to all dimensions \(m\geq 2\)!
 \par}
@@ -417,7 +446,8 @@ because lines necessarily have infinite extent.
 This strongly motivates the development of new SIRSN models which:
 \par}
 \note[item]{involve segments not lines (thus localizable, facilitating modelling of inhomogeneity);}
-\note[item]{and preferably use curved fibres rather than linear segments.}
+\note[item]{preferably use curved fibres rather than linear segments;}
+\note[item]{enormous amounts of data on road transportation and traffic intensity is now becoming available.}
 
 Sticks and stiff fibres: foundations 
 ====================================
@@ -452,14 +482,14 @@ x && \omega && r && \alert<6>{\shape} && v
 \end{matrix}
 \end{aligned}
 \]
-* Parameters: 
+* Parameters (after applying scale-invariance):
   - fibre \alert<6>{shape} distribution;
 \note[item]{Statistical shape (exactly the DGK notion) is trivial for sticks!
 Configuration space collapses in the stick case, involving minor simplification and the
 need to check formulae carefully.}
   - \alert<7>{rescaled length} distribution (joint with shape);
   - \alert<8>{specific length intensity} \(\lambda\) for set of fibres of more than unit speed;
-  - \alert<9>{scaling index} \(\gamma\).
+  - \alert<9>{scaling index} \(\gamma=(m-1)(\Index-1)=1\) for \(\Index>2\).
 \note[item]{Usually set \(\lambda=1\) for \emph{standard} soup.}
 
 :::
@@ -495,7 +525,7 @@ and do the sums for
 * deriving exponential moment of fractional power(connection time);
 * deriving estimate on "time-diameter" for compact set.
 \note[item]{You've probably guessed, 
-the key for future progress is to study stick-based first-passage percolation problems!}
+the key for future progress is to study \alert{stick-based first-passage and percolation problems}!}
 
 (III) Beyond thickness: percolation
 ===================================
@@ -568,7 +598,8 @@ first-passage percolation may cover situations where ordinary percolation may fa
 Here ``suitable'' is likely to require bounded exponential-fractional moment on longest time-distance of
 point on circle to circle centre.}
 
-
+\note[item]{Note that long fast sticks should not be relevant: scaling arguments show they will normally be so far away
+that any path involving them would take too long to supply useful bounds on time-of-passage!}
 
 Conclusion
 ==========
