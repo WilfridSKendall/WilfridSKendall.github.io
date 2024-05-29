@@ -361,7 +361,7 @@ Poisson line process SIRSN:
 planar _and also_ higher dimensions too [@Aldous-2012; @Kendall-2014c; @Kahn-2015].
 \note{Aldous (2014) asked whether something could be done using Poisson line processes (Plp).
 WSK and Kahn showed this can indeed be done, using ``speed'' to select routes.
-Blanc and collaborators (2022+) have recently made remarkable contributions to our understanding of Plp-SIRSN.
+Blanc and collaborators (2022+) have recently made deep contributions to our understanding of Plp-SIRSN.
 
 Remarkably, the Plp example extends to all dimensions \(m\geq 2\)!
 \par}
@@ -398,7 +398,7 @@ scaling speed \(v\to\lambda v\) versus space \(x\to\lambda^{\gamma-1}x\):
 \structure{NB} (\(\gamma>1\)): Lines of speed \(\geq1\) form \alert<5>{standard Poisson line process \(\Pi^{(\geq1)}\)}.  
 \bigskip
 
-\note{\bigskip
+\note{\medskip
 The parameter \(\gamma\) is constrained by \(\gamma>2\). If this fails
 then
 \newline
