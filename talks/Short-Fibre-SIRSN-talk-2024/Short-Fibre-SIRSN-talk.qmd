@@ -35,7 +35,7 @@ format:
         include-in-header:
             - "Short-Fibre-SIRSN-talk.sty"
         nocite: |
-            @PlatzmanBartholdi-1989, @PopovVachkovskaia-2002, @DGKendallBardenCarneLe-1999 @Chartier-2017 @Tsukayama-2013
+            @PlatzmanBartholdi-1989, @PopovVachkovskaia-2002, @DGKendallBardenCarneLe-1999
 ---
 
 ![](image/barndorff_nielsen_ole_small.jpg)
