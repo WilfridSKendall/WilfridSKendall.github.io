@@ -28,6 +28,7 @@ QUARTO	      := /usr/local/bin/quarto
 QUARTO_OPT    := --highlight-style tango 
 
 .PHONY: main handout notes full see see_handout see_notes qrcode
+.INTERMIDIATE: Abstract-template.qmd
 
 ##################################################
 # General targets:
@@ -59,11 +60,13 @@ $(biblio): $(biblio-source)
 
 #################################################
 # Creating abstract
-Abstract.docx: Abstract.qmd Abstract-paragraph.qmd
-	$(QUARTO) render Abstract.qmd - --to=docx $(QUARTO_OPT) \
-	--citeproc --bibliography=$(biblio) --csl=$(csl)
-Abstract.txt: Abstract.qmd Abstract-paragraph.qmd
-	$(QUARTO) render Abstract.qmd  --to plain $(QUARTO_OPT) \
+Abstract-template.qmd : $(source)
+	$(SED) -e'/subtitle: *|/d' -e'/^$$/a{{< include _Abstract-paragraph.qmd >}}\n\n## References'  -e'/^$$/q' $(source) > $@
+Abstract.docx: Abstract-template.qmd _Abstract-paragraph.qmd
+	$(QUARTO) render Abstract-template.qmd --to=docx $(QUARTO_OPT) \
+	--citeproc --bibliography=$(biblio) --csl=$(csl)#
+Abstract.txt: Abstract-template.qmd _Abstract-paragraph.qmd
+	$(QUARTO) render $< --output $@ --to=plain $(QUARTO_OPT) \
 	--citeproc --bibliography=$(biblio) --csl=$(csl)
 
 
