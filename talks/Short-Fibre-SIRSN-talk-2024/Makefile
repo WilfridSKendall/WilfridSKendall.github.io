@@ -28,7 +28,7 @@ ZBARIMG       := /usr/bin/zbarimg
 QUARTO	      := /usr/local/bin/quarto
 QUARTO_OPT    := --highlight-style tango 
 
-.PHONY: main handout notes full see see_handout see_notes qrcode commit record-commit
+.PHONY: main handout notes full see see_handout see_notes qrcode commit record-commit record-full
 .INTERMEDIATE: Abstract-template.qmd
 
 ##################################################
@@ -88,14 +88,15 @@ Abstract.txt: Abstract-template.qmd _Abstract-paragraph.qmd
 	$(PDFNUP) --tidy --landscape --frame 'true' --scale '0.95' --nup '2x2' $^ -o $@
 
 #################################################
-# Structured make followed by commitment:
+# Structured make followed by commitment, creating copies to be printed later:
 record-full:
 	$(GIT) log -1 > $(version)
 record-commit: record-full full
 	$(GIT) commit -a
 commit: record-full record-commit
 	$(GIT) push
-
+	ln -sf  `pwd`/$(notes-2x2) ~/Desktop/00\ PRINTME/$(notes-2x2)
+	ln -sf  `pwd`/$(handout-2x2) ~/Desktop/00\ PRINTME/$(handout-2x2)
 
 #################################################
 # Creating QR-codes:
