@@ -106,3 +106,4 @@ qrcode:
 		"https://wilfridskendall.github.io/talks/Short-Fibre-SIRSN-talk-2024/Short-Fibre-SIRSN-talk-handout.pdf"
 	$(CONVERT) image/talk_URL.png image/talk_URL.jpg
 	$(ZBARIMG) image/talk_URL.jpg | tail -1
+
