@@ -28,7 +28,7 @@ QUARTO	      := /usr/local/bin/quarto
 QUARTO_OPT    := --highlight-style tango 
 
 .PHONY: main handout notes full see see_handout see_notes qrcode
-.INTERMIDIATE: Abstract-template.qmd
+.INTERMEDIATE: Abstract-template.qmd
 
 ##################################################
 # General targets:

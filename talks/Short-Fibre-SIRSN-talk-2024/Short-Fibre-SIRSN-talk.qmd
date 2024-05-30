@@ -35,7 +35,7 @@ format:
         include-in-header:
             - "Short-Fibre-SIRSN-talk.sty"
         nocite: |
-            @PlatzmanBartholdi-1989, @PopovVachkovskaia-2002, @DGKendallBardenCarneLe-1999 @Chartier-2017
+            @PlatzmanBartholdi-1989, @PopovVachkovskaia-2002, @DGKendallBardenCarneLe-1999 @Chartier-2017 @Tsukayama-2013
 ---
 
 ![](image/barndorff_nielsen_ole_small.jpg)
@@ -52,7 +52,7 @@ format:
 
 \scriptsize
 **Abstract: **
-{{< include Abstract-paragraph.qmd >}}
+{{< include _Abstract-paragraph.qmd >}}
 
 :::
 
@@ -69,18 +69,17 @@ Development of work on line process models for transportation networks
 [@AldousKendall-2007; @Kendall-2011b; @Kendall-2014a],  
 particularly concerning line process models for online maps:  
 [@Aldous-2012; @AldousGanesan-2013;  @Kahn-2015; @Kendall-2014c; @Kendall-2019].
-
-![](image/talk_URL.jpg){width=1in fig-align="center"}
-
-. . .
+See @Tsukayama-2013 also @Chartier-2017 for big-dollar motivation.
 
 \structure{Current objective:} model online maps,
 but replace infinitely long straight lines by line segments ("sticks")
 or moderately curved paths ("stiff fibres").
 
+![](image/talk_URL.jpg){width=1in fig-align="center"}
+
 \note{
 Online mapping has been
-calculated to add multi-trillion dollar value annually (Chartier 2017).
+calculated to add trillion-dollar-plus value each year (Chartier 2017, Tsukayama 2013).
 The is excellent motivation for mathematical modelling of online maps!
 
 \bigskip
@@ -105,9 +104,8 @@ But there is still quite a lot more work to do.
 
 . . .
 
-\structure{Structure of talk:}
-
-1. Modelling efficient spatial transport systems by an axiomatic approach to 
+##### \structure{Structure of talk}
+1. Axiomatic approach:
 \structure{scale-invariant random spatial networks} (SIRSN);
 2. Practicalities (why the two current SIRSN models are unsatisfactory);
 3. Sticks and fibres (brief notes on some key results and proofs).
