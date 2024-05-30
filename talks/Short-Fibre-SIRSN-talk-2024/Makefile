@@ -18,6 +18,7 @@ notes-2x2         := $(title)-notes-2x2.pdf
 
 ##################################################
 # Utilities:
+GIT           := /usr/bin/git
 SED           := /usr/bin/sed
 PDFNUP        := /usr/bin/pdfjam
 CONVERT       := /usr/bin/convert
@@ -27,7 +28,7 @@ ZBARIMG       := /usr/bin/zbarimg
 QUARTO	      := /usr/local/bin/quarto
 QUARTO_OPT    := --highlight-style tango 
 
-.PHONY: main handout notes full see see_handout see_notes qrcode
+.PHONY: main handout notes full see see_handout see_notes qrcode commit
 .INTERMEDIATE: Abstract-template.qmd
 
 ##################################################
@@ -73,7 +74,7 @@ Abstract.txt: Abstract-template.qmd _Abstract-paragraph.qmd
 #################################################
 # Creating other pdf files:
 %-handout.pdf: %.qmd $(biblio) # $(figures-pdf)
-	$(SED) -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \
+	$(SED) -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \ -F-
 	$(QUARTO) render $< - --to=beamer $(QUARTO_OPT) --output $@    \
 	--citeproc --bibliography=$(biblio) --csl=$(csl)  \
 	-M classoption=handout
@@ -86,6 +87,11 @@ Abstract.txt: Abstract-template.qmd _Abstract-paragraph.qmd
 
 %-2x2.pdf: %.pdf
 	$(PDFNUP) --tidy --landscape --frame 'true' --scale '0.95' --nup '2x2' $^ -o $@
+
+#################################################
+# Structured commitment:
+commit:
+	echo "Structured commit" | $(GIT) commit -a -F-
 
 #################################################
 # Creating QR-codes:
