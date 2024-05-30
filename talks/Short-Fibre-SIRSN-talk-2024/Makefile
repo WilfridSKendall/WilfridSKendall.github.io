@@ -89,9 +89,11 @@ Abstract.txt: Abstract-template.qmd _Abstract-paragraph.qmd
 	$(PDFNUP) --tidy --landscape --frame 'true' --scale '0.95' --nup '2x2' $^ -o $@
 
 #################################################
-# Structured commitment:
+# Structured make followed by commitment:
 commit:
+	$(GIT) log -1 > VERSION.txt
 	echo "Structured commit" | $(GIT) commit -a -F-
+
 
 #################################################
 # Creating QR-codes:
