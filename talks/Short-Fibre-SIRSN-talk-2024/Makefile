@@ -93,7 +93,7 @@ record-commit:
 	$(GIT) commit -a
 	$(GIT) log -1 > $(version)
 commit: record-commit full
-	echo "Benchmark commit" | $(GIT) tag -m -F-
+	echo "Benchmark commit" | $(GIT) tag -a -F-
 	$(GIT) push
 
 
