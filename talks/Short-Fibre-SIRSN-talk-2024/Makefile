@@ -28,7 +28,7 @@ ZBARIMG       := /usr/bin/zbarimg
 QUARTO	      := /usr/local/bin/quarto
 QUARTO_OPT    := --highlight-style tango 
 
-.PHONY: main handout notes full see see_handout see_notes qrcode commit
+.PHONY: main handout notes full see see_handout see_notes qrcode commit record-commit
 .INTERMEDIATE: Abstract-template.qmd
 
 ##################################################
@@ -46,7 +46,6 @@ see_notes:      $(notes-2x2); xdg-open $(notes-2x2)
 #################################################
 # Creating main pdf file 
 $(beamer): $(source) $(biblio) $(macros)
-	git log -1 > $(version)
 	$(SED) -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \
 	$(QUARTO) render $< - --to=beamer $(QUARTO_OPT)              \
 	--citeproc --bibliography=$(biblio) --csl=$(csl)
@@ -74,7 +73,7 @@ Abstract.txt: Abstract-template.qmd _Abstract-paragraph.qmd
 #################################################
 # Creating other pdf files:
 %-handout.pdf: %.qmd $(biblio) # $(figures-pdf)
-	$(SED) -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \ -F-
+	$(SED) -e "1iThese notes were produced from \`$<\`:\n" -f $(versionsed) $(version)  | \
 	$(QUARTO) render $< - --to=beamer $(QUARTO_OPT) --output $@    \
 	--citeproc --bibliography=$(biblio) --csl=$(csl)  \
 	-M classoption=handout
@@ -90,8 +89,8 @@ Abstract.txt: Abstract-template.qmd _Abstract-paragraph.qmd
 
 #################################################
 # Structured make followed by commitment:
-commit:
-	$(GIT) log -1 > VERSION.txt
+record-commit: ; $(GIT) log -1 > $(version)
+commit: record-commit full
 	echo "Structured commit" | $(GIT) commit -a -F-
 
 
