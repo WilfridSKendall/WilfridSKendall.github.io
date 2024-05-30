@@ -89,11 +89,11 @@ Abstract.txt: Abstract-template.qmd _Abstract-paragraph.qmd
 
 #################################################
 # Structured make followed by commitment:
-record-commit:
-	$(GIT) commit -a
+record-full:
 	$(GIT) log -1 > $(version)
-commit: record-commit full
-	echo "Benchmark commit" | $(GIT) tag -F-
+record-commit: record-full full
+	$(GIT) commit -a
+commit: record-full record-commit
 	$(GIT) push
 
 
