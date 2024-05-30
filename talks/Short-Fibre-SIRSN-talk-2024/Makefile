@@ -88,7 +88,8 @@ Abstract.txt: Abstract-template.qmd _Abstract-paragraph.qmd
 	$(PDFNUP) --tidy --landscape --frame 'true' --scale '0.95' --nup '2x2' $^ -o $@
 
 #################################################
-# Structured make followed by commitment, creating copies to be printed later:
+# Structured make followed by commitment,
+# creating copies to be printed later:
 record-full:
 	$(GIT) log -1 > $(version)
 record-commit: record-full full
