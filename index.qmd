@@ -19,7 +19,7 @@ format: html
 
 I am an emeritus professor in the [Statistics department](https://www.warwick.ac.uk/statsdept) at the [University of Warwick](https://www.warwick.ac.uk).  My research interests lie mostly in probability theory:  random processes, stochastic geometry, stochastic calculus, computer algebra in statistics and probability, and perfect simulation. 
 
-My occasional blog [Random Curiosities](https://blogs.warwick.ac.uk/randomcuriosities/) records some thoughts arising when teaching or researching.
+My occasional blog [Random Curiosities](https://blogs.warwick.ac.uk/randomcuriosities/) records some occasional thoughts arising when teaching or researching.
 
 Contact me at  `w dot s dot kendall at warwick dot ac dot uk`.
 
