@@ -85,7 +85,7 @@ Abstract.txt: Abstract-template.qmd _Abstract-paragraph.qmd
 	-M classoption=notes -M classoption=handout
 
 %-2x2.pdf: %.pdf
-	$(PDFNUP) --tidy --landscape --frame 'true' --scale '0.95' --nup '2x2' $^ -o $@
+	$(PDFNUP) $(PDFNUP_FLAGS) --nup '2x2' $^ -o $@
 
 #################################################
 # Structured make followed by commitment,
