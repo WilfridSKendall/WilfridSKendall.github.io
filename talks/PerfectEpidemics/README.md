@@ -10,5 +10,5 @@ This talk reports on some work I am engaged on with [Stephen Connor](https://www
 
 **Acknowledgments:** The author acknowledges support of UK EPSRC grant EP/R022100.
 
-**Handout:** [PDF here.](PerfectEpidemics-handout.pdf)
+**Handout:** [PDF here.](2025-01-17-PerfectEpidemics-handout.pdf)
 
