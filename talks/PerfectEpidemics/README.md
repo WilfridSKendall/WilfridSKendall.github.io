@@ -1,7 +1,7 @@
 # Perfect Epidemics
-## Seminar at Warwick University Department of Statistics
+## Seminar at Second Workshop of UK Research Network in Stochastics
 ## Wilfrid S Kendall
-## 17 January 2025
+## 18 June 2025
 
 **Abstract:**
 This talk reports on some work I am engaged on with [Stephen Connor](https://www-users.york.ac.uk/~sbc502), concerning a perfect simulation approach for making exact draws from an SIR epidemic when one observes only the removals.
@@ -10,5 +10,5 @@ This talk reports on some work I am engaged on with [Stephen Connor](https://www
 
 **Acknowledgments:** The author acknowledges support of UK EPSRC grant EP/R022100.
 
-**Handout:** [PDF here.](2025-01-17-PerfectEpidemics-handout.pdf)
+**Handout:** [PDF here.](PerfectEpidemics-handout.pdf)
 
