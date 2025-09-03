@@ -22,7 +22,7 @@ deploy: push-to-branch
 
 # Datestamp `index.html`
 datestamp:
-	-$(SED) -i -e"/^This web-page/s/updated.*$$/updated $(shell date -Idate)/" index.html
+	-$(SED) -i -e"/^This web-page/s/updated.*$$/updated $(shell date -Idate)/" index.qmd
 
 # Test by visiting `index.html`
 see: index.html
