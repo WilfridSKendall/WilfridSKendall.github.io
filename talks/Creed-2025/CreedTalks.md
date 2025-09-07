@@ -1,6 +1,6 @@
-# HTC talks on the Nicean Creed, Summer 2025
+# HTC talks on the Nicene Creed, Summer 2025
 
-Here are links to the livestreamed talks from the Holy Trinity Coventry summer series on the Nicean Creed. It also includes one talk on the Apostle Bartholomew, because this occurred during the series. At the time of writing the final talk (7 September) is still to come, so has no YouTube link yet.
+Here are links to the livestreamed talks from the Holy Trinity Coventry summer series on the Nicene Creed. It also includes one talk on the Apostle Bartholomew, because this occurred during the series. 
 
 The first three livestreams were occasionally disrupted by technical issues and this is indicated by an asterisk ==*==. This was due to a poor internet connection, now resolved.
 
@@ -19,4 +19,4 @@ The first three livestreams were occasionally disrupted by technical issues and 
 
 If you have enjoyed this summer series, then take a look at Coventry Diocese [Equiphub](https://www.equiphub.org.uk/). This runs a considerable variety of study modules, typically *via* Zoom. Mostly these involve weekly meetings (usually in the evenings) over periods of four or five weeks. Currently the modules include [Genesis – a storyteller’s perspective](https://www.equiphub.org.uk/courses-events-and-resources/genesis-storyteller-2025/) (starting end-September) and [Worship in the Bible](https://www.equiphub.org.uk/courses-events-and-resources/worship-in-the-bible-2025/) (starting in November): modules on other topics will appear as the year progresses. You can browse the [Equiphub](https://www.equiphub.org.uk/) site for free. To apply to join a module you need to create an account (free, no commitment) and then sign up for the module (for a modest price). We strongly recommend [Equiphub](https://www.equiphub.org.uk/)!
 
-2 September 2025
+7 September 2025
