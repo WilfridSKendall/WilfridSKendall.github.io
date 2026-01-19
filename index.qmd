@@ -68,7 +68,7 @@ Additionally, with [Giacomo Zanella](https://sites.google.com/site/gzanellawebpa
 
 Four different ways in which information about my publications is accumulated on the web:
 
- * [ORCID](https://orcid.org/0000-0001-9799-3480]orcid.org/0000-0001-9799-3480);
+ * [ORCID](https://orcid.org/0000-0001-9799-3480);
  * [Google Scholar](https://scholar.google.co.uk/citations?user=0IJZ3EkAAAAJ) (includes Google citation statistics);
  * [`arXiv`](https://arxiv.org/a/kendall_w_1]arxiv.org/a/kendall_w_1) (most new research outputs go straight to `arXiv`, at or before submission to a journal);
  * [ResearchGate](https://www.researchgate.net/profile/Wilfrid_Kendall/publications/).
@@ -113,4 +113,4 @@ This project has developed [LaTeX](https://www.latex-project.org/) packages to a
 
 -----------------
 
-This web-page updated 2025-10-24
+This web-page updated 2026-01-19
