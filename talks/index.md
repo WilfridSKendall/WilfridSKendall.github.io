@@ -42,6 +42,15 @@ Seminar for graduate students (45 minutes) [Markov chain Monte Carlo and Perfect
 
 **Keywords:** Coupling from the Past (CFTP); Dead  Leaves; Epidemics; Exact Simulation; Markov Chain Monte Carlo;  Multiserver Queues; Perfect Simulation.
 
+
+##### References
+
+Connor S B and WSK (2015): Perfect simulation of M/G/c queues, *Advances in Applied Probability* 47.4, 1039-1063 <https://doi.org/10.1239/aap/1449859799>.  
+Huber M (2015): *Perfect Simulation*. Chapman and Hall/CRC [ https://doi.org/10.1201/b19235 ](https://doi.org/10.1201/b19235).  
+WSK (2005): Notes on Perfect Simulation, in *Markov Chain Monte Carlo: Innovations and Applications*, edited by WSK, Liang F and Wang J-S, World Scientific, Singapore <https://doi.org/10.1142/5904>.  
+Metropolis N, Rosenbluth A W, Rosenbluth M N, Teller A H and Teller E (1953): Equation of State Calculations by Fast Computing Machines, *Journal of Chemical Physics* 21.6, 1087-1092 <https://doi.org/10.1063/1.1699114>.  
+Propp J G and Wilson D B (1996): Exact sampling with coupled Markov chains and applications to statistical mechanics, *Random Structures and Algorithms* 9, 223-252 <https://doi.org/10.1002/(SICI)1098-2418(199608/09)9:1/2%3C223::AID-RSA14%3E3.0.CO;2-O>.
+
 ------
 
 #### 13 March 2026, Reflections on the Crofton formula (Warwick)
@@ -56,11 +65,12 @@ Banach representation of total variation; Crofton formula; Poincaré kiniematic 
 
 ##### References
 
-Connor S B and WSK (2015): Perfect simulation of M/G/c queues, *Advances in Applied Probability* 47.4, 1039-1063 <https://doi.org/10.1239/aap/1449859799>.  
-Huber M (2015): *Perfect Simulation*. Chapman and Hall/CRC [ https://doi.org/10.1201/b19235 ](https://doi.org/10.1201/b19235).  
-WSK (2005): Notes on Perfect Simulation, in *Markov Chain Monte Carlo: Innovations and Applications*, edited by WSK, Liang F and Wang J-S, World Scientific, Singapore <https://doi.org/10.1142/5904>.  
-Metropolis N, Rosenbluth A W, Rosenbluth M N, Teller A H and Teller E (1953): Equation of State Calculations by Fast Computing Machines, *Journal of Chemical Physics* 21.6, 1087-1092 <https://doi.org/10.1063/1.1699114>.  
-Propp J G and Wilson D B (1996): Exact sampling with coupled Markov chains and applications to statistical mechanics, *Random Structures and Algorithms* 9, 223-252 <https://doi.org/10.1002/(SICI)1098-2418(199608/09)9:1/2%3C223::AID-RSA14%3E3.0.CO;2-O>.
+CAUCHY, A. (1832) Mémoire sur la rectification des courbes et la
+quadrature des surfaces courbes. Mémoires de l’Académie des Sciences,
+22, 3–15.
+
+STIGLER, S.M. (1980) Stigler’s law of Eponymy. Transactions of the New
+York Academy of Sciences, 39, 147–157.
 
 ------
 
