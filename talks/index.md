@@ -42,6 +42,18 @@ Seminar for graduate students (45 minutes) [Markov chain Monte Carlo and Perfect
 
 **Keywords:** Coupling from the Past (CFTP); Dead  Leaves; Epidemics; Exact Simulation; Markov Chain Monte Carlo;  Multiserver Queues; Perfect Simulation.
 
+------
+
+#### 13 March 2026, Reflections on the Crofton formula (Warwick)
+
+Applied Probability Seminar (45 minutes) [Reflections on the Crofton formula](https://wilfridskendall.github.io/talks/CroftonReflections-2026/CroftonReflections-handout.pdf)
+
+**Abstract:**
+The Crofton formula (the length of an arc can be estimated by the number of hits by a random line) is extremely important in modern-day microscopy. Exemplifying [Stigler's -@Stigler-1980 law of eponymy](https://en.wikipedia.org/wiki/Stigler%27s_law_of_eponymy) (itself actually due to Robert Merton^[\scriptsize Wikipedia: \newline\qquad "Everything of importance has been said before by somebody who did not discover it", \newline\qquad attributed to Alfred North Whitehead.]), the formula is more properly described as the Cauchy-Crofton formula (announced in *Comptes Rendus* by @Cauchy-1832), and originates from the famous thought experiment on Buffon's baguettes. Together with the associated Poincaré kinematic formula, Crofton's formula can be proved by a simple intuitive visual argument in the case of polygonal curves. But the Crofton and Poincaré results actually hold for the far more general case of curves of finite total variation, in which context they require rather more technical proofs. I will report on progress I have made in deriving intuitive visual arguments for the general case.
+
+**Keywords:** 
+Banach representation of total variation; Crofton formula; Poincaré kiniematic formula; Poisson line process.
+
 ##### References
 
 Connor S B and WSK (2015): Perfect simulation of M/G/c queues, *Advances in Applied Probability* 47.4, 1039-1063 <https://doi.org/10.1239/aap/1449859799>.  
