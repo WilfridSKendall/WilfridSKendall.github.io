@@ -57,32 +57,17 @@ Propp J G and Wilson D B (1996): Exact sampling with coupled Markov chains and a
 
 Applied Probability Seminar (45 minutes) [Reflections on the Crofton formula](https://wilfridskendall.github.io/talks/CroftonReflections-2026/CroftonReflections-handout.pdf)
 
-**Abstract:** The Crofton formula (the length of an arc can be estimated by
-the number of hits by a random line) is extremely important in
-modern-day microscopy. Exemplifying Stigler’s (1980) law of eponymy
-(itself actually due to Robert Merton[1]), the formula is more properly
-described as the Cauchy-Crofton formula (announced in Comptes Rendus by
-Cauchy (1832)), and originates from the famous thought experiment on
-Buffon’s baguettes. Together with the associated Poincaré kinematic
-formula, Crofton’s formula can be proved by a simple intuitive visual
-argument in the case of polygonal curves. But the Crofton and Poincaré
-results actually hold for the far more general case of curves of finite
-total variation, in which context they require rather more technical
-proofs. I will report on progress I have made in deriving intuitive
-visual arguments for the general case.
-
+**Abstract:** The Crofton formula (the length of an arc can be estimated by the number of hits by a random line) is extremely important in modern-day microscopy. Exemplifying Stigler’s (1980) law of eponymy (itself actually due to Robert Merton), the formula is more properly described as the Cauchy-Crofton formula (announced in Comptes Rendus by
+Cauchy (1832)), and originates from the famous thought experiment on Buffon’s baguettes. Together with the associated Poincaré kinematic formula, Crofton’s formula can be proved by a simple intuitive visual argument in the case of polygonal curves. But the Crofton and Poincaré results actually hold for the far more general case of curves of finite total variation, in which context they require rather more technical proofs. I will report on progress I have made in deriving intuitive visual arguments for the general case.
 
 **Keywords:** 
-Banach representation of total variation; Crofton formula; Poincaré kiniematic formula; Poisson line process.
+Banach representation of total variation; Crofton formula; Poincaré kinematic formula; Poisson line process.
 
 ##### References
 
-CAUCHY, A. (1832) Mémoire sur la rectification des courbes et la
-quadrature des surfaces courbes. Mémoires de l’Académie des Sciences,
-22, 3–15.
+CAUCHY, A. (1832) Mémoire sur la rectification des courbes et la quadrature des surfaces courbes. *Mémoires de l’Académie des Sciences*, 22, 3–15.
 
-STIGLER, S.M. (1980) Stigler’s law of Eponymy. Transactions of the New
-York Academy of Sciences, 39, 147–157.
+STIGLER, S.M. (1980) Stigler’s law of Eponymy. *Transactions of the New York Academy of Sciences*, 39, 147–157.
 
 ------
 
