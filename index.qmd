@@ -110,7 +110,6 @@ Initially the Web App was available online, but host funding expired. The
 This project has developed [LaTeX](https://www.latex-project.org/) packages to assist in writing mathematics (namely, `WSKmaths.cls`) and annotating it with revision notes _et cetera_ (namely `WSKtracking.cls`). The packages are still under occasional development, and I use them all the time!
 
 
-
 -----------------
 
-This web-page updated 2026-03-17
+This web-page updated 2026-09-17
